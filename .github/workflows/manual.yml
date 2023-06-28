@@ -28,7 +28,4 @@ jobs:
       with:
         arch: aarch64
         distro: ubuntu_latest
-          
-    # Runs a single command using the runners shell
-    - name: Send greeting
-      run: echo "Hello ${{ inputs.name }}"
+        run: echo "Hello ${{ inputs.name }}"
