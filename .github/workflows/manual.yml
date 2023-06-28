@@ -32,4 +32,6 @@ jobs:
                 apt-get update -y 
                 apt-get -y install ninja-build gettext cmake unzip curl
         
-        run: echo "Hello ${{ inputs.name }}"
+        run: |
+            git clone --branch master --depth 1 'https://github.com/neovim/neovim.git'
+            echo "Hello ${{ inputs.name }}"
