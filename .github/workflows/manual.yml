@@ -30,7 +30,7 @@ jobs:
         distro: ubuntu_latest
         install: | 
                 apt-get update -y 
-                apt-get -y install ninja-build gettext cmake unzip curl
+                apt-get -y install ninja-build gettext cmake unzip curl git
         
         run: |
             git clone --branch master --depth 1 'https://github.com/neovim/neovim.git'
