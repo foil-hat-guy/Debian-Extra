@@ -26,11 +26,13 @@ jobs:
             apt-get -y install ninja-build gettext cmake unzip curl git
         
         run: |
-            curl -o appimagetool https://github.com/AppImage/AppImageKit/releases/download/13/appimagetool-aarch64.AppImage
-            chmod a+x appimagetool
+            curl -o appimagetool https://github.com/AppImage/AppImageKit/releases/download/13/appimagetool-aarch64.AppImage && chmod a+x appimagetool
+            ls
             git clone --branch master --depth 1 'https://github.com/neovim/neovim.git'
             cd ./neovim
             make CMAKE_BUILD_TYPE=RelWithDebInfo CMAKE_INSTALL_PREFIX='./compiled/usr'
+            ls
+            mkdir -p ./compiled/usr
             make install
             cd ./compiled
             echo '#!/bin/bash' >> AppRun
