@@ -42,6 +42,7 @@ jobs:
             ln -s ./usr/share/applications/nvim.desktop nvim.desktop
             ln -s ./usr/share/icons/hicolor/128x128/apps/nvim.png nvim.png
             cd ../../
-            appimagetool ./neovim/compiled/ nvim-rolling.appimage
+            ls
+            ./appimagetool ./neovim/compiled/ nvim-rolling.appimage
             chmod a+x nvim-rolling.appimage
             cp nvim-rolling.appimage "/artifacts/nvim-rolling.appimage"
