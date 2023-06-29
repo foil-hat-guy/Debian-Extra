@@ -17,11 +17,29 @@ jobs:
       with:
         arch: aarch64
         distro: ubuntu_latest
+        setup: |
+            mkdir -p "${PWD}/artifacts"
+        dockerRunArgs: |
+            --volume "${PWD}/artifacts:/artifacts"
         install: | 
-                apt-get update -y 
-                apt-get -y install ninja-build gettext cmake unzip curl git
+            apt-get update -y 
+            apt-get -y install ninja-build gettext cmake unzip curl git
         
         run: |
+            curl -o appimagetool https://github.com/AppImage/AppImageKit/releases/download/13/appimagetool-aarch64.AppImage
+            chmod appimagetool a+x
             git clone --branch master --depth 1 'https://github.com/neovim/neovim.git'
             cd ./neovim
-            make CMAKE_BUILD_TYPE=RelWithDebInfo
+            make CMAKE_BUILD_TYPE=RelWithDebInfo CMAKE_INSTALL_PREFIX='./compiled/usr'
+            make install
+            cd ./compiled
+            echo '#!/bin/bash' >> AppRun
+            echo 'unset ARGV0' >> AppRun
+            echo 'exec "$(dirname "$(readlink  -f "${0}")")/usr/bin/nvim" ${@+"$@"}' >> AppRun
+            chmod a+x AppRun
+            ln -s ./usr/share/applications/nvim.desktop nvim.desktop
+            ln -s ./usr/share/icons/hicolor/128x128/apps/nvim.png nvim.png
+            cd ../../
+            appimagetool ./neovim/compiled/ nvim-rolling.appimage
+            chmod nvim-rolling.appimage a+x
+            cp nvim-rolling.appimage "/artifacts/nvim-rolling.appimage"
