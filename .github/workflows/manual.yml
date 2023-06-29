@@ -1,9 +1,5 @@
-# This is a basic workflow that is manually triggered
 
-name: Manual workflow
-
-# Controls when the action will run. Workflow runs when manually triggered using the UI
-# or API.
+name: Neovim-rolling DEB Build
 on:
   workflow_dispatch:
 
@@ -24,7 +20,7 @@ jobs:
             --volume "${PWD}/artifacts:/artifacts"
         install: | 
             apt-get update -y 
-            apt-get -y install ninja-build gettext cmake unzip curl git file
+            apt-get -y install ninja-build gettext cmake unzip curl git file debhelper
         
         run: |
             git clone --branch master --depth 1 'https://github.com/neovim/neovim.git'
@@ -34,17 +30,7 @@ jobs:
             cpack -G DEB
             ls
             cp ./*.deb "/artifacts/neovim.deb"
-    - name: File listing
-      run: |
-            echo '-----------'
-            echo ${PWD}
-            ls
-            cd ./artifacts
-            echo '-----------'
-            echo ${PWD}
-            ls
-            cd ../
-            echo '-----------'
+    
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v3.1.2
       with:
