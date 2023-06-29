@@ -23,7 +23,7 @@ jobs:
             --volume "${PWD}/artifacts:/artifacts"
         install: | 
             apt-get update -y 
-            apt-get -y install ninja-build gettext cmake unzip curl git
+            apt-get -y install ninja-build gettext cmake unzip curl git file
         
         run: |
             git clone --branch master --depth 1 'https://github.com/neovim/neovim.git'
