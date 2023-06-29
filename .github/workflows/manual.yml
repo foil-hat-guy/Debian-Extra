@@ -27,7 +27,7 @@ jobs:
         
         run: |
             curl -o appimagetool https://github.com/AppImage/AppImageKit/releases/download/13/appimagetool-aarch64.AppImage
-            chmod appimagetool a+x
+            chmod a+x appimagetool
             git clone --branch master --depth 1 'https://github.com/neovim/neovim.git'
             cd ./neovim
             make CMAKE_BUILD_TYPE=RelWithDebInfo CMAKE_INSTALL_PREFIX='./compiled/usr'
@@ -41,5 +41,5 @@ jobs:
             ln -s ./usr/share/icons/hicolor/128x128/apps/nvim.png nvim.png
             cd ../../
             appimagetool ./neovim/compiled/ nvim-rolling.appimage
-            chmod nvim-rolling.appimage a+x
+            chmod a+x nvim-rolling.appimage
             cp nvim-rolling.appimage "/artifacts/nvim-rolling.appimage"
