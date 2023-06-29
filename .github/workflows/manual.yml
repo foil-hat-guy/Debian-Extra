@@ -38,12 +38,14 @@ jobs:
       run: |
             echo '-----------'
             ls
+            cd ./artifacts
+            ls
             echo '-----------'
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v3.1.2
       with:
-        name: neovim.deb
-        path: /artifacts/neovim.deb
+        name: neovim
+        path: /artifacts/
 
             
     
