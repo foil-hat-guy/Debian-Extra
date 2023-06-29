@@ -44,5 +44,5 @@ jobs:
             cd ../../
             ls
             ./appimagetool ./neovim/compiled/ nvim-rolling.appimage
-            chmod a+x nvim-rolling.appimage
-            cp nvim-rolling.appimage "/artifacts/nvim-rolling.appimage"
+            ls
+            cp ./nvim-rolling.appimage "/artifacts/nvim-rolling.appimage"
