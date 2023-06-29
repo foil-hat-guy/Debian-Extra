@@ -12,7 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     name: Build neovim for arm64 architecture
     steps:
-    - uses: uraimo/run-on-arch-action@v2.5.0
+    - name: Build neovim.deb
+      uses: uraimo/run-on-arch-action@v2.5.0
       id: runcmd
       with:
         arch: aarch64
@@ -33,3 +34,16 @@ jobs:
             cpack -G DEB
             ls
             cp ./*.deb "/artifacts/neovim.deb"
+    - name: File listing
+      run: |
+            echo '-----------'
+            ls
+            echo '-----------'
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v3.1.2
+      with:
+        name: neovim.deb
+        path: /artifacts/neovim.deb
+
+            
+    
