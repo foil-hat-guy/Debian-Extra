@@ -37,15 +37,19 @@ jobs:
     - name: File listing
       run: |
             echo '-----------'
+            echo ${PWD}
             ls
             cd ./artifacts
+            echo '-----------'
+            echo ${PWD}
             ls
+            cd ../
             echo '-----------'
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v3.1.2
       with:
         name: neovim
-        path: /artifacts/
+        path: ${PWD}/artifacts/
 
             
     
