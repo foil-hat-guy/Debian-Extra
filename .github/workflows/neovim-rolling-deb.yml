@@ -1,4 +1,4 @@
-name: Neovim-stable DEB Build
+name: Neovim-rolling DEB Build
 on:
   workflow_dispatch:
 
