@@ -1,3 +1,5 @@
 # aarch64
 
-[![Neovim-aarch64 build](https://github.com/foil-hat-guy/aarch64/actions/workflows/manual.yml/badge.svg)](https://github.com/foil-hat-guy/aarch64/actions/workflows/manual.yml)
+[![Neovim-stable DEB Build](https://github.com/foil-hat-guy/aarch64/actions/workflows/neovim-stable-deb.yml/badge.svg)](https://github.com/foil-hat-guy/aarch64/actions/workflows/neovim-stable-deb.yml)
+
+[![Neovim-rolling DEB Build](https://github.com/foil-hat-guy/aarch64/actions/workflows/neovim-rolling-deb.yml/badge.svg)](https://github.com/foil-hat-guy/aarch64/actions/workflows/neovim-rolling-deb.yml)
