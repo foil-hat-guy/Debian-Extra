@@ -38,10 +38,10 @@ jobs:
             cmake --build . --target package
             echo '====================='
             ls
-    # cp ./*.deb "/artifacts/neovim-stable.deb"
+            cp ./*.deb "/artifacts/fastfetch-stable.deb"
     
-    # - name: Upload a Build Artifact
-    #  uses: actions/upload-artifact@v3.1.2
-    #  with:
-    #    name: neovim.deb
-    #    path: /home/runner/work/aarch64/aarch64/artifacts/neovim-stable.deb
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v3.1.2
+      with:
+        name: fastfetch.deb
+        path: /home/runner/work/aarch64/aarch64/artifacts/fastfetch-stable.deb
