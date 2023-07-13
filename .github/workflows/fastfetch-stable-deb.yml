@@ -27,7 +27,7 @@ jobs:
         install: | 
             apt-get update -y
             apt-get -y install apt-utils
-            apt-get -y install cmake git pkg-config zip 
+            apt-get -y install cmake git pkg-config librpmbuild9
         
         run: |
             git clone --branch ${{ steps.gettag.outputs.release }} --depth 1 'https://github.com/fastfetch-cli/fastfetch.git'
