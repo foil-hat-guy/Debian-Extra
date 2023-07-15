@@ -60,13 +60,9 @@ jobs:
           echo 'Origin: foil-hat-guy.github.io/aarch64' >> distributions
           echo 'Label: foil-hat-guy.github.io/aarch64' >> distributions
           echo 'Codename: bookworm' >> distributions
-          echo 'Architectures: aarch64' >> distributions
+          echo 'Architectures: aarch64 arm64' >> distributions
           echo 'Components: contrib' >> distributions
           echo 'Description: Repository with some additional for Orangepi 5 plus Armbian Bookworm.' >> distributions
-          
-          echo '=============================='
-          cat distributions
-          echo '=============================='
           
           cd ../
           reprepro --basedir . includedeb bookworm /home/runner/work/aarch64/aarch64/artifacts/fastfetch-stable.deb
