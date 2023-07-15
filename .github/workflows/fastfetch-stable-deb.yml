@@ -49,8 +49,7 @@ jobs:
     - name: Setup debian repository
       run: |
           sudo apt-get update -y
-          sudo apt-get -y install apt-utils
-          sudo apt-get -y install apt-utils reprepro git
+          sudo apt-get -y install reprepro
           
           mkdir debian 
           cd debian
@@ -66,18 +65,11 @@ jobs:
           echo 'Description: Repository with some additional for Orangepi 5 plus Armbian Bookworm.' >> distributions
           
           echo '=============================='
-          echo distributions
+          cat distributions
           echo '=============================='
           
           cd ../../
-          reprepro --basedir ./ includedeb bookworm /home/runner/work/aarch64/aarch64/artifacts/fastfetch-stable.deb
+          reprepro --basedir . includedeb bookworm /home/runner/work/aarch64/aarch64/artifacts/fastfetch-stable.deb
           
           echo '=============================='
           reprepro --basedir ./ list bookworm
-
-
-
-
- 
-
-          
