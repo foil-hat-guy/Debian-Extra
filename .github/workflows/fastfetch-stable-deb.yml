@@ -68,7 +68,7 @@ jobs:
           cat distributions
           echo '=============================='
           
-          cd ../../
+          cd ../
           reprepro --basedir . includedeb bookworm /home/runner/work/aarch64/aarch64/artifacts/fastfetch-stable.deb
           
           echo '=============================='
