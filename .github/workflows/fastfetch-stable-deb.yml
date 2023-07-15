@@ -48,9 +48,9 @@ jobs:
     
     - name: Setup debian repository
       run: |
-          apt-get update -y
-          apt-get -y install apt-utils
-          apt-get -y install apt-utils reprepro git
+          sudo apt-get update -y
+          sudo apt-get -y install apt-utils
+          sudo apt-get -y install apt-utils reprepro git
           
           mkdir debian 
           cd debian
