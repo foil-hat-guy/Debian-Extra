@@ -54,6 +54,9 @@ jobs:
           sudo apt-get -y install reprepro
           
     - uses: actions/checkout@v3
+      with:
+        path: './debian'
+        
     - name: Setup debian repository
       run: |
           mkdir conf 
