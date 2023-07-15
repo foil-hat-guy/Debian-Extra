@@ -59,6 +59,7 @@ jobs:
         
     - name: Setup debian repository
       run: |
+          cd debian
           mkdir conf 
           cd conf
           
