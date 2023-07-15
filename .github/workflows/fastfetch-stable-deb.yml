@@ -46,13 +46,16 @@ jobs:
         name: fastfetch.deb
         path: /home/runner/work/aarch64/aarch64/artifacts/fastfetch-stable.deb
     
-    - name: Setup debian repository
+    - name: Prepare repository root folder
       run: |
+          mkdir debian 
+          cd debian
           sudo apt-get update -y
           sudo apt-get -y install reprepro
           
-          mkdir debian 
-          cd debian
+    - uses: actions/checkout@v3
+    - name: Setup debian repository
+      run: |
           mkdir conf 
           cd conf
           
@@ -69,3 +72,10 @@ jobs:
           
           echo '=============================='
           reprepro --basedir ./ list bookworm
+          echo '=============================='
+          git status
+          echo '=============================='
+          git add --all
+          git commit -m "generated"
+          git push origin
+          git push
