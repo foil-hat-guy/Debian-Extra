@@ -70,6 +70,10 @@ jobs:
           echo 'Description: Repository with some additional for Orangepi 5 plus Armbian Bookworm.' >> distributions
           
           cd ../
+          echo '================='
+          reprepro --basedir . list bookworm
+          echo '================='
+          reprepro --basedir . remove bookworm fastfetch-stable.deb
           reprepro --basedir . includedeb bookworm /home/runner/work/aarch64/aarch64/artifacts/fastfetch-stable.deb
 
     - name: Update git repository
