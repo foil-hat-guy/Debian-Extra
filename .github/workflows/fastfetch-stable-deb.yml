@@ -73,7 +73,7 @@ jobs:
           echo '================='
           reprepro --basedir . list bookworm
           echo '================='
-          reprepro --basedir . remove bookworm fastfetch-stable.deb
+          reprepro --basedir . remove bookworm fastfetch
           reprepro --basedir . includedeb bookworm /home/runner/work/aarch64/aarch64/artifacts/fastfetch-stable.deb
 
     - name: Update git repository
