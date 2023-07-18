@@ -60,12 +60,9 @@ jobs:
         
     - name: Prepare files for debian repository
       run: |
-          cd debian
-          mkdir conf 
-          cd conf
+          cd ./debian/conf
           
-          touch distributions
-          echo 'Origin: foil-hat-guy.github.io/aarch64' >> distributions
+          echo 'Origin: foil-hat-guy.github.io/aarch64' > distributions
           echo 'Label: foil-hat-guy.github.io/aarch64' >> distributions
           echo 'Codename: bookworm' >> distributions
           echo 'Architectures: arm64' >> distributions
@@ -74,10 +71,6 @@ jobs:
           
           cd ../
           reprepro --basedir . includedeb bookworm /home/runner/work/aarch64/aarch64/artifacts/fastfetch-stable.deb
-          
-          echo '=============================='
-          git status
-          echo '=============================='
 
     - name: Update git repository
       uses: EndBug/add-and-commit@v9.1.3
