@@ -1,0 +1,6 @@
+Origin: foil-hat-guy.github.io/aarch64
+Label: foil-hat-guy.github.io/aarch64
+Codename: bookworm
+Architectures: arm64
+Components: contrib
+Description: Repository with some additional for Orangepi 5 plus Armbian Bookworm.
