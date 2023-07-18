@@ -62,8 +62,8 @@ jobs:
       run: |
           cd ./debian/conf
           
-          echo 'Origin: foil-hat-guy.github.io/aarch64' > distributions
-          echo 'Label: foil-hat-guy.github.io/aarch64' >> distributions
+          echo 'Origin: foil-hat-guy.github.io/OPi5Plus-Soft' > distributions
+          echo 'Label: foil-hat-guy.github.io/OPi5Plus-Soft' >> distributions
           echo 'Codename: bookworm' >> distributions
           echo 'Architectures: arm64' >> distributions
           echo 'Components: contrib' >> distributions
