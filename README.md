@@ -11,12 +11,12 @@ build them from source. Or you can download them and install from this repositor
 ## Installation:
 
 1. Download a gpg key for the repository:
-```sh
+```
 wget -qO - https://foil-hat-guy.github.io/OPi5Plus-Soft/PUBLIC.KEY | sudo tee /etc/apt/trusted.gpg.d/OPi5Plus-Soft.asc
 ```
 
-2. Add the repository tp the repository list.
-```sh
+2. Add the repository to the repository list:
+```
 printf "\ndeb https://foil-hat-guy.github.io/OPi5Plus-Soft/ bookworm contrib \n" | sudo tee --append /etc/apt/sources.list 
 ```
 
