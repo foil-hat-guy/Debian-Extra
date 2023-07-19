@@ -49,7 +49,7 @@ jobs:
       uses: actions/upload-artifact@v3.1.2
       with:
         name: fastfetch.deb
-        path: /home/runner/work/aarch64/aarch64/artifacts/fastfetch-stable.deb
+        path: /home/runner/work/OPi5Plus-Soft/OPi5Plus-Soft/artifacts/fastfetch-stable.deb
     
     - name: Prepare repository root folder
       run: |
@@ -87,7 +87,7 @@ jobs:
           reprepro --basedir . list bookworm
           echo '================='
           reprepro --basedir . remove bookworm fastfetch
-          reprepro --basedir . includedeb bookworm /home/runner/work/aarch64/aarch64/artifacts/fastfetch-stable.deb
+          reprepro --basedir . includedeb bookworm /home/runner/work/OPi5Plus-Soft/OPi5Plus-Soft/artifacts/fastfetch-stable.deb
 
     - name: Update git repository
       uses: EndBug/add-and-commit@v9.1.3
