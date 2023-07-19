@@ -1,5 +1,7 @@
 # Extra software repository for Orange Pi 5 Plus
 
+[![Fastfetch DEB build](https://github.com/foil-hat-guy/OPi5Plus-Soft/actions/workflows/fastfetch-stable-deb.yml/badge.svg)](https://github.com/foil-hat-guy/OPi5Plus-Soft/actions/workflows/fastfetch-stable-deb.yml)
+
 ## Description:
 
 This repository contains some software packages for Orange Pi 5 Plus SBC.
