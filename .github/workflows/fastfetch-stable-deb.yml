@@ -12,8 +12,13 @@ jobs:
       uses: pozetroninc/github-action-get-latest-release@master
       with:
           repository: fastfetch-cli/fastfetch
-      
-
+    
+    - name: Import GPG key
+      uses: crazy-max/ghaction-import-gpg@v5
+      with:
+          gpg_private_key: ${{ secrets.DEBIANREPOSIGNATURE }}
+          passphrase: ${{ secrets.PASSPHRASE }}
+    
     - id: builddeb
       name: Build fastfetch.deb
       uses: uraimo/run-on-arch-action@v2.5.0
@@ -60,6 +65,10 @@ jobs:
         
     - name: Prepare files for debian repository
       run: |
+          echo '================='
+          gpg --list-secret-keys
+          echo '================='
+          
           cd ./debian/conf
           
           echo 'Origin: foil-hat-guy.github.io/OPi5Plus-Soft' > distributions
@@ -68,8 +77,12 @@ jobs:
           echo 'Architectures: arm64' >> distributions
           echo 'Components: contrib' >> distributions
           echo 'Description: Repository with some additional for Orangepi 5 plus Armbian Bookworm.' >> distributions
+          echo 'SignWith: yes' >> distributions
           
           cd ../
+          gpg --armor --export dev@foilhatguy.casa > PUBLIC.KEY
+          echo '================='
+          ls
           echo '================='
           reprepro --basedir . list bookworm
           echo '================='
