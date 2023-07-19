@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
 Origin: foil-hat-guy.github.io/OPi5Plus-Soft
 Label: foil-hat-guy.github.io/OPi5Plus-Soft
 Codename: bookworm
@@ -17,3 +20,19 @@ SHA256:
  b654f67dfa8556dae66a664e85eea67dbe58a24649e541e609e9dab8eea375e6 666 contrib/binary-arm64/Packages
  591598886995d3e6e3ae9e1166f4466b62dcc4c1513d727d003e63ada76446bd 448 contrib/binary-arm64/Packages.gz
  3eafbc49f394efb2a0054c18eaef6e59db565f113e0bdcf58bf52a90af5d26b6 199 contrib/binary-arm64/Release
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCgAdFiEEvSw75Ax1R0i7iDeGU3H7Vhs2vMAFAmS3UOcACgkQU3H7Vhs2
+vMDP6Q//avTKbc/taa4iBJgCpBYqXjKKI2eeLknZx5Y2Y3cS2Bwm7FkVje6Jq0h9
+QwPSZKsti73XOQJytREMgAkcJPrxfx7XRnrE6a0ehkbElYmbuSaKK9ETe2AOon4g
+WS7JYZzGL/2HMsXjm7OWosi0ksftaJCk7f2XwcU404SRxZQqIWj+eqNQiC1BWJsS
+vmPlwPkJ4d6monOG+6WY3I44LgEwh7gXQK+RvsgfX5lK0O8sJjdZuPDSqLuCE/Qq
+8QYxQgN1unxFwDC0mpO+Ot31EtUk1JIZh0KdjK2JIjMbBMulCzQF+V7w7hTPuYtu
+695yJeZmGJBsCC6ugJZucLeXhP93D6YZ4bIS0VCa+XRz5Fi48hkLL7CJ+hr6ciad
+nLR0czSlBg/9z89mEOYGSy+VmVisxGCyUBVAiOODRK3X4g4QC+9HzfZbH39N8gHL
+RAmADEs3xo2i3E1D+o+21BkHSuu2nSlMFDk7VbPxn9nunShvaKVlNJ+2yAEIlAN2
+SnJbSBBvzmsRbL5Os2FVV0s+iXX5wP1YFX29BejuWk7LHTXD01qGIBhLRkvZZw+/
+5g9+rDiRXsTG++n6AWNsNpt6nhHnEqRi02PGDF9SicB/iu7XSX5HavNGLTfXdfYT
+tzNx0MKwK9Vnf7SZs/pcsO7MhZ65X+/2pR3j/mOyWdWlJrMMne4=
+=5hCD
+-----END PGP SIGNATURE-----
