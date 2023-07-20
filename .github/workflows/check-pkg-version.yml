@@ -37,7 +37,7 @@
       if: ${{ needs.pkg-version.outputs.new != needs.pkg-version.outputs.old }}
       uses: foil-hat-guy/OPi5Plus-Soft/.github/workflows/fastfetch-deb.yml@main
       with:
-        version: ${{ jobs.pkg-version.outputs.new }}
+        version: ${{ needs.pkg-version.outputs.new }}
       
         
         
