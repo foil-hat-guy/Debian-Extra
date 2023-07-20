@@ -24,10 +24,8 @@ jobs:
         wget -qO - https://foil-hat-guy.github.io/OPi5Plus-Soft/PUBLIC.KEY | sudo tee /etc/apt/trusted.gpg.d/OPi5Plus-Soft.asc
         printf "\ndeb https://foil-hat-guy.github.io/OPi5Plus-Soft/ bookworm contrib \n" | sudo tee /etc/apt/sources.list 
         sudo apt-get update -y
-        sudo apt list fastfetch
         touch currentversion
-        echo $(sudo apt list fastfetch)
-        echo $(sudo apt list fastfetch) | cut -d ' ' -f 3 > currentversion
+        apt-cache madison fastfetch | cut -d '|' -f 2 | tr -d ' ' > currentversion
         echo '============'
         cat currentversion
         echo '============'
