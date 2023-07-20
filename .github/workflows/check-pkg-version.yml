@@ -28,8 +28,12 @@
             echo ${{ steps.getversion.outputs.current }}
             echo 'It is the same version!'
       
-      - name: There is a new version
+      Build-new:
+        name: There is a new version
         if: ${{ steps.gettag.outputs.release != steps.getversion.outputs.current }}
         uses: foil-hat-guy/OPi5Plus-Soft/.github/workflows/fastfetch-deb.yml@main
         with:
           version: ${{ steps.gettag.outputs.release }}
+      
+        
+        
