@@ -1,31 +1,29 @@
-  name: Fastfetch DEB build
+  name: Check package version
   on:
     workflow_dispatch:
     
   jobs:
-    Build-deb:
-    name: Build fastfetch for arm64 architecture
-    runs-on: ubuntu-latest    
-    
-
+    Check-version:
+      name: Check version
+      runs-on: ubuntu-latest    
       steps:
     
-    - id: gettag
-      name: Get latest release tag
-      uses: pozetroninc/github-action-get-latest-release@master
-      with:
+      - id: gettag
+        name: Get latest release tag
+        uses: pozetroninc/github-action-get-latest-release@master
+        with:
           repository: fastfetch-cli/fastfetch
 
-    - id: getversion
-      name: Get current package version
-      run: |
-        wget -qO - https://foil-hat-guy.github.io/OPi5Plus-Soft/dists/bookworm/contrib/binary-arm64/Packages > packages
-        grep -A 16 'Package: fastfetch' packages | grep 'Version' | cut -d ' ' -f 2 > currentversion
-        echo "current="$(cat currentversion) >> "$GITHUB_OUTPUT"
+      - id: getversion
+        name: Get current package version
+        run: |
+          wget -qO - https://foil-hat-guy.github.io/OPi5Plus-Soft/dists/bookworm/contrib/binary-arm64/Packages > packages
+          grep -A 16 'Package: fastfetch' packages | grep 'Version' | cut -d ' ' -f 2 > currentversion
+          echo "current="$(cat currentversion) >> "$GITHUB_OUTPUT"
     
-    - name: Is there a new version
-      if: ${{ steps.gettag.outputs.release == steps.getversion.outputs.current }}
-      run: |
-          echo ${{ steps.gettag.outputs.release }}
-          echo ${{ steps.getversion.outputs.current }}
-          echo 'It is the same version!'
+      - name: Is there a new version
+        if: ${{ steps.gettag.outputs.release == steps.getversion.outputs.current }}
+        run: |
+            echo ${{ steps.gettag.outputs.release }}
+            echo ${{ steps.getversion.outputs.current }}
+            echo 'It is the same version!'
