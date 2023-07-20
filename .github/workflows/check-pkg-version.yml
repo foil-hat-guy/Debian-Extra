@@ -30,7 +30,6 @@
       
       - name: There is a new version
         if: ${{ steps.gettag.outputs.release != steps.getversion.outputs.current }}
-        run: |
-            echo ${{ steps.gettag.outputs.release }}
-            echo ${{ steps.getversion.outputs.current }}
-            echo 'There is a new version!'
+        uses: ./.github/workflows/fastfetch-deb.yml
+        with:
+          version: ${{ steps.gettag.outputs.release }}
