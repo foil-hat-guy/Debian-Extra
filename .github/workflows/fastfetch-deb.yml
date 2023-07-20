@@ -64,16 +64,7 @@ jobs:
         
     - name: Prepare files for debian repository
       run: |
-          cd ./debian/conf          
-          echo 'Origin: foil-hat-guy.github.io/OPi5Plus-Soft' > distributions
-          echo 'Label: foil-hat-guy.github.io/OPi5Plus-Soft' >> distributions
-          echo 'Codename: bookworm' >> distributions
-          echo 'Architectures: arm64' >> distributions
-          echo 'Components: contrib' >> distributions
-          echo 'Description: Repository with some additional for Orangepi 5 plus Armbian Bookworm.' >> distributions
-          echo 'SignWith: yes' >> distributions
-          
-          cd ../
+          cd ./debian
           gpg --armor --export dev@foilhatguy.casa > PUBLIC.KEY
           reprepro --basedir . remove bookworm fastfetch
           reprepro --basedir . includedeb bookworm /home/runner/work/OPi5Plus-Soft/OPi5Plus-Soft/artifacts/fastfetch-stable.deb
