@@ -7,13 +7,32 @@ jobs:
     name: Build fastfetch for arm64 architecture
     runs-on: ubuntu-latest
     steps:
+    - name: Install dependenties
+      run: |
+        sudo apt-get update -y
+        sudo apt-get -y install reprepro
+
     - id: gettag
       name: Get latest release tag
       uses: pozetroninc/github-action-get-latest-release@master
       with:
           repository: fastfetch-cli/fastfetch
+
+    - id: getversion
+      name: Get current package version
+      run: |
+        wget -qO - https://foil-hat-guy.github.io/OPi5Plus-Soft/PUBLIC.KEY | sudo tee /etc/apt/trusted.gpg.d/OPi5Plus-Soft.asc
+        printf "\ndeb https://foil-hat-guy.github.io/OPi5Plus-Soft/ bookworm contrib \n" | sudo tee /etc/apt/sources.list 
+        sudo apt-get update -y
+        sudo apt list fastfetch
+        touch currentversion
+        sudo apt list fastfetch | cut -d ' ' -f 2 > currentversion
+        echo '============'
+        cat currentversion
+        echo '============'
+        echo ${{ steps.gettag.outputs.release }}
     
-    - name: Import GPG key
+    - name: Import GPG key for debian
       uses: crazy-max/ghaction-import-gpg@v5
       with:
           gpg_private_key: ${{ secrets.DEBIANREPOSIGNATURE }}
@@ -55,8 +74,6 @@ jobs:
       run: |
           mkdir debian 
           cd debian
-          sudo apt-get update -y
-          sudo apt-get -y install reprepro
           
     - uses: actions/checkout@v3
       with:
