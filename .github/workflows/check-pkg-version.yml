@@ -31,9 +31,10 @@
             echo ${{ steps.getversion.outputs.current }}
             echo 'It is the same version!'
       
-    Build-new:
+    build-new:
       name: Update debian repository
-      if: ${{ jobs.pkg-version.outputs.new != jobs.pkg-version.outputs.old }}
+      needs: pkg-version
+      if: ${{ needs.pkg-version.outputs.new != needs.pkg-version.outputs.old }}
       uses: foil-hat-guy/OPi5Plus-Soft/.github/workflows/fastfetch-deb.yml@main
       with:
         version: ${{ jobs.pkg-version.outputs.new }}
