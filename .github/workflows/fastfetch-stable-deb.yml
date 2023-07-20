@@ -23,10 +23,14 @@ jobs:
       run: |
         wget -qO - https://foil-hat-guy.github.io/OPi5Plus-Soft/dists/bookworm/contrib/binary-arm64/Packages > packages
         grep -A 16 'Package: fastfetch' packages | grep 'Version' | cut -d ' ' -f 2 > currentversion
-        echo '============'
-        cat currentversion
-        echo '============'
-        echo ${{ steps.gettag.outputs.release }}
+        echo "current="$(cat currentversion) >> "$GITHUB_OUTPUT"
+    
+    - name: Is there a new version
+      if: ${{ steps.gettag.outputs.release == steps.getversion.outputs.current }}
+      run: |
+          echo ${{ steps.gettag.outputs.release }}
+          echo ${{ steps.getversion.outputs.current }}
+          echo 'It is the same version!'
     
     - name: Import GPG key for debian
       uses: crazy-max/ghaction-import-gpg@v5
