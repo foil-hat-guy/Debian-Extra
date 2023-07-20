@@ -7,31 +7,6 @@ jobs:
     name: Build fastfetch for arm64 architecture
     runs-on: ubuntu-latest
     steps:
-    - name: Install dependenties
-      run: |
-        sudo apt-get update -y
-        sudo apt-get -y install reprepro
-
-    - id: gettag
-      name: Get latest release tag
-      uses: pozetroninc/github-action-get-latest-release@master
-      with:
-          repository: fastfetch-cli/fastfetch
-
-    - id: getversion
-      name: Get current package version
-      run: |
-        wget -qO - https://foil-hat-guy.github.io/OPi5Plus-Soft/dists/bookworm/contrib/binary-arm64/Packages > packages
-        grep -A 16 'Package: fastfetch' packages | grep 'Version' | cut -d ' ' -f 2 > currentversion
-        echo "current="$(cat currentversion) >> "$GITHUB_OUTPUT"
-    
-    - name: Is there a new version
-      if: ${{ steps.gettag.outputs.release == steps.getversion.outputs.current }}
-      run: |
-          echo ${{ steps.gettag.outputs.release }}
-          echo ${{ steps.getversion.outputs.current }}
-          echo 'It is the same version!'
-    
     - name: Import GPG key for debian
       uses: crazy-max/ghaction-import-gpg@v5
       with:
@@ -64,14 +39,10 @@ jobs:
             ls
             cp ./*.deb "/artifacts/fastfetch-stable.deb"
     
-    - name: Upload a Build Artifact
-      uses: actions/upload-artifact@v3.1.2
-      with:
-        name: fastfetch.deb
-        path: /home/runner/work/OPi5Plus-Soft/OPi5Plus-Soft/artifacts/fastfetch-stable.deb
-    
     - name: Prepare repository root folder
       run: |
+          sudo apt-get update -y
+          sudo apt-get -y install reprepro
           mkdir debian 
           cd debian
           
@@ -82,12 +53,7 @@ jobs:
         
     - name: Prepare files for debian repository
       run: |
-          echo '================='
-          gpg --list-secret-keys
-          echo '================='
-          
-          cd ./debian/conf
-          
+          cd ./debian/conf          
           echo 'Origin: foil-hat-guy.github.io/OPi5Plus-Soft' > distributions
           echo 'Label: foil-hat-guy.github.io/OPi5Plus-Soft' >> distributions
           echo 'Codename: bookworm' >> distributions
@@ -98,11 +64,6 @@ jobs:
           
           cd ../
           gpg --armor --export dev@foilhatguy.casa > PUBLIC.KEY
-          echo '================='
-          ls
-          echo '================='
-          reprepro --basedir . list bookworm
-          echo '================='
           reprepro --basedir . remove bookworm fastfetch
           reprepro --basedir . includedeb bookworm /home/runner/work/OPi5Plus-Soft/OPi5Plus-Soft/artifacts/fastfetch-stable.deb
 
