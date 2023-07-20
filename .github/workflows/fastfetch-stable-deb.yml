@@ -26,6 +26,7 @@ jobs:
         sudo apt-get update -y
         sudo apt list fastfetch
         touch currentversion
+        echo $(sudo apt list fastfetch)
         echo $(sudo apt list fastfetch) | cut -d ' ' -f 3 > currentversion
         echo '============'
         cat currentversion
