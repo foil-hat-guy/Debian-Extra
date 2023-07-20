@@ -7,6 +7,11 @@ on:
         default: '1.12.1'
         required: true
         type: string
+  workflow_call:
+    inputs:
+      version:
+        required: true
+        type: string
 
 jobs:
   Build-deb:
