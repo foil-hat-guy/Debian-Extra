@@ -25,6 +25,9 @@ jobs:
         printf "\ndeb https://foil-hat-guy.github.io/OPi5Plus-Soft/ bookworm contrib \n" | sudo tee /etc/apt/sources.list 
         sudo apt-get update -y
         touch currentversion
+        apt-cache madison fastfetch
+        apt-cache madison fastfetch | cut -d '|' -f 2
+        apt-cache madison fastfetch | cut -d '|' -f 2 | tr -d ' '
         apt-cache madison fastfetch | cut -d '|' -f 2 | tr -d ' ' > currentversion
         echo '============'
         cat currentversion
