@@ -40,7 +40,7 @@ jobs:
             apt-get -y install ninja-build gettext cmake unzip curl git file debhelper
         
         run: |
-            git clone --branch stable --depth 1 'https://github.com/neovim/neovim.git'
+            git clone --branch ${{ inputs.version }} --depth 1 'https://github.com/neovim/neovim.git'
             cd ./neovim
             make CMAKE_BUILD_TYPE=Release
             cd build 
