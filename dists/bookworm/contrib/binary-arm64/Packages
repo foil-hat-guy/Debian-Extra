@@ -15,3 +15,18 @@ Maintainer: Linus Dierheimer <Linus@Dierheimer.de>
 Version: 1.12.2
 Installed-Size: 695
 
+Package: neovim
+Architecture: arm64
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 4.2)
+Priority: optional
+Section: devel
+Filename: pool/contrib/n/neovim/neovim_0.9.1_arm64.deb
+Size: 10539010
+SHA256: 1a2b1a43fe9722bb2acc5b2c8b4e1f10f101ff577feb71999ad3c2ace470d68d
+SHA1: 29a0489c0c64031f33c158097798258e4d0d40a3
+MD5sum: eccc63a8a877ffbd795982c2f88b69f0
+Description: Vim-fork focused on extensibility and usability.
+Maintainer: Neovim.io
+Version: 0.9.1
+Installed-Size: 32041
+
