@@ -16,6 +16,7 @@
         uses: pozetroninc/github-action-get-latest-release@master
         with:
           repository: neovim/neovim
+          excludes: prerelease, draft
 
       - id: getversion
         name: Get current package version
