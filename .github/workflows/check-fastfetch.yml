@@ -1,4 +1,4 @@
-  name: Check package version
+  name: Check fastfetch version
   on:
     workflow_dispatch:
     
