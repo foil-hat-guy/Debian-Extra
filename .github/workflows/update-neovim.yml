@@ -1,0 +1,73 @@
+name: Neovim-stable DEB Build
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Package version to be built'
+        default: '0.9.0'
+        required: true
+        type: string
+  workflow_call:
+    inputs:
+      version:
+        required: true
+        type: string
+
+jobs:
+  neovim-aarch64-build:
+    runs-on: ubuntu-latest
+    name: Build neovim for arm64 architecture
+    steps:
+    - name: Import GPG key for debian
+      uses: crazy-max/ghaction-import-gpg@v5
+      with:
+          gpg_private_key: ${{ secrets.DEBIANREPOSIGNATURE }}
+          passphrase: ${{ secrets.PASSPHRASE }}
+    
+    - name: Build neovim.deb
+      uses: uraimo/run-on-arch-action@v2.5.0
+      id: runcmd
+      with:
+        arch: aarch64
+        distro: ubuntu_latest
+        setup: |
+            mkdir -p "${PWD}/artifacts"
+        dockerRunArgs: |
+            --volume "${PWD}/artifacts:/artifacts"
+        install: | 
+            apt-get update -y
+            apt-get -y install apt-utils
+            apt-get -y install ninja-build gettext cmake unzip curl git file debhelper
+        
+        run: |
+            git clone --branch stable --depth 1 'https://github.com/neovim/neovim.git'
+            cd ./neovim
+            make CMAKE_BUILD_TYPE=Release
+            cd build 
+            cpack -G DEB
+            ls
+            cp ./*.deb "/artifacts/neovim-stable.deb"
+    
+    - name: Prepare repository root folder
+      run: |
+          sudo apt-get update -y
+          sudo apt-get -y install reprepro
+          mkdir debian 
+          cd debian
+          
+    - uses: actions/checkout@v3
+      with:
+        path: './debian'
+        token: ${{ secrets.GITHUB_TOKEN }}
+        
+    - name: Prepare files for debian repository
+      run: |
+          cd ./debian
+          reprepro --basedir . remove bookworm neovim
+          reprepro --basedir . includedeb bookworm /home/runner/work/OPi5Plus-Soft/OPi5Plus-Soft/artifacts/neovim-stable.deb
+
+    - name: Update git repository
+      uses: EndBug/add-and-commit@v9.1.3
+      with:
+        cwd: './debian'
+        message: 'Automatic update of the repository.'
