@@ -1,4 +1,4 @@
-name: Neovim-stable DEB Build
+name: Neovim DEB Build
 on:
   workflow_dispatch:
     inputs:
