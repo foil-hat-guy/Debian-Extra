@@ -1,4 +1,4 @@
-  name: Check fastfetch version
+  name: Check neovim version
   on:
     workflow_dispatch:
     
@@ -15,17 +15,17 @@
         name: Get latest release tag
         uses: pozetroninc/github-action-get-latest-release@master
         with:
-          repository: fastfetch-cli/fastfetch
+          repository: neovim/neovim
 
       - id: getversion
         name: Get current package version
         run: |
           wget -qO - https://foil-hat-guy.github.io/OPi5Plus-Soft/dists/bookworm/contrib/binary-arm64/Packages > packages
-          grep -A 16 'Package: fastfetch' packages | grep 'Version' | cut -d ' ' -f 2 > currentversion
+          grep -A 16 'Package: neovim' packages | grep 'Version' | cut -d ' ' -f 2 > currentversion
           echo "current="$(cat currentversion) >> "$GITHUB_OUTPUT"
     
       - name: There is no new version
-        if: ${{ steps.gettag.outputs.release == steps.getversion.outputs.current }}
+        if: ${{ steps.gettag.outputs.release != steps.getversion.outputs.current }}
         run: |
             echo ${{ steps.gettag.outputs.release }}
             echo ${{ steps.getversion.outputs.current }}
@@ -34,7 +34,7 @@
     build-new:
       name: Update debian repository
       needs: pkg-version
-      if: ${{ needs.pkg-version.outputs.new != needs.pkg-version.outputs.old }}
+      if: ${{ needs.pkg-version.outputs.new == needs.pkg-version.outputs.old }}
       uses: foil-hat-guy/OPi5Plus-Soft/.github/workflows/update-fastfetch.yml@main
       with:
         version: ${{ needs.pkg-version.outputs.new }}
