@@ -65,7 +65,6 @@ jobs:
     - name: Prepare files for debian repository
       run: |
           cd ./debian
-          gpg --armor --export dev@foilhatguy.casa > PUBLIC.KEY
           reprepro --basedir . remove bookworm fastfetch
           reprepro --basedir . includedeb bookworm /home/runner/work/OPi5Plus-Soft/OPi5Plus-Soft/artifacts/fastfetch-stable.deb
 
