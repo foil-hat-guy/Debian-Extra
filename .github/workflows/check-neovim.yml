@@ -26,7 +26,7 @@
           echo "current="$(cat currentversion) >> "$GITHUB_OUTPUT"
     
       - name: There is no new version
-        if: ${{ steps.gettag.outputs.release != steps.getversion.outputs.current }}
+        if: ${{ steps.gettag.outputs.release == steps.getversion.outputs.current }}
         run: |
             echo ${{ steps.gettag.outputs.release }}
             echo ${{ steps.getversion.outputs.current }}
@@ -35,8 +35,8 @@
     build-new:
       name: Update debian repository
       needs: pkg-version
-      if: ${{ needs.pkg-version.outputs.new == needs.pkg-version.outputs.old }}
-      uses: foil-hat-guy/OPi5Plus-Soft/.github/workflows/update-fastfetch.yml@main
+      if: ${{ needs.pkg-version.outputs.new != needs.pkg-version.outputs.old }}
+      uses: foil-hat-guy/OPi5Plus-Soft/.github/workflows/update-neovim.yml@main
       with:
         version: ${{ needs.pkg-version.outputs.new }}
       secrets: inherit
