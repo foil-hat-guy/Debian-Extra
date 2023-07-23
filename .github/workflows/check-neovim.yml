@@ -1,6 +1,7 @@
   name: Check neovim version
   on:
     workflow_dispatch:
+    workflow_call:
     
   jobs:
     pkg-version:
