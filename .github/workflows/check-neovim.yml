@@ -24,15 +24,12 @@
           wget -qO - https://foil-hat-guy.github.io/OPi5Plus-Soft/dists/bookworm/contrib/binary-arm64/Packages > packages
           grep -A 16 'Package: neovim' packages | grep 'Version' | cut -d ' ' -f 2 > currentversion
           echo "current=v$(cat currentversion)" >> "$GITHUB_OUTPUT"
-          echo '================='
-          echo v$(cat currentversion)
-          echo ${{ steps.gettag.outputs.release }}
     
       - name: There is no new version
         if: ${{ steps.gettag.outputs.release == steps.getversion.outputs.current }}
         run: |
-            echo ${{ steps.gettag.outputs.release }}
-            echo ${{ steps.getversion.outputs.current }}
+            echo 'Latest version at origin git repo:'${{ steps.gettag.outputs.release }}
+            echo 'Current version at debian repo:'${{ steps.getversion.outputs.current }}
             echo 'It is the same version!'
       
     build-new:
