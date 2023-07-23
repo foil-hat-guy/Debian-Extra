@@ -71,3 +71,10 @@ jobs:
       with:
         cwd: './debian'
         message: 'Automatic update of the repository.'
+        
+  report:
+    runs-on: ubuntu-latest
+    if: always()
+    needs: neovim-aarch64-build
+    steps:
+    - run: echo $(( needs.neovim-aarch64-build.result ))
