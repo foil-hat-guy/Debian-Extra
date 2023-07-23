@@ -28,8 +28,8 @@
       - name: There is no new version
         if: ${{ steps.gettag.outputs.release == steps.getversion.outputs.current }}
         run: |
-            echo 'Latest version at origin git repo:'${{ steps.gettag.outputs.release }}
-            echo 'Current version at debian repo:'${{ steps.getversion.outputs.current }}
+            echo 'Latest version at origin git repo is '${{ steps.gettag.outputs.release }}
+            echo 'Current version at debian repo is '${{ steps.getversion.outputs.current }}
             echo 'It is the same version!'
       
     build-new:
