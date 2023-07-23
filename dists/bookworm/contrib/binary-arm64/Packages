@@ -21,10 +21,10 @@ Depends: libc6 (>= 2.34), libgcc-s1 (>= 4.2)
 Priority: optional
 Section: devel
 Filename: pool/contrib/n/neovim/neovim_0.9.1_arm64.deb
-Size: 10539010
-SHA256: 1a2b1a43fe9722bb2acc5b2c8b4e1f10f101ff577feb71999ad3c2ace470d68d
-SHA1: 29a0489c0c64031f33c158097798258e4d0d40a3
-MD5sum: eccc63a8a877ffbd795982c2f88b69f0
+Size: 10539124
+SHA256: b89b1cea19556882d102b405052c8ed690041626cb316581bfc07b8e676d1465
+SHA1: a0fd789bf6503c2ce508fb187f145f6aaefe8d59
+MD5sum: 2a4559be10cf86f2c0999fc5abfd1e54
 Description: Vim-fork focused on extensibility and usability.
 Maintainer: Neovim.io
 Version: 0.9.1
