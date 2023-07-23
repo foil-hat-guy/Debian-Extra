@@ -1,6 +1,7 @@
   name: Check fastfetch version
   on:
     workflow_dispatch:
+    workflow_call:
     
   jobs:
     pkg-version:
