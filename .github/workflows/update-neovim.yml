@@ -74,7 +74,7 @@ jobs:
         
   report:
     runs-on: ubuntu-latest
-    if: always()
+    if: always() && needs.neovim-aarch64-build.result == 'failure'
     needs: neovim-aarch64-build
     steps:
-    - run: echo $(( needs.neovim-aarch64-build.result ))
+    - run: echo 'Neovim build have failed.'
