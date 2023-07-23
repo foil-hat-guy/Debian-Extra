@@ -1,0 +1,16 @@
+name: Update debian repository
+on:
+  workflow_dispatch:
+
+jobs:
+  update-fastfetch:
+    concurrency: sequential
+    uses: foil-hat-guy/OPi5Plus-Soft/.github/workflows/check-fastfetch.yml@main
+    secrets: inherit
+
+  update-neovim:
+    concurrency: sequential
+    uses: foil-hat-guy/OPi5Plus-Soft/.github/workflows/check-neovim.yml@main
+    secrets: inherit
+      
+    
