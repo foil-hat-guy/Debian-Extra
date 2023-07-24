@@ -77,17 +77,11 @@ jobs:
     if: always() && needs.neovim-aarch64-build.result == 'failure'
     needs: neovim-aarch64-build
     steps:
-    - name: Send email
-      uses: dawidd6/action-send-mail@v3.7.2
+    - name: Send notification
+      uses: appleboy/telegram-action@v0.1.1
       with:
-        server_address: smtp.tutanota.com
-        server_port: 465
-        secure: true
-        username: ${{ secrets.NOTIFICATIONMAIL }}
-        password: ${{ secrets.NOTIFICATIONPASSWORD }}
-        subject: Warning! NeoVim build failed!
-        to: ${{ secrets.MAILDESTINATION }}
-        from: GitHub Actions
-        body: Warning! NeoVim build failed!
+        token: ${{ secrets.TELEGRAMBOT }}
+        to: ${{ secrets.TELEGRAMCHAT }}
+        message: Warning! NeoVim build failed!
 
 
