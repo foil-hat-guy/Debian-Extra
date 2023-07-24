@@ -14,7 +14,7 @@ on:
         type: string
 
 jobs:
-  Build-deb:
+  fastfetch-aarch64-build:
     name: Build fastfetch for arm64 architecture
     runs-on: ubuntu-latest
     steps:
@@ -73,4 +73,16 @@ jobs:
       with:
         cwd: './debian'
         message: 'Automatic update of the repository.'
+    
+  report:
+    runs-on: ubuntu-latest
+    if: always() && needs.fastfetch-aarch64-build.result == 'failure'
+    needs: fastfetch-aarch64-build
+    steps:
+    - name: Send notification
+      uses: appleboy/telegram-action@v0.1.1
+      with:
+        token: ${{ secrets.TELEGRAMBOT }}
+        to: ${{ secrets.TELEGRAMCHAT }}
+        message: Warning! FastFetch build failed!
 
