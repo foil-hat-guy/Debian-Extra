@@ -11,7 +11,7 @@ jobs:
       uses: actions/cache/restore@v3.3.1
       id: fastfetch-cache
       with:
-        path: ./
+        path: /home/runner/work/OPi5Plus-Soft/OPi5Plus-Soft/artifacts/fastfetch.deb
         key: fastfetch.deb
     
     - name: Import GPG key for debian
@@ -40,7 +40,7 @@ jobs:
       run: |
           cd ./debian
           reprepro --basedir . remove bookworm fastfetch
-          reprepro --basedir . includedeb bookworm /home/runner/work/OPi5Plus-Soft/OPi5Plus-Soft/fastfetch-stable.deb
+          reprepro --basedir . includedeb bookworm /home/runner/work/OPi5Plus-Soft/OPi5Plus-Soft/artifacts/fastfetch-stable.deb
 
     - name: Update git repository
       if: steps.fastfetch-cache.outputs.cache-hit == 'true'
