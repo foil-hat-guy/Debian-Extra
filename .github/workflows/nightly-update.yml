@@ -1,4 +1,4 @@
-name: Update all packages
+name: Nightly repo update
 on:
   workflow_dispatch:
 
