@@ -50,6 +50,12 @@ jobs:
             ls
             cp ./*.deb "/artifacts/fastfetch-stable.deb"
     
+    - name: Save DEB to cache
+      uses: actions/cache/save@v1.2.1
+      with:
+        path: /home/runner/work/OPi5Plus-Soft/OPi5Plus-Soft/artifacts/fastfetch-stable.deb
+        key: fastfetch.deb
+      
     - name: Prepare repository root folder
       run: |
           sudo apt-get update -y
