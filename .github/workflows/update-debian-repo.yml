@@ -1,6 +1,7 @@
 name: Update debian repository
 on:
   workflow_dispatch:
+  workflow_call:
 
 jobs:
   update-repo:
