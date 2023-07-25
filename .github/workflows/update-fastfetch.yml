@@ -82,6 +82,8 @@ jobs:
         
     - name: Delete Repository Cache
       uses: TheRealRyGuy/clear-cache-action@master
+      env:
+        token: ${{ secrets.GITHUB_TOKEN }}
     
   report:
     runs-on: ubuntu-latest
