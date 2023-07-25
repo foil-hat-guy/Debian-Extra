@@ -50,7 +50,8 @@ jobs:
         path: /home/runner/work/OPi5Plus-Soft/OPi5Plus-Soft/artifacts/fastfetch.deb
         key: fastfetch.deb
     
-  report:
+  report-fail:
+    name: Report build fail.
     runs-on: ubuntu-latest
     if: always() && needs.fastfetch-aarch64-build.result == 'failure'
     needs: fastfetch-aarch64-build
@@ -62,3 +63,15 @@ jobs:
         to: ${{ secrets.TELEGRAMCHAT }}
         message: Warning! FastFetch build failed!
 
+  report-ok:
+    name: Report new version.
+    runs-on: ubuntu-latest
+    if: always() && needs.fastfetch-aarch64-build.result == 'success'
+    needs: fastfetch-aarch64-build
+    steps:
+    - name: Send notification
+      uses: appleboy/telegram-action@v0.1.1
+      with:
+        token: ${{ secrets.TELEGRAMBOT }}
+        to: ${{ secrets.TELEGRAMCHAT }}
+        message: Good News! A new version ${{ inputs.version }} of FastFetch is ready!
