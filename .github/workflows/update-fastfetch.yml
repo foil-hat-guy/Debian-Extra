@@ -79,6 +79,9 @@ jobs:
       with:
         cwd: './debian'
         message: 'Automatic update of the repository.'
+        
+    - name: Delete Repository Cache
+      uses: TheRealRyGuy/clear-cache-action@master
     
   report:
     runs-on: ubuntu-latest
