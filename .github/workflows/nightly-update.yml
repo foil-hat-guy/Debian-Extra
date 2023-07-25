@@ -3,14 +3,15 @@ on:
   workflow_dispatch:
 
 jobs:
-  update-fastfetch:
-    concurrency: sequential
+  fastfetch:
     uses: foil-hat-guy/OPi5Plus-Soft/.github/workflows/check-fastfetch.yml@main
     secrets: inherit
 
-  update-neovim:
-    concurrency: sequential
+  neovim:
     uses: foil-hat-guy/OPi5Plus-Soft/.github/workflows/check-neovim.yml@main
     secrets: inherit
       
-    
+  update-repo:
+    needs: [ neovim, fastfetch ]
+    uses: foil-hat-guy/OPi5Plus-Soft/.github/workflows/update-debian-repo.yml@main
+    secrets: inherit
