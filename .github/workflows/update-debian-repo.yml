@@ -8,11 +8,18 @@ jobs:
     name: Load packages from cache to repo
     steps:
     - name: Load new fastfetch.deb
-      uses: actions/cache/restore@v@v3.3.1
+      uses: actions/cache/restore@v3.3.1
       id: fastfetch-cache
       with:
         path: ./
         key: fastfetch.deb
+    
+    - name: Import GPG key for debian
+      if: steps.fastfetch-cache.outputs.cache-hit == 'true'
+      uses: crazy-max/ghaction-import-gpg@v5
+      with:
+          gpg_private_key: ${{ secrets.DEBIANREPOSIGNATURE }}
+          passphrase: ${{ secrets.PASSPHRASE }}
     
     - name: Prepare repository root folder
       if: steps.fastfetch-cache.outputs.cache-hit == 'true'
