@@ -1,0 +1,61 @@
+name: Update debian repository
+on:
+  workflow_dispatch:
+
+jobs:
+  update-repo:
+    runs-on: ubuntu-latest
+    name: Load packages from cache to repo
+    steps:
+    - name: Load new fastfetch.deb
+      uses: actions/cache/restore@v@v3.3.1
+      id: fastfetch-cache
+      with:
+        path: ./
+        key: fastfetch.deb
+    
+    - name: Prepare repository root folder
+      if: steps.fastfetch-cache.outputs.cache-hit == 'true'
+      run: |
+          sudo apt-get update -y
+          sudo apt-get -y install reprepro
+          ls
+          mkdir debian 
+          
+    - uses: actions/checkout@v3
+      if: steps.fastfetch-cache.outputs.cache-hit == 'true'
+      with:
+        path: './debian'
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Prepare files for debian repository
+      if: steps.fastfetch-cache.outputs.cache-hit == 'true'
+      run: |
+          cd ./debian
+          reprepro --basedir . remove bookworm fastfetch
+          reprepro --basedir . includedeb bookworm /home/runner/work/OPi5Plus-Soft/OPi5Plus-Soft/fastfetch-stable.deb
+
+    - name: Update git repository
+      if: steps.fastfetch-cache.outputs.cache-hit == 'true'
+      uses: EndBug/add-and-commit@v9.1.3
+      with:
+        cwd: './debian'
+        message: 'Automatic update of the repository.'
+        
+    - name: Delete Repository Cache
+      if: steps.fastfetch-cache.outputs.cache-hit == 'true'
+      uses: TheRealRyGuy/clear-cache-action@master
+      env:
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+  report:
+    runs-on: ubuntu-latest
+    if: always() && needs.update-repo.result == 'success'
+    needs: update-repo
+    steps:
+    - name: Send notification
+      uses: appleboy/telegram-action@v0.1.1
+      with:
+        token: ${{ secrets.TELEGRAMBOT }}
+        to: ${{ secrets.TELEGRAMCHAT }}
+        message: Debian repository successfuly updated!
