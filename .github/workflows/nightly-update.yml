@@ -1,4 +1,4 @@
-name: Update debian repository
+name: Update all packages
 on:
   workflow_dispatch:
 
