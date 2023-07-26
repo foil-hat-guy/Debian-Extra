@@ -1,7 +1,9 @@
 name: Nightly repo update
 on:
   workflow_dispatch:
-
+  schedule:
+  - cron: '0 20 * * *'
+  
 jobs:
   fastfetch:
     uses: foil-hat-guy/OPi5Plus-Soft/.github/workflows/check-fastfetch.yml@main
