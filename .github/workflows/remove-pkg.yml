@@ -17,6 +17,13 @@ jobs:
           gpg_private_key: ${{ secrets.DEBIANREPOSIGNATURE }}
           passphrase: ${{ secrets.PASSPHRASE }}
     
+    - name: Prepare repository root folder
+      run: |
+          sudo apt-get update -y
+          sudo apt-get -y install reprepro
+          mkdir debian 
+          cd debian
+    
     - uses: actions/checkout@v3
       with:
         path: './debian'
