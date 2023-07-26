@@ -7,6 +7,8 @@ jobs:
   update-repo:
     runs-on: ubuntu-latest
     name: Load packages from cache to repo
+    outputs:
+      has-new-pkg: ${{ contains( steps.*.outputs.cache-hit, 'true' ) }}
     steps:
     - name: Load new fastfetch.deb
       uses: actions/cache/restore@v3.3.1
@@ -62,9 +64,10 @@ jobs:
       env:
         token: ${{ secrets.GITHUB_TOKEN }}
     
-  report:
+  report-update:
+    name: Successful update report
     runs-on: ubuntu-latest
-    if: always() && needs.update-repo.result == 'success'
+    if: always() && needs.update-repo.result == 'success' && needs.update-repo.outputs.has-new-pkg == 'true'
     needs: update-repo
     steps:
     - name: Send notification
@@ -73,3 +76,29 @@ jobs:
         token: ${{ secrets.TELEGRAMBOT }}
         to: ${{ secrets.TELEGRAMCHAT }}
         message: Debian repository successfuly updated!
+        
+  report-fail:
+    name: Update fail report
+    runs-on: ubuntu-latest
+    if: always() && needs.update-repo.result == 'failure' 
+    needs: update-repo
+    steps:
+    - name: Send notification
+      uses: appleboy/telegram-action@v0.1.1
+      with:
+        token: ${{ secrets.TELEGRAMBOT }}
+        to: ${{ secrets.TELEGRAMCHAT }}
+        message: Debian repository failed to update!
+        
+  report-nonews:
+    name: No updates report
+    runs-on: ubuntu-latest
+    if: always() && needs.update-repo.result == 'success' && needs.update-repo.outputs.has-new-pkg == 'false'
+    needs: update-repo
+    steps:
+    - name: Send notification
+      uses: appleboy/telegram-action@v0.1.1
+      with:
+        token: ${{ secrets.TELEGRAMBOT }}
+        to: ${{ secrets.TELEGRAMCHAT }}
+        message: There is no updates today.
