@@ -1,0 +1,62 @@
+name: St DEB Build
+on:
+  workflow_dispatch:
+  workflow_call:
+
+jobs:
+  st-aarch64-build:
+    runs-on: ubuntu-latest
+    name: Build st for arm64
+    steps:
+    - name: Build st
+      uses: uraimo/run-on-arch-action@v2.5.0
+      id: runcmd
+      with:
+        arch: aarch64
+        distro: ubuntu_latest
+        setup: |
+            mkdir -p "${PWD}/artifacts"
+        dockerRunArgs: |
+            --volume "${PWD}/artifacts:/artifacts"
+        install: | 
+            apt-get update -y
+            apt-get -y install apt-utils
+            apt-get -y install git libx11-dev
+        
+        run: |
+            git clone --branch '0.9' --depth 1 'git://git.suckless.org/st'
+            cd ./st
+            sudo make clean install
+            cp ./st "/artifacts/st"
+    
+    - name: Save DEB to cache
+      uses: actions/cache/save@v3.3.1
+      with:
+        path: /home/runner/work/OPi5Plus-Soft/OPi5Plus-Soft/artifacts/st
+        key: st
+          
+  report-fail:
+    name: Report build fail.
+    runs-on: ubuntu-latest
+    if: always() && needs.st-aarch64-build.result == 'failure'
+    needs: st-aarch64-build
+    steps:
+    - name: Send notification
+      uses: appleboy/telegram-action@v0.1.1
+      with:
+        token: ${{ secrets.TELEGRAMBOT }}
+        to: ${{ secrets.TELEGRAMCHAT }}
+        message: Warning! St build failed!
+
+  report-ok:
+    name: Report new version.
+    runs-on: ubuntu-latest
+    if: always() && needs.st-aarch64-build.result == 'success'
+    needs: st-aarch64-build
+    steps:
+    - name: Send notification
+      uses: appleboy/telegram-action@v0.1.1
+      with:
+        token: ${{ secrets.TELEGRAMBOT }}
+        to: ${{ secrets.TELEGRAMCHAT }}
+        message: Good News! A new version of St is ready!
