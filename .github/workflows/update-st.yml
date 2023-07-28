@@ -21,12 +21,12 @@ jobs:
         install: | 
             apt-get update -y
             apt-get -y install apt-utils
-            apt-get -y install git libx11-dev make pkg-config
+            apt-get -y install git libx11-dev make pkg-config libxft-dev libfontconfig-dev
         
         run: |
             git clone --branch '0.9' --depth 1 'git://git.suckless.org/st'
             cd ./st
-            make clean install
+            make st
             echo  '========='
             ls
             echo  '========='
