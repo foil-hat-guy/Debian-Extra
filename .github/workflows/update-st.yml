@@ -26,7 +26,10 @@ jobs:
         run: |
             git clone --branch '0.9' --depth 1 'git://git.suckless.org/st'
             cd ./st
-            sudo make clean install
+            make clean install
+            echo  '========='
+            ls
+            echo  '========='
             cp ./st "/artifacts/st"
     
     - name: Save DEB to cache
