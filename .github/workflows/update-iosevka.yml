@@ -40,7 +40,7 @@ jobs:
       run: |
           ./build-iosevka.sh 'Extra line'
           echo '========'
-          cat ./$basedir/DEBIAN/control
+          cat ./$basename/DEBIAN/control
           echo '========'
           dpkg-deb --build ./$basename
 
