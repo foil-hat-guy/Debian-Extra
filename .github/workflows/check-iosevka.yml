@@ -1,4 +1,4 @@
-  name: Check fastfetch version
+  name: Check iosevka version
   on:
     workflow_dispatch:
     workflow_call:
