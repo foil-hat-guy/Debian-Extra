@@ -53,20 +53,16 @@ jobs:
           echo 'Description: Iosevka nerd font.' >> $controlfile
           echo ' This package contains regular, bold, italic and bold italic fonts.' >> $controlfile
 
-          echo '======='
-          cat $controlfile
-          echo '======='
-
           dpkg-deb --build './'$basename
-          
-          cp ./*.deb "/artifacts/"
-          cd ./artifacts
+
+          echo '========'
           ls
+          echo '========'
     
     - name: Save DEB to cache
       uses: actions/cache/save@v3.3.1
       with:
-        path: /home/runner/work/OPi5Plus-Soft/OPi5Plus-Soft/artifacts/iosevka*.deb
+        path: /home/runner/work/OPi5Plus-Soft/OPi5Plus-Soft/*.deb
         key: iosevka.deb
     
   report-fail:
