@@ -38,8 +38,8 @@ jobs:
           cp './source/'$basename'-Italic.ttf' './'$basename$fontdir'-Italic.ttf'
           cp './source/'$basename'-Regular.ttf' './'$basename$fontdir'-Regular.ttf'
 
-          mkdir -p '/'$basename'/DEBIAN'
-          export controlfile='/'$basename'/DEBIAN/control'
+          mkdir -p './'$basename'/DEBIAN'
+          export controlfile='./'$basename'/DEBIAN/control'
           touch controlfile
           echo 'Package: '$pkgname >> controlfile
           echo 'Maintainer: Foil-hat-guy <dev@foilhatguy.casa>' >> controlfile
