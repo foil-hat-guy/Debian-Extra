@@ -40,21 +40,21 @@ jobs:
 
           mkdir -p './'$basename'/DEBIAN'
           export controlfile='./'$basename'/DEBIAN/control'
-          touch controlfile
-          echo 'Package: '$pkgname >> controlfile
-          echo 'Maintainer: Foil-hat-guy <dev@foilhatguy.casa>' >> controlfile
-          echo 'Priority: optional' >> controlfile
-          echo 'Essentional: no' >> controlfile
-          echo 'Architecture: all' >> controlfile
-          echo 'Section: fonts' >> controlfile
-          echo 'Homepage: https://www.nerdfonts.com/' >> controlfile
-          echo 'Version: '$(echo ${{ inputs.version }} | cut -d 'v' -f 2) >> controlfile
-          echo 'Installed-Size: '$(du -sk './'$basename | cut -f 1) >> controlfile
-          echo 'Description: Iosevka nerd font.' >> controlfile
-          echo ' This package contains regular, bold, italic and bold italic fonts.' >> controlfile
+          touch $controlfile
+          echo 'Package: '$pkgname >> $controlfile
+          echo 'Maintainer: Foil-hat-guy <dev@foilhatguy.casa>' >> $controlfile
+          echo 'Priority: optional' >> $controlfile
+          echo 'Essentional: no' >> $controlfile
+          echo 'Architecture: all' >> $controlfile
+          echo 'Section: fonts' >> $controlfile
+          echo 'Homepage: https://www.nerdfonts.com/' >> $controlfile
+          echo 'Version: '$(echo ${{ inputs.version }} | cut -d 'v' -f 2) >> $controlfile
+          echo 'Installed-Size: '$(du -sk './'$basename | cut -f 1) >> $controlfile
+          echo 'Description: Iosevka nerd font.' >> $controlfile
+          echo ' This package contains regular, bold, italic and bold italic fonts.' >> $controlfile
 
           echo '======='
-          cat controlfile
+          cat $controlfile
           echo '======='
 
           dpkg-deb --build './'$basename
