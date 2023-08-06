@@ -20,10 +20,9 @@ jobs:
     steps:
     - name: Build iosevka.deb
       run: |
-          sudo apt install -y xz-utils
           mkdir source
           cd source
-          wget -qO - https://github.com/ryanoasis/nerd-fonts/releases/download/${{ inputs.version }}/Iosevka.tar.xz
+          wget -q https://github.com/ryanoasis/nerd-fonts/releases/download/${{ inputs.version }}/Iosevka.tar.xz 
           xz --decompress Iosevka.tar.xz
           echo '==========='
           ls
