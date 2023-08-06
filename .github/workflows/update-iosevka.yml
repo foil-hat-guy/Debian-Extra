@@ -33,25 +33,25 @@ jobs:
         touch build.sh
         cat <<EOT >> build.sh
         #1/bin/sh
-        mkdir -p ./$basename$fontdir
-        cp ./source/$basename-Bold.ttf ./$basename$fontdir-Bold.ttf
-        cp ./source/$basename-BoldItalic.ttf ./$basename$fontdir-BoldItalic.ttf
-        cp ./source/$basename-Italic.ttf ./$basename$fontdir-Italic.ttf
-        cp ./source/$basename-Regular.ttf ./$basename$fontdir-Regular.ttf
-        mkdir -p ./$basename/DEBIAN
-        export controlfile=./$basename/DEBIAN/control
-        touch $controlfile
-        echo Package: $pkgname >> $controlfile
-        echo "Maintainer: Foil-hat-guy <dev@foilhatguy.casa>" >> $controlfile
-        echo Priority: optional >> $controlfile
-        echo Essentional: no >> $controlfile
-        echo Architecture: all >> $controlfile
-        echo Section: fonts >> $controlfile
-        echo Homepage: https://www.nerdfonts.com/ >> $controlfile
-        echo Version: $(echo $pkgversion | cut -d v -f 2) >> $controlfile
-        echo Installed-Size: $(du -sk ./$basename | cut -f 1) >> $controlfile
-        echo Description: Iosevka nerd font. >> $controlfile
-        echo " This package contains regular, bold, italic and bold italic fonts." >> $controlfile
+        mkdir -p ./\$basename\$fontdir
+        cp ./source/\$basename-Bold.ttf ./\$basename\$fontdir-Bold.ttf
+        cp ./source/\$basename-BoldItalic.ttf ./\$basename\$fontdir-BoldItalic.ttf
+        cp ./source/\$basename-Italic.ttf ./\$basename\$fontdir-Italic.ttf
+        cp ./source/\$basename-Regular.ttf ./\$basename\$fontdir-Regular.ttf
+        mkdir -p ./\$basename/DEBIAN
+        export controlfile=./\$basename/DEBIAN/control
+        touch \$controlfile
+        echo Package: \$pkgname >> \$controlfile
+        echo "Maintainer: Foil-hat-guy <dev@foilhatguy.casa>" >> \$controlfile
+        echo Priority: optional >> \$controlfile
+        echo Essentional: no >> \$controlfile
+        echo Architecture: all >> \$controlfile
+        echo Section: fonts >> \$controlfile
+        echo Homepage: https://www.nerdfonts.com/ >> \$controlfile
+        echo Version: \$(echo \$pkgversion | cut -d v -f 2) >> \$controlfile
+        echo Installed-Size: \$(du -sk ./\$basename | cut -f 1) >> \$controlfile
+        echo Description: Iosevka nerd font. >> \$controlfile
+        echo " This package contains regular, bold, italic and bold italic fonts." >> \$controlfile
         EOT
         chmod a+x ./build.sh
         
