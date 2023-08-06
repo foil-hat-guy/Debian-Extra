@@ -1,0 +1,68 @@
+name: Iosevka DEB Build
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Package version to be built'
+        default: 'v3.0.1'
+        required: true
+        type: string
+  workflow_call:
+    inputs:
+      version:
+        required: true
+        type: string
+
+jobs:
+  iosevka-build:
+    name: Build iosevka package
+    runs-on: ubuntu-latest
+    steps:
+    - name: Build iosevka.deb
+      run: |
+          sudo apt install -y xz-utils
+          mkdir source
+          cd source
+          wget -qO - https://github.com/ryanoasis/nerd-fonts/releases/download/${{ inputs.version }}/Iosevka.tar.xz
+          xz --decompress Iosevka.tar.xz
+          echo '==========='
+          ls
+          echo '==========='
+          cd ..
+          ls
+          echo '==========='
+          cp ./*.deb "/artifacts/"'
+          cd ./artifacts
+          ls
+    
+    - name: Save DEB to cache
+      uses: actions/cache/save@v3.3.1
+      with:
+        path: /home/runner/work/OPi5Plus-Soft/OPi5Plus-Soft/artifacts/iosevka*.deb
+        key: iosevka.deb
+    
+  report-fail:
+    name: Report build fail.
+    runs-on: ubuntu-latest
+    if: always() && needs.iosevka-build.result == 'failure'
+    needs: iosevka-build
+    steps:
+    - name: Send notification
+      uses: appleboy/telegram-action@v0.1.1
+      with:
+        token: ${{ secrets.TELEGRAMBOT }}
+        to: ${{ secrets.TELEGRAMCHAT }}
+        message: Warning! Iosevka build failed!
+
+  report-ok:
+    name: Report new version.
+    runs-on: ubuntu-latest
+    if: always() && needs.iosevka-build.result == 'success'
+    needs: iosevka-build
+    steps:
+    - name: Send notification
+      uses: appleboy/telegram-action@v0.1.1
+      with:
+        token: ${{ secrets.TELEGRAMBOT }}
+        to: ${{ secrets.TELEGRAMCHAT }}
+        message: Good News! A new version ${{ inputs.version }} of Iosevka is ready!
