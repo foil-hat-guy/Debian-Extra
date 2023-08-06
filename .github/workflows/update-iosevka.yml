@@ -31,9 +31,11 @@ jobs:
     - name: Prepare build script
       run: |
         touch build.sh
-        echo '#1/bin/sh
+        cat <<EOT >> build.sh
+        #1/bin/sh
         line 1
-        line 2' >> build.sh
+        line 2
+        EOT
         chmod a+x ./build.sh
         
     - name: Build IosevkaNerdFont.deb
@@ -51,7 +53,7 @@ jobs:
           export controlfile=./$basename/DEBIAN/control
           touch $controlfile
           echo Package: $pkgname >> $controlfile
-          echo Maintainer: Foil-hat-guy <dev@foilhatguy.casa> >> $controlfile
+          echo "Maintainer: Foil-hat-guy <dev@foilhatguy.casa>" >> $controlfile
           echo Priority: optional >> $controlfile
           echo Essentional: no >> $controlfile
           echo Architecture: all >> $controlfile
