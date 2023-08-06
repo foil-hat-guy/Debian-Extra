@@ -31,11 +31,9 @@ jobs:
     - name: Prepare build script
       run: |
         touch build.sh
-        cat <<EOT >> build.sh
-        #1/bin/sh
+        echo '#1/bin/sh
         line 1
-        line 2
-        EOT
+        line 2' >> build.sh
         chmod a+x ./build.sh
         
     - name: Build IosevkaNerdFont.deb
