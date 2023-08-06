@@ -24,6 +24,7 @@ jobs:
     steps:
     - name: Download iosevka.tar.xz
       run: |
+          mkdir artifacts
           mkdir source
           cd source
           wget -q https://github.com/ryanoasis/nerd-fonts/releases/download/${{ inputs.version }}/Iosevka.tar.xz 
@@ -38,21 +39,15 @@ jobs:
         basename: IosevkaNerdFont
         pkgname: iosevka-nerd-font
       run: |
-          ./build-iosevka.sh 'Extra line'
-          echo '========'
-          cat ./$basename/DEBIAN/control
-          echo '========'
+          ./build-iosevka.sh
           dpkg-deb --build ./$basename
-
-          echo '========'
-          ls
-          echo '========'
+          cp ./*.deb ./artifacts
     
     - name: Save DEB to cache
       uses: actions/cache/save@v3.3.1
       with:
-        path: /home/runner/work/OPi5Plus-Soft/OPi5Plus-Soft/*.deb
-        key: iosevka.deb
+        path: /home/runner/work/OPi5Plus-Soft/OPi5Plus-Soft/artifacts/*.deb
+        key: iosevka.debs
     
   report-fail:
     name: Report build fail.
