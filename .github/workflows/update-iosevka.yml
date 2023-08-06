@@ -56,8 +56,10 @@ jobs:
           echo '======='
           cat controlfile
           echo '======='
+
+          dpkg-deb --build './'$basename
           
-          cp ./*.deb "/artifacts/"'
+          cp ./*.deb "/artifacts/"
           cd ./artifacts
           ls
     
