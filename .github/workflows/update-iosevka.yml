@@ -32,7 +32,7 @@ jobs:
         basename: IosevkaNerdFont
         pkgname: iosevka-nerd-font
       run: |
-          mkdir -p '/'$basename$fontdir
+          mkdir -p './'$basename$fontdir
           cp './source/'$basename'-Bold.ttf' './'$basename$fontdir'-Bold.ttf'
           cp './source/'$basename'-BoldItalic.ttf' './'$basename$fontdir'-BoldItalic.ttf'
           cp './source/'$basename'-Italic.ttf' './'$basename$fontdir'-Italic.ttf'
