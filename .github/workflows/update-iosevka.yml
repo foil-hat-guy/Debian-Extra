@@ -15,21 +15,48 @@ on:
 
 jobs:
   iosevka-build:
-    name: Build iosevka package
+    name: Build iosevka packages
     runs-on: ubuntu-latest
+    env:
+      fontdir: /usr/share/fonts/truetype/iosevka
+      docdir: /usr/share/doc/iosevka
     steps:
-    - name: Build iosevka.deb
+    - name: Download iosevka.tar.xz
       run: |
           mkdir source
           cd source
           wget -q https://github.com/ryanoasis/nerd-fonts/releases/download/${{ inputs.version }}/Iosevka.tar.xz 
           tar -xf Iosevka.tar.xz
-          echo '==========='
-          ls
-          echo '==========='
-          cd ..
-          ls
-          echo '==========='
+    - name: Build IosevkaNerdFont.deb
+      env:
+        basename: IosevkaNerdFont
+        pkgname: iosevka-nerd-font
+      run: |
+          mkdir -p '/'$basename$fontdir
+          cp './source/'$basename'-Bold.ttf' './'$basename$fontdir'-Bold.ttf'
+          cp './source/'$basename'-BoldItalic.ttf' './'$basename$fontdir'-BoldItalic.ttf'
+          cp './source/'$basename'-Italic.ttf' './'$basename$fontdir'-Italic.ttf'
+          cp './source/'$basename'-Regular.ttf' './'$basename$fontdir'-Regular.ttf'
+
+          mkdir -p '/'$basename'/DEBIAN'
+          export controlfile='/'$basename'/DEBIAN/control'
+          touch controlfile
+          echo 'Package: '$pkgname >> controlfile
+          echo 'Maintainer: Foil-hat-guy <dev@foilhatguy.casa>' >> controlfile
+          echo 'Priority: optional' >> controlfile
+          echo 'Essentional: no' >> controlfile
+          echo 'Architecture: all' >> controlfile
+          echo 'Section: fonts' >> controlfile
+          echo 'Homepage: https://www.nerdfonts.com/' >> controlfile
+          echo 'Version: '$(echo ${{ inputs.version }} | cut -d 'v' -f 2) >> controlfile
+          echo 'Installed-Size: '$(du -sk './'$basename | cut -f 1) >> controlfile
+          echo 'Description: Iosevka nerd font.' >> controlfile
+          echo ' This package contains regular, bold, italic and bold italic fonts.' >> controlfile
+
+          echo '======='
+          cat controlfile
+          echo '======='
+          
           cp ./*.deb "/artifacts/"'
           cd ./artifacts
           ls
