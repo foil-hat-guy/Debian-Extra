@@ -23,7 +23,7 @@ jobs:
           mkdir source
           cd source
           wget -q https://github.com/ryanoasis/nerd-fonts/releases/download/${{ inputs.version }}/Iosevka.tar.xz 
-          xz --decompress Iosevka.tar.xz
+          tar -xf Iosevka.tar.xz
           echo '==========='
           ls
           echo '==========='
