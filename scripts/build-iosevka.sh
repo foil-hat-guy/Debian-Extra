@@ -11,7 +11,7 @@ touch ./$basename/DEBIAN/control
 
 cat <<EOT >> ./$basename/DEBIAN/control
 Package: $pkgname
-Maintainer: Foil-hat-guy \<dev@foilhatguy.casa\> 
+Maintainer: Foil-hat-guy <dev@foilhatguy.casa> 
 Priority: optional 
 Essentional: no 
 Architecture: all 
@@ -20,6 +20,6 @@ Homepage: https://www.nerdfonts.com/
 Version: $(echo $pkgversion | cut -d v -f 2) 
 Installed-Size: $(du -sk ./$basename | cut -f 1) 
 Description: Iosevka nerd font.
-\ This package contains regular, bold, italic and bold italic fonts.
-$1
+ This package contains regular, bold, italic and bold italic fonts.
+ $1
 EOT
