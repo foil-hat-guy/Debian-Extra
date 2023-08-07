@@ -21,5 +21,9 @@ Version: $(echo $pkgversion | cut -d v -f 2)
 Installed-Size: $(du -sk ./$basename | cut -f 1) 
 Description: Iosevka nerd font.
  This package contains regular, bold, italic and bold italic fonts.
- $1
 EOT
+
+if [ ! -z $1 ]
+then
+  echo ' '$1 >> ./$basename/DEBIAN/control
+fi
