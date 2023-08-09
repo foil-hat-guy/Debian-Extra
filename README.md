@@ -15,12 +15,12 @@ build them from source. Or you can download them and install from this repositor
 
 1. Download a gpg key for the repository:
 ```
-wget -qO - https://foil-hat-guy.github.io/OPi5Plus-Soft/PUBLIC.KEY | sudo tee /etc/apt/trusted.gpg.d/OPi5Plus-Soft.asc
+wget -qO - https://foil-hat-guy.github.io/OPi5Plus-Soft/PUBLIC.KEY | sudo tee /etc/apt/trusted.gpg.d/OPi5Plus-Soft.asc >> /dev/null
 ```
 
 2. Add the repository to the repository list:
 ```
-printf "\ndeb https://foil-hat-guy.github.io/OPi5Plus-Soft/ bookworm contrib \n" | sudo tee --append /etc/apt/sources.list 
+printf "\ndeb https://foil-hat-guy.github.io/OPi5Plus-Soft/ bookworm contrib \n" | sudo tee --append /etc/apt/sources.list >> /dev/null
 ```
 
 ## Usage:
