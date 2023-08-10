@@ -29,6 +29,9 @@ jobs:
           cd source
           wget -q https://github.com/ryanoasis/nerd-fonts/releases/download/${{ inputs.version }}/Iosevka.tar.xz 
           tar -xf Iosevka.tar.xz
+          echo '===='
+          ls
+          echo '===='
     - name: Prepare build script
       run: |
           wget -q https://raw.githubusercontent.com/foil-hat-guy/OPi5Plus-Soft/main/scripts/build-iosevka.sh
