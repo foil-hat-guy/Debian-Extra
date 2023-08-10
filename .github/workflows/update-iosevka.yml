@@ -52,6 +52,42 @@ jobs:
           dpkg-deb --build ./$basename
           cp ./*.deb ./artifacts
     
+    - name: Build IosevkaNerdFontPropo.deb
+      env:
+        basename: IosevkaNerdFontPropo
+        pkgname: iosevka-nerd-font-propo
+      run: |
+          ./build-iosevka.sh 'Proportional version.'
+          dpkg-deb --build ./$basename
+          cp ./*.deb ./artifacts
+    
+    - name: Build IosevkaTermNerdFont.deb
+      env:
+        basename: IosevkaTermNerdFont
+        pkgname: iosevka-term-nerd-font
+      run: |
+          ./build-iosevka.sh ' ' 'This font is more suitable for terminals with restricted capabilities.'
+          dpkg-deb --build ./$basename
+          cp ./*.deb ./artifacts
+          
+    - name: Build IosevkaTermNerdFontMono.deb
+      env:
+        basename: IosevkaTermNerdFontMono
+        pkgname: iosevka-term-nerd-font-mono
+      run: |
+          ./build-iosevka.sh 'Monospace version.' 'This font is more suitable for terminals with restricted capabilities.'
+          dpkg-deb --build ./$basename
+          cp ./*.deb ./artifacts
+    
+    - name: Build IosevkaTermNerdFontPropo.deb
+      env:
+        basename: IosevkaTermNerdFontPropo
+        pkgname: iosevka-term-nerd-font-propo
+      run: |
+          ./build-iosevka.sh 'Proportional version.' 'This font is more suitable for terminals with restricted capabilities.'
+          dpkg-deb --build ./$basename
+          cp ./*.deb ./artifacts
+    
     - name: Save DEB to cache
       uses: actions/cache/save@v3.3.1
       with:
