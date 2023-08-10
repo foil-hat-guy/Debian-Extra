@@ -42,6 +42,15 @@ jobs:
           ./build-iosevka.sh
           dpkg-deb --build ./$basename
           cp ./*.deb ./artifacts
+          
+    - name: Build IosevkaNerdFontMono.deb
+      env:
+        basename: IosevkaNerdFontMono
+        pkgname: iosevka-nerd-font-mono
+      run: |
+          ./build-iosevka.sh 'It is a monospace version of this font.'
+          dpkg-deb --build ./$basename
+          cp ./*.deb ./artifacts
     
     - name: Save DEB to cache
       uses: actions/cache/save@v3.3.1
