@@ -48,7 +48,7 @@ jobs:
         basename: IosevkaNerdFontMono
         pkgname: iosevka-nerd-font-mono
       run: |
-          ./build-iosevka.sh 'It is a monospace version of this font.'
+          ./build-iosevka.sh 'Monospace version.'
           dpkg-deb --build ./$basename
           cp ./*.deb ./artifacts
     
