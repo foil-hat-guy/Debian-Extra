@@ -15,6 +15,40 @@ Maintainer: Linus Dierheimer <Linus@Dierheimer.de>
 Version: 1.12.2
 Installed-Size: 695
 
+Package: iosevka-nerd-font
+Maintainer: Foil-hat-guy <dev@foilhatguy.casa> 
+Essentional: no 
+Architecture: all 
+Homepage: https://www.nerdfonts.com/ 
+Version: 3.0.1 
+Installed-Size: 37400 
+Priority: optional
+Section: fonts
+Filename: pool/contrib/i/iosevka-nerd-font/iosevka-nerd-font_3.0.1_all.deb
+Size: 8870676
+SHA256: 0fc85cec379fc54c79af373874aba3693c77c8a55dfce4dbfeee280a5e993c44
+SHA1: f1d7624f538c001ebaf7d26bd6733a3981ea6d40
+MD5sum: f6105e3c1ce1d9541495f9b81a0d3098
+Description: Iosevka nerd font.
+ This package contains regular, bold, italic and bold italic fonts.
+
+Package: iosevka-nerd-font-mono
+Maintainer: Foil-hat-guy <dev@foilhatguy.casa> 
+Essentional: no 
+Architecture: all 
+Homepage: https://www.nerdfonts.com/ 
+Version: 3.0.1 
+Installed-Size: 36980 
+Priority: optional
+Section: fonts
+Filename: pool/contrib/i/iosevka-nerd-font-mono/iosevka-nerd-font-mono_3.0.1_all.deb
+Size: 8838466
+SHA256: b44934a2938623390f7a45e293c238ceb062f5309e08aca78d035aba33d8e6b6
+SHA1: e7d5b33bd42d7a1285177907cb8d32d2decbde13
+MD5sum: 01b09b0ca21ce32ac46413179dc72303
+Description: Iosevka nerd font.
+ This package contains regular, bold, italic and bold italic fonts.
+
 Package: neovim
 Architecture: arm64
 Depends: libc6 (>= 2.34), libgcc-s1 (>= 4.2)
