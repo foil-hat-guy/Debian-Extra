@@ -1,10 +1,10 @@
 #!/bin/sh
 
 mkdir -p ./$basename$fontdir
-cp ./source/$basename-Bold.ttf ./$basename$fontdir-Bold.ttf
-cp ./source/$basename-BoldItalic.ttf ./$basename$fontdir-BoldItalic.ttf
-cp ./source/$basename-Italic.ttf ./$basename$fontdir-Italic.ttf
-cp ./source/$basename-Regular.ttf ./$basename$fontdir-Regular.ttf
+cp ./source/$basename-Bold.ttf ./$basename$fontdir/$basename-Bold.ttf
+cp ./source/$basename-BoldItalic.ttf ./$basename$fontdir/$basename-BoldItalic.ttf
+cp ./source/$basename-Italic.ttf ./$basename$fontdir/$basename-Italic.ttf
+cp ./source/$basename-Regular.ttf ./$basename$fontdir/$basename-Regular.ttf
 
 mkdir -p ./$basename/DEBIAN
 touch ./$basename/DEBIAN/control
