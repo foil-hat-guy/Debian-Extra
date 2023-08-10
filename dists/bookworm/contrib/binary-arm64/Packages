@@ -15,6 +15,111 @@ Maintainer: Linus Dierheimer <Linus@Dierheimer.de>
 Version: 1.12.2
 Installed-Size: 695
 
+Package: iosevka-nerd-font
+Maintainer: Foil-hat-guy <dev@foilhatguy.casa> 
+Essentional: no 
+Architecture: all 
+Homepage: https://www.nerdfonts.com/ 
+Version: 3.0.1 
+Installed-Size: 37400 
+Priority: optional
+Section: fonts
+Filename: pool/contrib/i/iosevka-nerd-font/iosevka-nerd-font_3.0.1_all.deb
+Size: 8870740
+SHA256: d3308077d0ffb285704c43a8df76434b6457fca882cae8071bacacd2d406fa9d
+SHA1: ebf8355aa3c56d564ec0cee85e16882e44ee2585
+MD5sum: 534c82fdf43e585c76cab901c8524861
+Description: Iosevka nerd font. 
+ This package contains regular, bold, italic and bold italic fonts.
+
+Package: iosevka-nerd-font-mono
+Maintainer: Foil-hat-guy <dev@foilhatguy.casa> 
+Essentional: no 
+Architecture: all 
+Homepage: https://www.nerdfonts.com/ 
+Version: 3.0.1 
+Installed-Size: 36980 
+Priority: optional
+Section: fonts
+Filename: pool/contrib/i/iosevka-nerd-font-mono/iosevka-nerd-font-mono_3.0.1_all.deb
+Size: 8838420
+SHA256: ed0e7d841527809fdf16f37fb394105773ef30dd4d5782a0d20b5ff700911fb4
+SHA1: 6c2c7d28aea71f9da6e79890957acb5de701d694
+MD5sum: fac8a7de9c450aceb0a9cbeefd5e25e4
+Description: Iosevka nerd font. Monospace version.
+ This package contains regular, bold, italic and bold italic fonts.
+
+Package: iosevka-nerd-font-propo
+Maintainer: Foil-hat-guy <dev@foilhatguy.casa> 
+Essentional: no 
+Architecture: all 
+Homepage: https://www.nerdfonts.com/ 
+Version: 3.0.1 
+Installed-Size: 37400 
+Priority: optional
+Section: fonts
+Filename: pool/contrib/i/iosevka-nerd-font-propo/iosevka-nerd-font-propo_3.0.1_all.deb
+Size: 8897088
+SHA256: 95e91f982602b7b33ef23d4f240da4a5e5987fa5036f43bbd20701652d98c160
+SHA1: 434d54a76c938787ed8eb4b8aa4662c559fe55ca
+MD5sum: 19d3abaa47934250be4513fc80bfee11
+Description: Iosevka nerd font. Proportional version.
+ This package contains regular, bold, italic and bold italic fonts.
+
+Package: iosevka-term-nerd-font
+Maintainer: Foil-hat-guy <dev@foilhatguy.casa> 
+Essentional: no 
+Architecture: all 
+Homepage: https://www.nerdfonts.com/ 
+Version: 3.0.1 
+Installed-Size: 37408 
+Priority: optional
+Section: fonts
+Filename: pool/contrib/i/iosevka-term-nerd-font/iosevka-term-nerd-font_3.0.1_all.deb
+Size: 8871328
+SHA256: a92d7eda5637b0bd2bc5a0eae8e6f79b611ec5f6e9b0a142bcab718a80c7d4a2
+SHA1: 0d4b1796db766edb37824313db221a1d702e6249
+MD5sum: 39c5f4a44f099be7ce91c98e28ea8793
+Description: Iosevka nerd font.  
+ This package contains regular, bold, italic and bold italic fonts.
+ This font is more suitable for terminals with restricted capabilities.
+
+Package: iosevka-term-nerd-font-mono
+Maintainer: Foil-hat-guy <dev@foilhatguy.casa> 
+Essentional: no 
+Architecture: all 
+Homepage: https://www.nerdfonts.com/ 
+Version: 3.0.1 
+Installed-Size: 36980 
+Priority: optional
+Section: fonts
+Filename: pool/contrib/i/iosevka-term-nerd-font-mono/iosevka-term-nerd-font-mono_3.0.1_all.deb
+Size: 8838070
+SHA256: c771f2241e827e54022e067267ad2fe605c904f9e01ec525c31e360c2c9d92c9
+SHA1: 134398cbac278042699c803636e4bac1d2de9ae8
+MD5sum: bba8809227d15c1b52c4f4e6848d936b
+Description: Iosevka nerd font. Monospace version.
+ This package contains regular, bold, italic and bold italic fonts.
+ This font is more suitable for terminals with restricted capabilities.
+
+Package: iosevka-term-nerd-font-propo
+Maintainer: Foil-hat-guy <dev@foilhatguy.casa> 
+Essentional: no 
+Architecture: all 
+Homepage: https://www.nerdfonts.com/ 
+Version: 3.0.1 
+Installed-Size: 37408 
+Priority: optional
+Section: fonts
+Filename: pool/contrib/i/iosevka-term-nerd-font-propo/iosevka-term-nerd-font-propo_3.0.1_all.deb
+Size: 8898116
+SHA256: 9024e8e9faaeb257ebc99a919a8a5d605165da6cc3d704ec7686c0a0305cd06d
+SHA1: 020dbade8bd520f655d5c71b2c130af2b202e438
+MD5sum: 29a9b97f4dd4cfdab87d98842d386cbd
+Description: Iosevka nerd font. Proportional version.
+ This package contains regular, bold, italic and bold italic fonts.
+ This font is more suitable for terminals with restricted capabilities.
+
 Package: neovim
 Architecture: arm64
 Depends: libc6 (>= 2.34), libgcc-s1 (>= 4.2)
