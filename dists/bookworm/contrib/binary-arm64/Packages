@@ -15,31 +15,6 @@ Maintainer: Linus Dierheimer <Linus@Dierheimer.de>
 Version: 1.12.2
 Installed-Size: 695
 
-Package: iosevka
-Maintainer: Foil-hat-guy <dev@foilhatguy.casa> 
-Essentional: no 
-Architecture: all
-Depends: iosevka-nerd-font (= 3.0.1),
- iosevka-nerd-font-mono (= 3.0.1),
- iosevka-nerd-font-propo (= 3.0.1),
- iosevka-term-nerd-font (= 3.0.1),
- iosevka-term-nerd-font-mono (= 3.0.1),
- iosevka-term-nerd-font-propo (= 3.0.1)
-Homepage: https://www.nerdfonts.com/ 
-Version: 3.0.1 
-Installed-Size: 8
-Priority: optional
-Section: fonts
-Filename: pool/contrib/i/iosevka/iosevka_3.0.1_all.deb
-Size: 768
-SHA256: 0d7ca1bb393de3803607d508ce8b21502cf496fa1349a754f5d4637ae20a870d
-SHA1: 460d3bcfe23cb58ffcb236c6b9cce5e431ca0a19
-MD5sum: ce7490014bc368dc61e1c413f4a108fa
-Description: It is a meta-package. It installs a set of Iosevka and IosevkaTerm nerd fonts. 
- There are default, monospace and proportional variants for both of them. Each font family 
- includes regular, bold, italic and bold italic fonts. All in all there are 24 fonts in six 
- font families.
-
 Package: iosevka-nerd-font
 Maintainer: Foil-hat-guy <dev@foilhatguy.casa> 
 Essentional: no 
