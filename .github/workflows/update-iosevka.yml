@@ -4,7 +4,7 @@ on:
     inputs:
       version:
         description: 'Package version to be built'
-        default: 'v3.0.1'
+        default: '3.0.1'
         required: true
         type: string
   workflow_call:
@@ -27,9 +27,9 @@ jobs:
           mkdir artifacts
           mkdir source
           cd source
-          wget -q https://github.com/ryanoasis/nerd-fonts/releases/download/${{ inputs.version }}/Iosevka.tar.xz 
+          wget -q https://github.com/ryanoasis/nerd-fonts/releases/download/v$pkgversion/Iosevka.tar.xz 
           tar -xf Iosevka.tar.xz
-          wget -q https://github.com/ryanoasis/nerd-fonts/releases/download/${{ inputs.version }}/IosevkaTerm.tar.xz 
+          wget -q https://github.com/ryanoasis/nerd-fonts/releases/download/v$pkgversion/IosevkaTerm.tar.xz 
           tar -xf IosevkaTerm.tar.xz
     - name: Prepare build script
       run: |
@@ -127,6 +127,36 @@ jobs:
           EOT
           
           dpkg-deb --build ./$basename
+          cp ./*.deb ./artifacts
+
+    - name: Build Iosevka.deb
+      run: |
+          mkdir -p ./iosevka/DEBIAN
+          touch ./iosevka/DEBIAN/control
+          
+          cat <<EOT >> ./iosevka/DEBIAN/control
+          Package: $pkgname
+          Maintainer: Foil-hat-guy <dev@foilhatguy.casa> 
+          Priority: optional 
+          Essentional: no 
+          Architecture: all
+          Depends: iosevka-nerd-font (= $pkgversion),
+           iosevka-nerd-font-mono (= $pkgversion),
+           iosevka-nerd-font-propo (= $pkgversion),
+           iosevka-term-nerd-font (= $pkgversion),
+           iosevka-term-nerd-font-mono (= $pkgversion),
+           iosevka-term-nerd-font-propo (= $pkgversion)
+          Section: fonts 
+          Homepage: https://www.nerdfonts.com/ 
+          Version: $pkgversion 
+          Installed-Size: $(du -sk ./iosevka | cut -f 1)
+          Description: It is a meta-package. It installs a set of Iosevka and IosevkaTerm nerd fonts. 
+           There are default, monospace and proportional variants for both of them. Each font family 
+           includes regular, bold, italic and bold italic fonts. All in all there are 24 fonts in six 
+           font families.
+          EOT
+
+          dpkg-deb --build ./iosevka.deb
           cp ./*.deb ./artifacts
     
     - name: Save DEB to cache
