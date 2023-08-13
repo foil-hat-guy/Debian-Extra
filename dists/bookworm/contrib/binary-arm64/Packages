@@ -15,23 +15,6 @@ Maintainer: Linus Dierheimer <Linus@Dierheimer.de>
 Version: 1.12.2
 Installed-Size: 695
 
-Package: iosevka-nerd-font
-Maintainer: Foil-hat-guy <dev@foilhatguy.casa> 
-Essentional: no 
-Architecture: all 
-Homepage: https://www.nerdfonts.com/ 
-Version: 3.0.1 
-Installed-Size: 37400 
-Priority: optional
-Section: fonts
-Filename: pool/contrib/i/iosevka-nerd-font/iosevka-nerd-font_3.0.1_all.deb
-Size: 8870740
-SHA256: d3308077d0ffb285704c43a8df76434b6457fca882cae8071bacacd2d406fa9d
-SHA1: ebf8355aa3c56d564ec0cee85e16882e44ee2585
-MD5sum: 534c82fdf43e585c76cab901c8524861
-Description: Iosevka nerd font. 
- This package contains regular, bold, italic and bold italic fonts.
-
 Package: iosevka-nerd-font-mono
 Maintainer: Foil-hat-guy <dev@foilhatguy.casa> 
 Essentional: no 
