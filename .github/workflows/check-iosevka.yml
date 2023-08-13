@@ -35,6 +35,7 @@
       
     debug:
       runs-on: ubuntu-latest
+      needs: pkg-version
       steps:
       - name: print
         run: |
