@@ -135,7 +135,7 @@ jobs:
           touch ./iosevka/DEBIAN/control
           
           cat <<EOT >> ./iosevka/DEBIAN/control
-          Package: Iosevka
+          Package: iosevka
           Maintainer: Foil-hat-guy <dev@foilhatguy.casa> 
           Priority: optional 
           Essentional: no 
