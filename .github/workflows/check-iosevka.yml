@@ -33,6 +33,14 @@
             echo ${{ steps.getversion.outputs.current }}
             echo 'It is the same version!'
       
+    debug:
+      runs-on: ubuntu-latest
+      steps:
+      - name: print
+        run: |
+            echo ${{ steps.getversion.outputs.new }}
+            echo ${{ steps.getversion.outputs.current }}
+            
     build-new:
       name: Update debian repository
       needs: pkg-version
