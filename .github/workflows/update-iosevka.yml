@@ -195,7 +195,7 @@ jobs:
           * https://typeof.net/Iosevka/
           EOT
           
-          dpkg-deb --build ./iosevka
+          dpkg-deb --build ./iosevka-doc
           cp ./*.deb ./artifacts
           
     - name: Save DEB to cache
