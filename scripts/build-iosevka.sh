@@ -17,6 +17,6 @@ Essentional: no
 Architecture: all 
 Section: fonts 
 Homepage: https://www.nerdfonts.com/ 
-Version: $(echo $pkgversion | cut -d v -f 2) 
+Version: $pkgversion 
 Installed-Size: $(du -sk ./$basename | cut -f 1) 
 EOT
