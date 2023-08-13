@@ -156,7 +156,7 @@ jobs:
            font families.
           EOT
 
-          dpkg-deb --build ./iosevka.deb
+          dpkg-deb --build ./iosevka
           cp ./*.deb ./artifacts
     
     - name: Save DEB to cache
