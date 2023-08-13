@@ -150,9 +150,9 @@ jobs:
           Version: $pkgversion 
           Installed-Size: $(du -sk ./iosevka | cut -f 1)
           Description: It is a meta-package. It installs a set of Iosevka and IosevkaTerm nerd fonts. 
-           There are default, monospace and proportional variants for both of them. Each font family 
-           includes regular, bold, italic and bold italic fonts. All in all there are 24 fonts in six 
-           font families.
+           There are default, monospace and proportional variants for both of them. 
+           Each font family includes regular, bold, italic and bold italic fonts. 
+           All in all there are 24 fonts in six font families.
           EOT
 
           dpkg-deb --build ./iosevka
@@ -183,16 +183,22 @@ jobs:
           
           touch ./iosevka-doc/usr/share/doc/iosevka/readme-pkg.md
           cat <<EOT >> ./iosevka-doc/usr/share/doc/iosevka/readme-pkg.md
-          \# Ioseka package for debian
+          
+          # Ioseka package for Debian
+          
           This package was prepared by the Foil-hat-guy <dev@foilhatguy.casa>.
+          
           For more information visit:
           * https://foil-hat-guy.github.io/OPi5Plus-Soft/
           * https://github.com/foil-hat-guy
+          
           Nerd fonts homepage:
           * https://www.nerdfonts.com/
+          
           Iosevka font homepages:
           * https://github.com/be5invis/Iosevka
           * https://typeof.net/Iosevka/
+          
           EOT
           
           dpkg-deb --build ./iosevka-doc
