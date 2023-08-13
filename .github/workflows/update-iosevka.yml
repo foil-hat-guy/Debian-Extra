@@ -42,6 +42,12 @@ jobs:
         pkgname: iosevka-nerd-font
       run: |
           ./build-iosevka.sh
+          
+          cat <<EOT >> ./$basename/DEBIAN/control
+          Description: Iosevka nerd font.
+           This package contains regular, bold, italic and bold italic fonts.
+          EOT
+          
           dpkg-deb --build ./$basename
           cp ./*.deb ./artifacts
           
@@ -50,7 +56,13 @@ jobs:
         basename: IosevkaNerdFontMono
         pkgname: iosevka-nerd-font-mono
       run: |
-          ./build-iosevka.sh 'Monospace version.'
+          ./build-iosevka.sh
+          
+          cat <<EOT >> ./$basename/DEBIAN/control
+          Description: Iosevka nerd font. Monospace variant.
+           This package contains regular, bold, italic and bold italic fonts.
+          EOT
+          
           dpkg-deb --build ./$basename
           cp ./*.deb ./artifacts
     
@@ -59,7 +71,13 @@ jobs:
         basename: IosevkaNerdFontPropo
         pkgname: iosevka-nerd-font-propo
       run: |
-          ./build-iosevka.sh 'Proportional version.'
+          ./build-iosevka.sh
+
+          cat <<EOT >> ./$basename/DEBIAN/control
+          Description: Iosevka nerd font. Proportional variant.
+           This package contains regular, bold, italic and bold italic fonts.
+          EOT
+          
           dpkg-deb --build ./$basename
           cp ./*.deb ./artifacts
     
@@ -68,7 +86,14 @@ jobs:
         basename: IosevkaTermNerdFont
         pkgname: iosevka-term-nerd-font
       run: |
-          ./build-iosevka.sh ' ' 'This font is more suitable for terminals with restricted capabilities.'
+          ./build-iosevka.sh
+
+          cat <<EOT >> ./$basename/DEBIAN/control
+          Description: Iosevka Term nerd font.
+           This package contains regular, bold, italic and bold italic fonts.
+           This font is more suitable for terminals with restricted capabilities.
+          EOT
+          
           dpkg-deb --build ./$basename
           cp ./*.deb ./artifacts
           
@@ -77,7 +102,14 @@ jobs:
         basename: IosevkaTermNerdFontMono
         pkgname: iosevka-term-nerd-font-mono
       run: |
-          ./build-iosevka.sh 'Monospace version.' 'This font is more suitable for terminals with restricted capabilities.'
+          ./build-iosevka.sh
+          
+          cat <<EOT >> ./$basename/DEBIAN/control
+          Description: Iosevka Term nerd font. Monospace variant.
+           This package contains regular, bold, italic and bold italic fonts.
+           This font is more suitable for terminals with restricted capabilities.
+          EOT
+          
           dpkg-deb --build ./$basename
           cp ./*.deb ./artifacts
     
@@ -86,7 +118,14 @@ jobs:
         basename: IosevkaTermNerdFontPropo
         pkgname: iosevka-term-nerd-font-propo
       run: |
-          ./build-iosevka.sh 'Proportional version.' 'This font is more suitable for terminals with restricted capabilities.'
+          ./build-iosevka.sh
+
+          cat <<EOT >> ./$basename/DEBIAN/control
+          Description: Iosevka Term nerd font. Proportional variant.
+           This package contains regular, bold, italic and bold italic fonts.
+           This font is more suitable for terminals with restricted capabilities.
+          EOT
+          
           dpkg-deb --build ./$basename
           cp ./*.deb ./artifacts
     
