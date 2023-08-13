@@ -37,7 +37,7 @@
       name: Update debian repository
       needs: pkg-version
       if: ${{ needs.pkg-version.outputs.new == needs.pkg-version.outputs.old }}
-      uses: foil-hat-guy/OPi5Plus-Soft/.github/workflows/update-fastfetch.yml@main
+      uses: foil-hat-guy/OPi5Plus-Soft/.github/workflows/update-iosevka.yml@main
       with:
         version: ${{ needs.pkg-version.outputs.new }}
       secrets: inherit
