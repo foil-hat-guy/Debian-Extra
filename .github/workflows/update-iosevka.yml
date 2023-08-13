@@ -184,10 +184,15 @@ jobs:
           touch ./iosevka-doc/usr/share/doc/iosevka/readme-pkg.md
           cat <<EOT >> ./iosevka-doc/usr/share/doc/iosevka/readme-pkg.md
           \# Ioseka package for debian
-          This package was prepared by the Foil-hat-guy.
+          This package was prepared by the Foil-hat-guy <dev@foilhatguy.casa>.
           For more information visit:
           * https://foil-hat-guy.github.io/OPi5Plus-Soft/
           * https://github.com/foil-hat-guy
+          Nerd fonts homepage:
+          * https://www.nerdfonts.com/
+          Iosevka font homepages:
+          * https://github.com/be5invis/Iosevka
+          * https://typeof.net/Iosevka/
           EOT
           
           dpkg-deb --build ./iosevka
