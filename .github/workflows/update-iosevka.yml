@@ -20,7 +20,6 @@ jobs:
     env:
       pkgversion: ${{ inputs.version }}
       fontdir: /usr/share/fonts/truetype/iosevka
-      docdir: /usr/share/doc/iosevka
     steps:
     - name: Download iosevka.tar.xz
       run: |
@@ -132,8 +131,8 @@ jobs:
     - name: Build Iosevka.deb
       run: |
           mkdir -p ./iosevka/DEBIAN
-          touch ./iosevka/DEBIAN/control
           
+          touch ./iosevka/DEBIAN/control
           cat <<EOT >> ./iosevka/DEBIAN/control
           Package: iosevka
           Maintainer: Foil-hat-guy <dev@foilhatguy.casa> 
@@ -159,6 +158,41 @@ jobs:
           dpkg-deb --build ./iosevka
           cp ./*.deb ./artifacts
     
+    - name: Build Iosevka-doc.deb
+      run: |
+          mkdir -p ./iosevka-doc/DEBIAN
+          
+          touch ./iosevka-doc/DEBIAN/control
+          cat <<EOT >> ./iosevka-doc/DEBIAN/control
+          Package: iosevka-doc
+          Maintainer: Foil-hat-guy <dev@foilhatguy.casa> 
+          Priority: optional 
+          Essentional: no 
+          Architecture: all
+          Section: fonts 
+          Homepage: https://www.nerdfonts.com/ 
+          Version: $pkgversion 
+          Installed-Size: $(du -sk ./iosevka | cut -f 1)
+          Description: License and readme files for Iosevka fonts.
+          EOT
+
+          mkdir -p ./iosevka-doc/usr/share/doc/iosevka
+          cp ./source/README.md ./iosevka-doc/usr/share/doc/iosevka/README.md
+          cp ./source/readme.md ./iosevka-doc/usr/share/doc/iosevka/readme-nerdfont.md
+          cp ./source/LICENSE.md ./iosevka-doc/usr/share/doc/iosevka/LICENSE.md
+          
+          touch ./iosevka-doc/usr/share/doc/iosevka/readme-pkg.md
+          cat <<EOT >> ./iosevka-doc/usr/share/doc/iosevka/readme-pkg.md
+          \# Ioseka package for debian
+          This package was prepared by the Foil-hat-guy.
+          For more information visit:
+          * https://foil-hat-guy.github.io/OPi5Plus-Soft/
+          * https://github.com/foil-hat-guy
+          EOT
+          
+          dpkg-deb --build ./iosevka
+          cp ./*.deb ./artifacts
+          
     - name: Save DEB to cache
       uses: actions/cache/save@v3.3.1
       with:
