@@ -12,8 +12,12 @@ jobs:
   neovim:
     uses: foil-hat-guy/OPi5Plus-Soft/.github/workflows/check-neovim.yml@main
     secrets: inherit
+
+  iosevka:
+    uses: foil-hat-guy/OPi5Plus-Soft/.github/workflows/iosevka-neovim.yml@main
+    secrets: inherit
       
   update-repo:
-    needs: [ neovim, fastfetch ]
+    needs: [ neovim, fastfetch, iosevka ]
     uses: foil-hat-guy/OPi5Plus-Soft/.github/workflows/update-debian-repo.yml@main
     secrets: inherit
