@@ -15,24 +15,6 @@ Maintainer: Linus Dierheimer <Linus@Dierheimer.de>
 Version: 1.12.2
 Installed-Size: 695
 
-Package: iosevka-term-nerd-font-propo
-Maintainer: Foil-hat-guy <dev@foilhatguy.casa> 
-Essentional: no 
-Architecture: all 
-Homepage: https://www.nerdfonts.com/ 
-Version: 3.0.1 
-Installed-Size: 37408 
-Priority: optional
-Section: fonts
-Filename: pool/contrib/i/iosevka-term-nerd-font-propo/iosevka-term-nerd-font-propo_3.0.1_all.deb
-Size: 8897990
-SHA256: 50e9c5f174199f5aad0701114155c98ae9d10447c80edd8b32849e14a5a3920a
-SHA1: 698c46eb0e300b0cce04daa7b52bf36d110ab39b
-MD5sum: da81cd75fb78f86b2bb4297a1bd4872e
-Description: Iosevka Term nerd font. Proportional variant.
- This package contains regular, bold, italic and bold italic fonts.
- This font is more suitable for terminals with restricted capabilities.
-
 Package: neovim
 Architecture: arm64
 Depends: libc6 (>= 2.34), libgcc-s1 (>= 4.2)
