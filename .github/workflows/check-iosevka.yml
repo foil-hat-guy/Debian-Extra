@@ -24,9 +24,9 @@
           wget -qO - https://foil-hat-guy.github.io/OPi5Plus-Soft/dists/bookworm/contrib/binary-arm64/Packages > packages
           grep -A 16 'Package: iosevka-doc' packages | grep 'Version' | cut -d ' ' -f 2 > currentversion
           echo "current="$(cat currentversion) >> "$GITHUB_OUTPUT"
-          echo "new="$(echo ${{ steps.gettag.outputs.release }} | cut -d 'v' -f 1) >> "$GITHUB_OUTPUT"
-          echo "current="$(cat currentversion)_
-          echo "new="$(echo ${{ steps.gettag.outputs.release }} | cut -d 'v' -f 1)_
+          echo "new="$(echo ${{ steps.gettag.outputs.release }} | cut -d v -f 1) >> "$GITHUB_OUTPUT"
+          echo ${{ steps.gettag.outputs.release }}
+          echo "new="$(echo ${{ steps.gettag.outputs.release }} | cut -d v -f 1)_
     
       - name: There is no new version
         if: ${{ steps.getversion.outputs.new == steps.getversion.outputs.current }}
