@@ -8,7 +8,7 @@
       name: Check version
       runs-on: ubuntu-latest
       outputs:
-        new: ${{ steps.gettag.outputs.release }}
+        new: ${{ steps.getversion.outputs.new }}
         old: ${{ steps.getversion.outputs.current }}
       steps:
     
@@ -24,13 +24,12 @@
           wget -qO - https://foil-hat-guy.github.io/OPi5Plus-Soft/dists/bookworm/contrib/binary-arm64/Packages > packages
           grep -A 16 'Package: iosevka' packages | grep 'Version' | cut -d ' ' -f 2 > currentversion
           echo "current="$(cat currentversion) >> "$GITHUB_OUTPUT"
-          echo ${{ steps.gettag.outputs.release }}
-          echo ${{ steps.getversion.outputs.current }}
+          echo "new="$(echo ${{ steps.gettag.outputs.release }} | cut -d 'v' -f 1) >> "$GITHUB_OUTPUT"
     
       - name: There is no new version
-        if: ${{ steps.gettag.outputs.release == steps.getversion.outputs.current }}
+        if: ${{ steps.getversion.outputs.new == steps.getversion.outputs.current }}
         run: |
-            echo ${{ steps.gettag.outputs.release }}
+            echo ${{ steps.getversion.outputs.new }}
             echo ${{ steps.getversion.outputs.current }}
             echo 'It is the same version!'
       
