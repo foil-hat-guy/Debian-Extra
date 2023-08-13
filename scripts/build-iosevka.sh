@@ -14,7 +14,8 @@ Package: $pkgname
 Maintainer: Foil-hat-guy <dev@foilhatguy.casa> 
 Priority: optional 
 Essentional: no 
-Architecture: all 
+Architecture: all
+Depends: iosevka-doc (= $pkgversion)
 Section: fonts 
 Homepage: https://www.nerdfonts.com/ 
 Version: $pkgversion 
