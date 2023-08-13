@@ -15,24 +15,6 @@ Maintainer: Linus Dierheimer <Linus@Dierheimer.de>
 Version: 1.12.2
 Installed-Size: 695
 
-Package: iosevka-term-nerd-font-mono
-Maintainer: Foil-hat-guy <dev@foilhatguy.casa> 
-Essentional: no 
-Architecture: all 
-Homepage: https://www.nerdfonts.com/ 
-Version: 3.0.1 
-Installed-Size: 36980 
-Priority: optional
-Section: fonts
-Filename: pool/contrib/i/iosevka-term-nerd-font-mono/iosevka-term-nerd-font-mono_3.0.1_all.deb
-Size: 8838010
-SHA256: 2ffb6e192f1b33e929033a2b72c25a67960b609720ca38d9392c75f67c4541e1
-SHA1: 840a00492c2d439fa52381ceff6f228cb06f0c73
-MD5sum: 4f1ec062e461c62a3006b9aacfa519a9
-Description: Iosevka Term nerd font. Monospace variant.
- This package contains regular, bold, italic and bold italic fonts.
- This font is more suitable for terminals with restricted capabilities.
-
 Package: iosevka-term-nerd-font-propo
 Maintainer: Foil-hat-guy <dev@foilhatguy.casa> 
 Essentional: no 
