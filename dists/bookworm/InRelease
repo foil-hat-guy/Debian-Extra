@@ -4,35 +4,35 @@ Hash: SHA512
 Origin: foil-hat-guy.github.io/OPi5Plus-Soft
 Label: foil-hat-guy.github.io/OPi5Plus-Soft
 Codename: bookworm
-Date: Sun, 13 Aug 2023 21:43:37 UTC
+Date: Sun, 13 Aug 2023 21:44:35 UTC
 Architectures: arm64
 Components: contrib
 Description: Repository with some additional for Orangepi 5 plus Armbian Bookworm.
 MD5Sum:
- b98b27952e08fc5af044c4b64cd679fa 1134 contrib/binary-arm64/Packages
- 64b021c149b74443731bc3e8b95e1dfd 651 contrib/binary-arm64/Packages.gz
+ 51ed1b53d3d4d5da3c0a695239825057 6631 contrib/binary-arm64/Packages
+ dcba4d1bb3a30f54ee315b27155a2873 1998 contrib/binary-arm64/Packages.gz
  6e500837c852f229e55e86df52c767f0 199 contrib/binary-arm64/Release
 SHA1:
- f0a3e9e3ef17a883b6267bc9948e0390a8d3c5f8 1134 contrib/binary-arm64/Packages
- 46af5c0685f44effa12a063845a0417894de8dd1 651 contrib/binary-arm64/Packages.gz
+ 14f728acb4d3359c34eb4b7a95c1b91dacb0aad8 6631 contrib/binary-arm64/Packages
+ 67424fe3ef498576ef5763b0598715776740f3d1 1998 contrib/binary-arm64/Packages.gz
  bc808286e5251f286e511db718514eb1f143f444 199 contrib/binary-arm64/Release
 SHA256:
- 4a3e0e4fa860a3d4efa07a4bc24bca1a61ab2269763693deb6adae57af82c17c 1134 contrib/binary-arm64/Packages
- d96e6f684b4f70732da821b39fc6c184032a46a20f65396c240dfb2b11303976 651 contrib/binary-arm64/Packages.gz
+ 2414219b1f36cc7f6f7347fa8563b63938b35b1ccba90b5168419becbae7805e 6631 contrib/binary-arm64/Packages
+ c1e4676b95c12ebbbf5d9485de08071e2b777822c9287ff175174f21738490da 1998 contrib/binary-arm64/Packages.gz
  3eafbc49f394efb2a0054c18eaef6e59db565f113e0bdcf58bf52a90af5d26b6 199 contrib/binary-arm64/Release
 -----BEGIN PGP SIGNATURE-----
 
-iQIzBAEBCgAdFiEETdZIeUrvOc2jRJXE8lQ/30LGE9EFAmTZTooACgkQ8lQ/30LG
-E9F9/BAAoAnRTr3NVzMLIcY7AWfnmB2f8zSc5xSErR+AFtEbcPzY+ZAZdkDK9gEd
-/efGrTVlBuhn0yjloW8Ks3sW2+G3Qa7Oin2hkjvnM2hWBy60bh8GjHG8KuJ0o4dZ
-7KzqW+V1MI+2i+dRh7wPf/jWvgElxFbE0qxjptHYkIYlcM5SVi7ghzZSWfFA1Zox
-OxRPEu2QLjUUxzPdnQ2qf1VJu2s/JAYqK4hoYOXl4zNiQ+Bi77paaOLc8Ex3QPjc
-2zIFMINMLWHg0JXMW13C3dPgyqnyftYBb6SRx5O78IyPbNlC1eMPrzzEoTCfoxg6
-pIBdhrFv9xlWy0a8lkSVd+Txn4kXN0hQfylVWY/2jyBQ6DRshqgJCHe7WN7/THAp
-zShMfZXkYGDU05rdn4xmbmkHRaqp6ux0orWeTg2OzbwLVNRzgKvX92ffClCsg3h/
-qfdO+YBxtGjT06VJwQVtok1mHlARXhcgqHxSfEiX1uMFO18+atX0qmYi3aYbhTOU
-hqVv3dFjdoi+DqR/sn1NMbsLirjSmgnUg39586qEQIMqT4bqbyM1kNl9/ZFxIKgw
-W2tANXoMhqQhQyYoi7fY6am9pU0pbXHR5dYsNZ2HENEafxXjMERD6hWA4FdqFur6
-3HE69dsFMKEpv43v1lg89A7kmzBYYpuMnrSIhIoTpWzOu02s158=
-=nW14
+iQIzBAEBCgAdFiEETdZIeUrvOc2jRJXE8lQ/30LGE9EFAmTZTsQACgkQ8lQ/30LG
+E9E+hg/7BWkQt2EgfORtgEArJDIc8xVReLYu32F50u1dKdSHOdJztzwF1xf1/4g7
+zBvBgR5sarRPWHioXAVlhESxWR4vcBXLUCnTo21CIifMF/4gLUIrBtGDAPzThc5q
+qIMKP73HIG7JO+V+Q8urzQML+cwQe3YC9Tg+XwDnks7klV5lfNJpo9BDogp4eqzW
+6i4+kE0Rk5f729dWvIFjsifDriN5XoReV2PMOvkPFmru9F2LTmMTFHifZi0wpAPN
+IZJsHdo3LNbrVq7UbSIwkQZJPOWD3ng3VTSrWH8gOsHA4dc0WyE810WBvWyQ/lst
+761MR4mtNQih0SS3QCOhO1saGIoL2QmYs4XbWKpiPvSDrDqt8KXjkvJ1/uooc+aA
+GE87p0WBfvHFA3XwHSc3H8DURu7R0Au3lak/p7NlbMaEhwJ4f6uwJJflKpdhi7a/
+opncRB9cil0dz6YrgN9f477l6JLGcx7MYlfcOnCHN/hYnnlVqCl/2PR3dZLvkwmP
+PgegTFWnHMth0aNrbk09fFJQA4hTvUpwy+1r9jOF4i2eMaWnvSjTdVsAzk6ULSKN
+ri9v1Orma72PFvNC4VdhIun2okrDda/jTUI9f87+MEEL/X9WbA+Yb5nnBA9M43Tj
+Ry84hetPi+T3kmou4i1kdPLWcqVzdPYsf2fIMtDHdP9kY/W+DCM=
+=9nfm
 -----END PGP SIGNATURE-----
