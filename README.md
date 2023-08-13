@@ -2,6 +2,7 @@
 
 [![Fastfetch DEB build](https://github.com/foil-hat-guy/OPi5Plus-Soft/actions/workflows/update-fastfetch.yml/badge.svg)](https://github.com/foil-hat-guy/OPi5Plus-Soft/actions/workflows/update-fastfetch.yml)
 [![Neovim DEB Build](https://github.com/foil-hat-guy/OPi5Plus-Soft/actions/workflows/update-neovim.yml/badge.svg)](https://github.com/foil-hat-guy/OPi5Plus-Soft/actions/workflows/update-neovim.yml)
+[![Iosevka DEB Build](https://github.com/foil-hat-guy/OPi5Plus-Soft/actions/workflows/update-iosevka.yml/badge.svg)](https://github.com/foil-hat-guy/OPi5Plus-Soft/actions/workflows/update-iosevka.yml)
 
 ## Description:
 
