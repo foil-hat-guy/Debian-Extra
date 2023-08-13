@@ -25,8 +25,8 @@
           grep -A 16 'Package: iosevka-doc' packages | grep 'Version' | cut -d ' ' -f 2 > currentversion
           echo "current="$(cat currentversion) >> "$GITHUB_OUTPUT"
           echo "new="$(echo ${{ steps.gettag.outputs.release }} | cut -d 'v' -f 1) >> "$GITHUB_OUTPUT"
-          echo "current="$(cat currentversion)
-          echo "new="$(echo ${{ steps.gettag.outputs.release }}
+          echo "current="$(cat currentversion)_
+          echo "new="$(echo ${{ steps.gettag.outputs.release }} | cut -d 'v' -f 1)_
     
       - name: There is no new version
         if: ${{ steps.getversion.outputs.new == steps.getversion.outputs.current }}
