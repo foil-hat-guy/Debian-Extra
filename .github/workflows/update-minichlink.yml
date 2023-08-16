@@ -30,10 +30,10 @@ jobs:
         install: | 
             apt-get update -y
             apt-get -y install apt-utils
-            apt-get -y install ninja-build gettext cmake unzip curl git file debhelper
+            apt-get -y install git build-essential libnewlib-dev libusb-1.0-0-dev libudev-dev
         
         run: |
-            git clone 'https://github.com/neovim/neovim.git'
+            git clone 'https://github.com/cnlohr/ch32v003fun.git'
             cd ./ch32v003fun
             git checkout ${{ inputs.commite-sha }} 
             
