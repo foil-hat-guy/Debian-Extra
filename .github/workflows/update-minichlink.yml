@@ -1,0 +1,77 @@
+name: Minichlink DEB Build
+on:
+  workflow_dispatch:
+    inputs:
+      commite-sha:
+        description: 'Comite hash of the version to be built'
+        default: '947edbf9d4ab1f78654c24376fb364f661670695'
+        required: true
+        type: string
+  workflow_call:
+    inputs:
+      commite-sha:
+        required: true
+        type: string
+
+jobs:
+  minichlink-aarch64-build:
+    runs-on: ubuntu-latest
+    name: Build minichlink for arm64
+    steps:
+    - name: Build minichlink.deb
+      uses: uraimo/run-on-arch-action@v2.5.0
+      with:
+        arch: aarch64
+        distro: ubuntu_latest
+        setup: |
+            mkdir -p "${PWD}/artifacts"
+        dockerRunArgs: |
+            --volume "${PWD}/artifacts:/artifacts"
+        install: | 
+            apt-get update -y
+            apt-get -y install apt-utils
+            apt-get -y install ninja-build gettext cmake unzip curl git file debhelper
+        
+        run: |
+            git clone 'https://github.com/neovim/neovim.git'
+            cd ./ch32v003fun
+            git checkout ${{ inputs.commite-sha }} 
+            
+            cd ./minichlink
+            make minichlink 
+            echo '========'
+            ./minichlink -h
+            echo '========'
+            echo 'cp ./*.deb "/artifacts/neovim.deb"'
+    
+    - name: Save DEB to cache
+      uses: actions/cache/save@v3.3.1
+      with:
+        path: /home/runner/work/OPi5Plus-Soft/OPi5Plus-Soft/artifacts/minichlink.deb
+        key: minichlink.deb
+          
+  report-fail:
+    name: Report build fail.
+    runs-on: ubuntu-latest
+    if: always() && needs.minichlink-aarch64-build.result == 'failure'
+    needs: minichlink-aarch64-build
+    steps:
+    - name: Send notification
+      uses: appleboy/telegram-action@v0.1.1
+      with:
+        token: ${{ secrets.TELEGRAMBOT }}
+        to: ${{ secrets.TELEGRAMCHAT }}
+        message: Warning! Minichlink build failed!
+
+  report-ok:
+    name: Report new version.
+    runs-on: ubuntu-latest
+    if: always() && needs.minichlink-aarch64-build.result == 'success'
+    needs: minichlink-aarch64-build
+    steps:
+    - name: Send notification
+      uses: appleboy/telegram-action@v0.1.1
+      with:
+        token: ${{ secrets.TELEGRAMBOT }}
+        to: ${{ secrets.TELEGRAMCHAT }}
+        message: Good News! A new version ${{ inputs.commite-sha }} of Minichlink is ready!
