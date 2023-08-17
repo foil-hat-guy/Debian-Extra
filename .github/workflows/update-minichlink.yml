@@ -69,7 +69,7 @@ jobs:
             mkdir -p ./minichlink-pkg/usr/bin
             cp ./minichlink ./minichlink-pkg/usr/bin/minichlink
 
-            mkdir -p ./minichlink-pkg/etc/
+            mkdir -p ./minichlink-pkg/etc/udev/rules.d/
             cp ./99-minichlink.rules ./minichlink-pkg/etc/udev/rules.d/
             
             mkdir -p ./minichlink-pkg/DEBIAN
