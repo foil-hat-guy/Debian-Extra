@@ -99,10 +99,7 @@ jobs:
             EOT
             
             dpkg-deb --build ./minichlink-pkg
-            echo '===='
-            ls
-            echo '===='
-            cp ./*.deb ./artifacts/minichlink.deb
+            cp ./*.deb /artifacts/minichlink.deb
     
     - name: Save DEB to cache
       uses: actions/cache/save@v3.3.1
