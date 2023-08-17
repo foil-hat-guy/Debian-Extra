@@ -95,7 +95,7 @@ jobs:
             Version: 0.0.1 
             Installed-Size: $(du -sk ./minichlink-pkg | cut -f 1)
             Description: Console utility for WCH CH32V003 MCU programming.
-            WCH CH32V003 is a 32-bit general-purpose RISC-V MCU.
+             WCH CH32V003 is a 32-bit general-purpose RISC-V MCU.
             EOT
             
             dpkg-deb --build ./minichlink-pkg
