@@ -30,6 +30,13 @@ jobs:
       with:
         path: /home/runner/work/OPi5Plus-Soft/OPi5Plus-Soft/artifacts/*.deb
         key: iosevka.debs
+
+    - name: Load new minichlink.deb
+      uses: actions/cache/restore@v3.3.1
+      id: minichlink-cache
+      with:
+        path: /home/runner/work/OPi5Plus-Soft/OPi5Plus-Soft/artifacts/minichlink.deb
+        key: minichlink.deb
     
     - name: Import GPG key for debian
       if: contains( steps.*.outputs.cache-hit, 'true' )
