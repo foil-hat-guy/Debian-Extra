@@ -15,7 +15,7 @@
       - id: getversion
         name: Get package old and new versions.
         run: |
-          git clone 'https://github.com/cnlohr/ch32v003fun.git'
+          git clone https://github.com/cnlohr/ch32v003fun.git
           cd ./ch32v003fun
           echo "new="$(git rev-parse HEAD) >> "$GITHUB_OUTPUT"
           cd ..
