@@ -39,10 +39,67 @@ jobs:
             
             cd ./minichlink
             make minichlink 
-            echo '========'
-            ./minichlink -h
-            echo '========'
-            echo 'cp ./*.deb "/artifacts/neovim.deb"'
+            
+            mkdir -p ./minichlink-pkg/usr/share/doc/minichlink
+            cp ./README.md ./minichlink-pkg/usr/share/doc/minichlink/README-minichlink.md
+            cp ../README.md ./minichlink-pkg/usr/share/doc/minichlink/README-ch32v003fun.md
+            cp ../LICENSE ./minichlink-pkg/usr/share/doc/minichlink/LICENSE
+          
+            touch ./minichlink-pkg/usr/share/doc/minichlink/README-pkg.md
+            cat <<EOT >> ./iosevka-doc/usr/share/doc/iosevka/README-pkg.md
+          
+            # Minichlink package for Debian
+            Minichlink is a console utility for WCH CH32V003 MCU programming.
+            WCH CH32V003 is a 32-bit general-purpose RISC-V MCU.
+            It is a part of ch32v003fun project.
+            This package was prepared by the Foil-hat-guy <dev@foilhatguy.casa>.
+          
+            For more information about this package visit:
+            * https://foil-hat-guy.github.io/OPi5Plus-Soft/
+            * https://github.com/foil-hat-guy
+          
+            Ch32v003fun homepage:
+            * https://github.com/cnlohr/ch32v003fun
+          
+            WCH CH32V003 MCU homepage:
+            * https://www.wch-ic.com/products/CH32V003.html
+          
+            EOT
+
+            mkdir -p ./minichlink-pkg/usr/bin
+            cp ./minichlink ./minichlink-pkg/usr/bin/minichlink
+
+            mkdir -p ./minichlink-pkg/etc/
+            cp ./99-minichlink.rules ./minichlink-pkg/etc/udev/rules.d/
+            
+            mkdir -p ./minichlink-pkg/DEBIAN
+
+            touch ./minichlink-pkg/DEBIAN/postinst
+            cat <<EOT >> ./minichlink-pkg/DEBIAN/postinst
+            #!/bin/sh
+            echo 'Reloading udev to apply new udev rules...'
+            udevadm control --reload-rules && udevadm trigger
+            EOT
+            chmod 555 ./minichlink-pkg/DEBIAN/postinst
+            
+            touch ./minichlink-pkg/DEBIAN/control
+            cat <<EOT >> ./minichlink-pkg/DEBIAN/control
+            Package: minichlink
+            Maintainer: Foil-hat-guy <dev@foilhatguy.casa> 
+            Priority: optional 
+            Essentional: no 
+            Architecture: arm64
+            Depends: libusb-1.0-0-dev ( >= 2:1.0.26 )
+            Section: electronics 
+            Homepage: https://github.com/cnlohr/ch32v003fun
+            Version: 0.0.1 
+            Installed-Size: $(du -sk ./minichlink-pkg | cut -f 1)
+            Description: Console utility for WCH CH32V003 MCU programming.
+            WCH CH32V003 is a 32-bit general-purpose RISC-V MCU.
+            EOT
+            
+            dpkg-deb --build ./minichlink-pkg
+            cp ./*.deb ./artifacts/minichlink.deb
     
     - name: Save DEB to cache
       uses: actions/cache/save@v3.3.1
