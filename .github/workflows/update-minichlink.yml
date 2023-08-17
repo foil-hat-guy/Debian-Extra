@@ -46,7 +46,7 @@ jobs:
             cp ../LICENSE ./minichlink-pkg/usr/share/doc/minichlink/LICENSE
           
             touch ./minichlink-pkg/usr/share/doc/minichlink/README-pkg.md
-            cat <<EOT >> ./iosevka-doc/usr/share/doc/iosevka/README-pkg.md
+            cat <<EOT >> ./minichlink-pkg/usr/share/doc/minichlink/README-pkg.md
           
             # Minichlink package for Debian
             Minichlink is a console utility for WCH CH32V003 MCU programming.
