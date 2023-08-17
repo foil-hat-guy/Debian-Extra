@@ -30,7 +30,7 @@ jobs:
         install: | 
             apt-get update -y
             apt-get -y install apt-utils
-            apt-get -y install git build-essential libnewlib-dev libusb-1.0-0-dev libudev-dev
+            apt-get -y install git build-essential libnewlib-dev libusb-1.0-0-dev libudev-dev wget
         
         run: |
             wget -qO - https://foil-hat-guy.github.io/OPi5Plus-Soft/dists/bookworm/contrib/binary-arm64/Packages > packages
