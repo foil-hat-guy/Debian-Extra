@@ -35,7 +35,6 @@ jobs:
         run: |
             wget -qO - https://foil-hat-guy.github.io/OPi5Plus-Soft/dists/bookworm/contrib/binary-arm64/Packages > packages
             currentversion=$(grep -A 16 'Package: minichlink' packages | grep 'Version' | cut -d ' ' -f 2 | cut -d '.' -f 3)
-            echo $currentversion
                         
             git clone 'https://github.com/cnlohr/ch32v003fun.git'
             cd ./ch32v003fun
@@ -98,7 +97,7 @@ jobs:
             Depends: libusb-1.0-0-dev ( >= 2:1.0.26 )
             Section: electronics 
             Homepage: https://github.com/cnlohr/ch32v003fun
-            Version: 0.0.1 
+            Version: 0.0.$(($currentversion+1))
             Installed-Size: $(du -sk ./minichlink-pkg | cut -f 1)
             Description: Console utility for WCH CH32V003 MCU programming.
              WCH CH32V003 is a 32-bit general-purpose RISC-V MCU.
