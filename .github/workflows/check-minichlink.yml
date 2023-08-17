@@ -1,0 +1,48 @@
+  name: Check minichlink version
+  on:
+    workflow_dispatch:
+    workflow_call:
+    
+  jobs:
+    pkg-version:
+      name: Check version
+      runs-on: ubuntu-latest
+      outputs:
+        new: ${{ steps.getversion.outputs.new }}
+        old: ${{ steps.getversion.outputs.current }}
+      steps:
+
+      - id: getversion
+        name: Get package old and new versions.
+        run: |
+          git clone 'https://github.com/cnlohr/ch32v003fun.git'
+          cd ./ch32v003fun
+          echo "new="$(git rev-parse HEAD) >> "$GITHUB_OUTPUT"
+          cd ..
+
+          wget -qO - https://foil-hat-guy.github.io/OPi5Plus-Soft/dists/bookworm/contrib/binary-arm64/Packages > packages
+          currentversion=$(grep -A 16 'Package: minichlink' packages | grep 'Version' | cut -d ' ' -f 2)
+          wget -qO - https://foil-hat-guy.github.io/OPi5Plus-Soft/pool/contrib/m/minichlink/minichlink_$currentversion_arm64.deb > pkg.deb
+          ar pkg.deb
+          echo '========'
+          ls
+          echo '========'
+          
+          echo "current="$(git rev-parse HEAD) >> "$GITHUB_OUTPUT"
+          
+    
+      - name: There is no new version
+        if: ${{ steps.getversion.outputs.new == steps.getversion.outputs.current }}
+        run: |
+            echo ${{ steps.getversion.outputs.new }}
+            echo ${{ steps.getversion.outputs.current }}
+            echo 'It is the same version!'
+            
+    build-new:
+      name: Update debian repository
+      needs: pkg-version
+      if: ${{ needs.pkg-version.outputs.new != needs.pkg-version.outputs.old }}
+      uses: foil-hat-guy/OPi5Plus-Soft/.github/workflows/update-iosevka.yml@main
+      with:
+        version: ${{ needs.pkg-version.outputs.new }}
+      secrets: inherit
