@@ -2,14 +2,14 @@ name: Minichlink DEB Build
 on:
   workflow_dispatch:
     inputs:
-      commite-sha:
-        description: 'Comite hash of the version to be built'
+      commit-sha:
+        description: 'Commit hash of the version to be built'
         default: '947edbf9d4ab1f78654c24376fb364f661670695'
         required: true
         type: string
   workflow_call:
     inputs:
-      commite-sha:
+      commit-sha:
         required: true
         type: string
 
@@ -33,9 +33,13 @@ jobs:
             apt-get -y install git build-essential libnewlib-dev libusb-1.0-0-dev libudev-dev
         
         run: |
+            wget -qO - https://foil-hat-guy.github.io/OPi5Plus-Soft/dists/bookworm/contrib/binary-arm64/Packages > packages
+            currentversion=$(grep -A 16 'Package: minichlink' packages | grep 'Version' | cut -d ' ' -f 2 | cut -d '.' -f 3)
+            echo $currentversion
+                        
             git clone 'https://github.com/cnlohr/ch32v003fun.git'
             cd ./ch32v003fun
-            git checkout ${{ inputs.commite-sha }} 
+            git checkout ${{ inputs.commit-sha }} 
             
             cd ./minichlink
             make minichlink 
@@ -51,7 +55,9 @@ jobs:
             # Minichlink package for Debian
             Minichlink is a console utility for WCH CH32V003 MCU programming.
             WCH CH32V003 is a 32-bit general-purpose RISC-V MCU.
-            It is a part of ch32v003fun project.
+            It is a part of ch32v003fun project. This version of minichlink utility
+            was bulid from the following commit of ch32v003fun project:
+            SHA:${{ inputs.commit-sha }}  
             This package was prepared by the Foil-hat-guy <dev@foilhatguy.casa>.
           
             For more information about this package visit:
