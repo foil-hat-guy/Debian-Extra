@@ -17,8 +17,11 @@ jobs:
   minichlink-aarch64-build:
     runs-on: ubuntu-latest
     name: Build minichlink for arm64
+    outputs:
+      version: ${{ steps.deb-build.outputs.version }}
     steps:
     - name: Build minichlink.deb
+      id: deb-build
       uses: uraimo/run-on-arch-action@v2.5.0
       with:
         arch: aarch64
@@ -105,6 +108,8 @@ jobs:
             
             dpkg-deb --build ./minichlink-pkg
             cp ./*.deb /artifacts/minichlink.deb
+
+            echo ::set-output name=version::0.0.$(($currentversion+1))
     
     - name: Save DEB to cache
       uses: actions/cache/save@v3.3.1
@@ -136,4 +141,4 @@ jobs:
       with:
         token: ${{ secrets.TELEGRAMBOT }}
         to: ${{ secrets.TELEGRAMCHAT }}
-        message: Good News! A new version ${{ inputs.commite-sha }} of Minichlink is ready!
+        message: Good News! A new version ${{ needs.minichlink-aarch64-build.outputs.version }} of Minichlink is ready!
