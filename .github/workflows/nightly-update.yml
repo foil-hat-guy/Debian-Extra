@@ -16,8 +16,12 @@ jobs:
   iosevka:
     uses: foil-hat-guy/OPi5Plus-Soft/.github/workflows/check-iosevka.yml@main
     secrets: inherit
+
+  minichlink:
+    uses: foil-hat-guy/OPi5Plus-Soft/.github/workflows/check-minichlink.yml@main
+    secrets: inherit  
       
   update-repo:
-    needs: [ neovim, fastfetch, iosevka ]
+    needs: [ neovim, fastfetch, iosevka, minichlink ]
     uses: foil-hat-guy/OPi5Plus-Soft/.github/workflows/update-debian-repo.yml@main
     secrets: inherit
