@@ -14,25 +14,30 @@
       - uses: actions/checkout@v3.5.3
         with:
           repository: cnlohr/ch32v003fun
+          path: ./newSource
 
       - id: getversion
         name: Get package old and new versions.
         run: |
+          cd ./newSource
           git rev-parse HEAD
           echo "new="$(git rev-parse HEAD) >> "$GITHUB_OUTPUT"
-          echo "===1"
+          cd ..
+          
           wget -qO - https://foil-hat-guy.github.io/OPi5Plus-Soft/dists/bookworm/contrib/binary-arm64/Packages > packages
-          echo "===2"
           currentversion=$(grep -A 16 'Package: minichlink' packages | grep 'Version' | cut -d ' ' -f 2)
-          echo "===3"
+          echo $currentversion
           wget -qO - https://foil-hat-guy.github.io/OPi5Plus-Soft/pool/contrib/m/minichlink/minichlink_$currentversion_arm64.deb > pkg.deb
+          echo '========'
+          ls
+          echo '========'
           ar pkg.deb
           echo '========'
           ls
           echo '========'
           
           echo "current="$(git rev-parse HEAD) >> "$GITHUB_OUTPUT"
-          
+          echo 'it is the end'
     
       - name: There is no new version
         if: ${{ steps.getversion.outputs.new == steps.getversion.outputs.current }}
