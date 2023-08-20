@@ -18,7 +18,13 @@
       - id: getversion
         name: Get package old and new versions.
         run: |
+          echo '========'
+          ls
+          echo '========'
           cd ./ch32v003fun
+          echo '========'
+          ls
+          echo '========'
           echo "new="$(git rev-parse HEAD) >> "$GITHUB_OUTPUT"
           cd ..
 
