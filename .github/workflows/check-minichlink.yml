@@ -20,9 +20,11 @@
         run: |
           git rev-parse HEAD
           echo "new="$(git rev-parse HEAD) >> "$GITHUB_OUTPUT"
-
+          echo "===1"
           wget -qO - https://foil-hat-guy.github.io/OPi5Plus-Soft/dists/bookworm/contrib/binary-arm64/Packages > packages
+          echo "===2"
           currentversion=$(grep -A 16 'Package: minichlink' packages | grep 'Version' | cut -d ' ' -f 2)
+          echo "===3"
           wget -qO - https://foil-hat-guy.github.io/OPi5Plus-Soft/pool/contrib/m/minichlink/minichlink_$currentversion_arm64.deb > pkg.deb
           ar pkg.deb
           echo '========'
