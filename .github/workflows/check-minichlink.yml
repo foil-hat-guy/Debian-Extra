@@ -11,11 +11,13 @@
         new: ${{ steps.getversion.outputs.new }}
         old: ${{ steps.getversion.outputs.current }}
       steps:
+      - uses: actions/checkout@v3.5.3
+        with:
+          repository: cnlohr/ch32v003fun
 
       - id: getversion
         name: Get package old and new versions.
         run: |
-          git clone https://github.com/cnlohr/ch32v003fun.git
           cd ./ch32v003fun
           echo "new="$(git rev-parse HEAD) >> "$GITHUB_OUTPUT"
           cd ..
