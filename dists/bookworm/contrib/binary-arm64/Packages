@@ -167,24 +167,6 @@ Description: Iosevka Term nerd font. Proportional variant.
  This package contains regular, bold, italic and bold italic fonts.
  This font is more suitable for terminals with restricted capabilities.
 
-Package: minichlink
-Maintainer: Foil-hat-guy <dev@foilhatguy.casa> 
-Essentional: no 
-Architecture: arm64
-Depends: libusb-1.0-0-dev ( >= 2:1.0.26 )
-Homepage: https://github.com/cnlohr/ch32v003fun
-Version: 0.0.3
-Installed-Size: 524
-Priority: optional
-Section: electronics
-Filename: pool/contrib/m/minichlink/minichlink_0.0.3_arm64.deb
-Size: 164860
-SHA256: 29d537fa41d0824bc044ceb0131ff10ea86ed9050e11a68fb17685589a7b49b9
-SHA1: 05b73a18acb17e554a406c24f39e958de3bd2ca2
-MD5sum: 2319acceb9eb73e067a6600154192923
-Description: Console utility for WCH CH32V003 MCU programming.
- WCH CH32V003 is a 32-bit general-purpose RISC-V MCU.
-
 Package: neovim
 Architecture: arm64
 Depends: libc6 (>= 2.34), libgcc-s1 (>= 4.2)
