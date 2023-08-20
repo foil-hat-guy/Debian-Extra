@@ -29,6 +29,7 @@
           echo $currentversion
           wget -qO - 'https://foil-hat-guy.github.io/OPi5Plus-Soft/pool/contrib/m/minichlink/minichlink_'$currentversion'_arm64.deb' > pkg.deb
           ar -x pkg.deb
+          tar --use-compress-program=unzstd -xvf data.tar.zst
           echo '========'
           ls
           
