@@ -31,7 +31,7 @@ jobs:
         install: | 
             apt-get update -y
             apt-get -y install apt-utils
-            apt-get -y install cmake git pkg-config rpm
+            apt-get -y install cmake git pkg-config rpm build-essential
         
         run: |
             git clone --branch ${{ inputs.version }} --depth 1 'https://github.com/fastfetch-cli/fastfetch.git'
