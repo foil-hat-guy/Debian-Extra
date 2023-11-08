@@ -1,19 +1,19 @@
 Origin: foil-hat-guy.github.io/OPi5Plus-Soft
 Label: foil-hat-guy.github.io/OPi5Plus-Soft
 Codename: bookworm
-Date: Tue, 07 Nov 2023 20:33:52 UTC
+Date: Wed, 08 Nov 2023 20:33:42 UTC
 Architectures: arm64
 Components: contrib
 Description: Repository with some additional for Orangepi 5 plus Armbian Bookworm.
 MD5Sum:
- 657418fef7ce1e4fbd626ca35ed38b5b 7271 contrib/binary-arm64/Packages
- 53d384277f274b66fbdc55ef4a26abaa 2248 contrib/binary-arm64/Packages.gz
+ 9fb0f2118cece68a4a2f2c69b298e938 7271 contrib/binary-arm64/Packages
+ 4b3a564f3e188a3c4839936e3494e176 2249 contrib/binary-arm64/Packages.gz
  6e500837c852f229e55e86df52c767f0 199 contrib/binary-arm64/Release
 SHA1:
- 752a81b4ea835c5ce4bd9f882c67c02470e97533 7271 contrib/binary-arm64/Packages
- ffedee0c0a7720b018ed83c160fad36afc0ed965 2248 contrib/binary-arm64/Packages.gz
+ ed70faa40363be94c3c3ac2aac4ee9b51c55983b 7271 contrib/binary-arm64/Packages
+ a1a030943de6e059a063858cb4bb31fa48b1604b 2249 contrib/binary-arm64/Packages.gz
  bc808286e5251f286e511db718514eb1f143f444 199 contrib/binary-arm64/Release
 SHA256:
- 6de6c58b44985b99589c2799422db9cef5efd30b4528e6a2f04650ed914003f3 7271 contrib/binary-arm64/Packages
- a7bb8fe717793d345813eaf137abcbd2a97ae1b9807c550c75025726c8d91a80 2248 contrib/binary-arm64/Packages.gz
+ feaa4b687dab4deb4d3b267ff74294ecd3fe64ac64599e81fdbf5a18923b956d 7271 contrib/binary-arm64/Packages
+ 6e5255dae5e1bfbcb633b8ca5eee72911169ab4dc64c85fc53641c691201d88e 2249 contrib/binary-arm64/Packages.gz
  3eafbc49f394efb2a0054c18eaef6e59db565f113e0bdcf58bf52a90af5d26b6 199 contrib/binary-arm64/Release
