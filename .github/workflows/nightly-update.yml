@@ -22,6 +22,7 @@ jobs:
     secrets: inherit  
       
   update-repo:
+    if: ${{ always() }}
     needs: [ neovim, fastfetch, iosevka, minichlink ]
     uses: foil-hat-guy/OPi5Plus-Soft/.github/workflows/update-debian-repo.yml@main
     secrets: inherit
