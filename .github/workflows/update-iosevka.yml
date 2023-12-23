@@ -178,7 +178,6 @@ jobs:
 
           mkdir -p ./iosevka-doc/usr/share/doc/iosevka
           cp ./source/README.md ./iosevka-doc/usr/share/doc/iosevka/README.md
-          cp ./source/readme.md ./iosevka-doc/usr/share/doc/iosevka/readme-nerdfont.md
           cp ./source/LICENSE.md ./iosevka-doc/usr/share/doc/iosevka/LICENSE.md
           
           touch ./iosevka-doc/usr/share/doc/iosevka/readme-pkg.md
