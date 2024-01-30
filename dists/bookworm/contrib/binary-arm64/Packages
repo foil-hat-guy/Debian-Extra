@@ -3,17 +3,17 @@ Architecture: arm64
 Depends: libc6
 Priority: optional
 Section: devel
-Filename: pool/contrib/f/fastfetch/fastfetch_2.7.0_arm64.deb
-Size: 4322600
-SHA256: fa346ffd25b78ecad62a88d2d42a968ca0e9cd82eda7b14e0aefef7e3770f2a6
-SHA1: 4308a7f1129704400d5b65b99800d69eb391d676
-MD5sum: b41b8f5b56323c938501b9c47a0e38c5
+Filename: pool/contrib/f/fastfetch/fastfetch_2.7.1_arm64.deb
+Size: 4320932
+SHA256: 5eae45aaab3f70e716cff83751f6fb25841c354758cc8027c587e8d56cab7533
+SHA1: 5c41009f82e1442dbf25a70b3a10ff799e940338
+MD5sum: d5bee2ba8004f3c28f33f591261e99a8
 Description: Fast neofetch-like system information tool
  fastfetch is a neofetch-like tool for fetching system information and displaying them in a pretty way. It is written in c to achieve much better performance.
 Homepage: https://github.com/fastfetch-cli/fastfetch
 Maintainer: Linus Dierheimer <Linus@Dierheimer.de>
-Version: 2.7.0
-Installed-Size: 11364
+Version: 2.7.1
+Installed-Size: 11358
 
 Package: iosevka
 Maintainer: Foil-hat-guy <dev@foilhatguy.casa> 
@@ -173,15 +173,15 @@ Essentional: no
 Architecture: arm64
 Depends: libusb-1.0-0-dev ( >= 2:1.0.26 )
 Homepage: https://github.com/cnlohr/ch32v003fun
-Version: 0.0.14
+Version: 0.0.15
 Installed-Size: 524
 Priority: optional
 Section: electronics
-Filename: pool/contrib/m/minichlink/minichlink_0.0.14_arm64.deb
-Size: 165496
-SHA256: b19e11a0d74f75822f3f0f93b32fda6adcd7614b8472874c0ed5b8f0f931dc13
-SHA1: 40b50c16014fce6e4a282418707d5dace4f7f6c8
-MD5sum: d9fe41368c29f8461a253e618809f52b
+Filename: pool/contrib/m/minichlink/minichlink_0.0.15_arm64.deb
+Size: 165360
+SHA256: 2327eafe1c05561031d7948671aa3c5db904e2a10dfd7d780d18a78df4df07c7
+SHA1: 176e60b9959329cc3c58e8b12cfcd73d50216622
+MD5sum: 94cd763f49f57b99e6ff38848b974219
 Description: Console utility for WCH CH32V003 MCU programming.
  WCH CH32V003 is a 32-bit general-purpose RISC-V MCU.
 

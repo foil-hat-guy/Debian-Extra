@@ -4,35 +4,35 @@ Hash: SHA512
 Origin: foil-hat-guy.github.io/OPi5Plus-Soft
 Label: foil-hat-guy.github.io/OPi5Plus-Soft
 Codename: bookworm
-Date: Sat, 27 Jan 2024 20:16:49 UTC
+Date: Tue, 30 Jan 2024 20:27:09 UTC
 Architectures: arm64
 Components: contrib
 Description: Repository with some additional for Orangepi 5 plus Armbian Bookworm.
 MD5Sum:
- f5053ea1b3a17f9a5e4097e31177a905 7273 contrib/binary-arm64/Packages
- 8eb71254810adb9418df2f65feb1d74a 2254 contrib/binary-arm64/Packages.gz
+ 15f0a4d5a98de9fee9d2ca490f201228 7273 contrib/binary-arm64/Packages
+ eb2e0664ee292d33e3c6e5f5411f8775 2253 contrib/binary-arm64/Packages.gz
  6e500837c852f229e55e86df52c767f0 199 contrib/binary-arm64/Release
 SHA1:
- 6f7088c845fd28c338036c6eff4c05f4d8bd5042 7273 contrib/binary-arm64/Packages
- d35bd26578819dca3524f1562b221b99a9d7fed2 2254 contrib/binary-arm64/Packages.gz
+ 8bab3cf796323203189f5fb39c070f16c86dd796 7273 contrib/binary-arm64/Packages
+ 0c3197c876cf5c18e5bd864589959c9913c71c07 2253 contrib/binary-arm64/Packages.gz
  bc808286e5251f286e511db718514eb1f143f444 199 contrib/binary-arm64/Release
 SHA256:
- ac24ee9ffe61bb49caf4e25f64f7f6ccec69784d8e995dbba72b47166b48063e 7273 contrib/binary-arm64/Packages
- 071eb44dae9941a16a3c41a94de12aeeb55295c50a7c445c41ebdf746e5180eb 2254 contrib/binary-arm64/Packages.gz
+ 38d9ac2c8c79af190633cc1fc238173c2354baf3e5c25d8c8aca7ebda53dc68f 7273 contrib/binary-arm64/Packages
+ 562a22abe3220d55f62c0f96509b8a8317618f6d4f5994c8c7316c3e39020f18 2253 contrib/binary-arm64/Packages.gz
  3eafbc49f394efb2a0054c18eaef6e59db565f113e0bdcf58bf52a90af5d26b6 199 contrib/binary-arm64/Release
 -----BEGIN PGP SIGNATURE-----
 
-iQIzBAEBCgAdFiEETdZIeUrvOc2jRJXE8lQ/30LGE9EFAmW1ZLIACgkQ8lQ/30LG
-E9G/CQ/9GYmJ7/k9YkPADlz5A0mLhwcS2YuGlC6WWzBQ5DlCoGMwR0ihFBXVV+k4
-u1XvxInMQ636gd1vcI7008khtFa3bBrq5UGWHO/W3LXeX5d3dQp5+rU6ci+eUbWd
-o3OaBidJvD9BAjDv1qwX7UI5R1sVh3MloWBcnVkNTOFHquwGUHha30wHv95zqCkc
-cKWva6k/YxhU0l375u/XgB2HKQukctokhrKCRdQQFoYBb2gQxWllaPTNHWMQw2YU
-GU1WU0K4llCOx3k/Gqv+TQ5K2R0v0g5Ef3+mDzqEctEWw8pFTyhcI94PD+27u1rF
-0wwmG1hFTpcsu92mty6g2oGnzVAbgQtT6H57txIKTZaLyG0FnIkP8jB4NuTdJeRh
-QswUcHNx/ekSclfOK27YZeC6l2KOYt/AmVLseb21acwC7mLnPR39/3XslRhpOz0T
-eV3nnrgJiW35B3zmeN8WlI5QD1Gb10yUwARyhOjCvYeowlUE2H0EH8OcGxT5l4t6
-hOVRUWAnjHXDx7Pe/JJEZGwW1a0Mp2LpWqdfVYd0B980nf4pQAiGq+72C4saaWNF
-dDIk47jsmt7680Acu43X9X6DjgNHTmaaWpNvaANfxbLTt822qOdixk9J04esreql
-HM67YCGNlPRblbjTjfQjEpriJ8KiZv14l4TCw4yIIumnxZTsS5U=
-=Xosl
+iQIzBAEBCgAdFiEETdZIeUrvOc2jRJXE8lQ/30LGE9EFAmW5W54ACgkQ8lQ/30LG
+E9GymA//XLbem5oavRdzcwik9UnlRSJvMkh/AIVgwseNGit7t5cLHG0iytHWBLnR
+hHR/R01cEGVzsHv/pFRv5GYWObmkjLrj9CSdoomlmkyWJubaVUpTvOCaDWUXlu7Q
+2O6WWMS4ObNiuP9EGAnwja68ozHWHkytw4asa3GNnjrwwAUCpItSECI0jXbLf+QP
+E6coxVy2lM1YGyjpNP+2zJz3/iHaWl/SMB2t/yLSk8NJ7b/K3Nmft1bYp/hzH/DN
+T1Pr9DzWXEAwdmFJgiiE9VuDqpiRIwzZ6zRcP8mxMAveOyFQ3wfXFGegf08wJh3c
+frih8eXWbdHGKYAwwueE/05LvfZdumxsna/w7HRla2Yfg46mJE/+7YTMh3/7jq5E
+oAUFOdiZe8uSz3pyoZ1wY0tm9antM1Rb0MOmCYsehMSr+d0km5xlN86PctC1wBka
+kETU0ww/EEjwtPupvUKqGI+pYEO9GncH42dxnpI+0kbqE/Y2NEsJMms+8ERWSszx
+3ESLUtZcepp4OhiIv9VLKHBHIekUfef0/D8+DpOiivJa7dEGwSfKSr24VDeSIT4B
+QwDv9Xd/E/jHjAVWBzbiQ6sdl4Bg0oc0jWoBjdoTNFHaK1LV/AOfaEW+0fJ9tFhb
+7Q4Emvp6jpZzoWMmrGRr5X53fDpjZn/HeK73YvenYsyoiOwHlbA=
+=i7N5
 -----END PGP SIGNATURE-----
