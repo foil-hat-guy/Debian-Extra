@@ -3,17 +3,17 @@ Architecture: arm64
 Depends: libc6
 Priority: optional
 Section: devel
-Filename: pool/contrib/f/fastfetch/fastfetch_2.8.3_arm64.deb
-Size: 4419490
-SHA256: 08afb24d7b9eaec891580d84c69caa7a6d3c95c262a0b6984fbec093d7546acd
-SHA1: 9b1cc3ed1032edad6fac34a710e562e87c2fdd69
-MD5sum: 268924822eec46981032132430481c00
+Filename: pool/contrib/f/fastfetch/fastfetch_2.8.5_arm64.deb
+Size: 4520588
+SHA256: f4b112b6a6066430ae9b8d7b3c00221ffe86d3fa57a74d7ead849797d3f0e347
+SHA1: ec5486735ccb2f326431293fae9bc70d441f634a
+MD5sum: fd81732a6c64511a33d969f27f81d397
 Description: Fast neofetch-like system information tool
  fastfetch is a neofetch-like tool for fetching system information and displaying them in a pretty way. It is written mostly in C to achieve much better performance.
 Homepage: https://github.com/fastfetch-cli/fastfetch
 Maintainer: Linus Dierheimer <Linus@Dierheimer.de>
-Version: 2.8.3
-Installed-Size: 11602
+Version: 2.8.5
+Installed-Size: 11839
 
 Package: iosevka
 Maintainer: Foil-hat-guy <dev@foilhatguy.casa> 
