@@ -187,16 +187,16 @@ Description: Console utility for WCH CH32V003 MCU programming.
 
 Package: neovim
 Architecture: arm64
-Depends: libc6 (>= 2.34), libgcc-s1 (>= 4.2)
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 4.2)
 Priority: optional
 Section: devel
-Filename: pool/contrib/n/neovim/neovim_0.9.5_arm64.deb
-Size: 10603534
-SHA256: 3cfbcdeaf4867dd78483e32fcba14e706b34816fb50084bd9136ee774ecd1c55
-SHA1: 6283fd7ecb7ce26a763ffdf3dcd3e6263eae3c4a
-MD5sum: 2d4e956f3881cbc1d3065748ca2ef557
+Filename: pool/contrib/n/neovim/neovim_0.10.0_arm64.deb
+Size: 12292654
+SHA256: aa6b7dde208520eb2a93964cf440ed7c74e535e25d47723a19a82adeca3bd381
+SHA1: fe18593aa7b10c7376a044df3a8d399257eed1bf
+MD5sum: 2e73db532656999c20c75b6c8e4c4deb
 Description: Vim-fork focused on extensibility and usability.
 Maintainer: Neovim.io
-Version: 0.9.5
-Installed-Size: 32512
+Version: 0.10.0
+Installed-Size: 39170
 
