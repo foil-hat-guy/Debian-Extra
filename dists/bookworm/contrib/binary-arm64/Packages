@@ -173,15 +173,15 @@ Essentional: no
 Architecture: arm64
 Depends: libusb-1.0-0-dev ( >= 2:1.0.26 )
 Homepage: https://github.com/cnlohr/ch32v003fun
-Version: 0.0.51
+Version: 0.0.52
 Installed-Size: 544
 Priority: optional
 Section: electronics
-Filename: pool/contrib/m/minichlink/minichlink_0.0.51_arm64.deb
-Size: 167766
-SHA256: e879d831a4e86e5bd1b4e3a3c843988a636b47937a9e13dc95a3a92f20a8124f
-SHA1: 8ed8b41f414ab15b96df43fcba88d34e11716d26
-MD5sum: 74cf47d712824266a7420b04a466beb2
+Filename: pool/contrib/m/minichlink/minichlink_0.0.52_arm64.deb
+Size: 167782
+SHA256: 7ef17af43a56c32dd052061798ec3e8540bb46c3cff0d6719fb84b321ec17979
+SHA1: 0f77f455322f18a5250c3e6a5fd2fd05cd880e9c
+MD5sum: a7e0bcdd6976f647ecaa24022ba327ed
 Description: Console utility for WCH CH32V003 MCU programming.
  WCH CH32V003 is a 32-bit general-purpose RISC-V MCU.
 
@@ -190,13 +190,13 @@ Architecture: arm64
 Depends: libc6 (>= 2.38), libgcc-s1 (>= 4.2)
 Priority: optional
 Section: devel
-Filename: pool/contrib/n/neovim/neovim_0.10.0_arm64.deb
-Size: 12292654
-SHA256: aa6b7dde208520eb2a93964cf440ed7c74e535e25d47723a19a82adeca3bd381
-SHA1: fe18593aa7b10c7376a044df3a8d399257eed1bf
-MD5sum: 2e73db532656999c20c75b6c8e4c4deb
+Filename: pool/contrib/n/neovim/neovim_0.10.1_arm64.deb
+Size: 11970850
+SHA256: 7c65ec386d5f22ce2d6943c709466b6d1b80c00a72471391c5dc007250309c5d
+SHA1: 5eff887efb431b62942abbeaca25e662ea7699dd
+MD5sum: 5bce9bd8c300ef8ffd5bd116476fa500
 Description: Vim-fork focused on extensibility and usability.
 Maintainer: Neovim.io
-Version: 0.10.0
-Installed-Size: 39170
+Version: 0.10.1
+Installed-Size: 36984
 
