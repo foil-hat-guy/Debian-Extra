@@ -21,6 +21,8 @@ jobs:
     
     - name: Download fastfetch.deb
       run: |
+            mkdir artifacts
+            cd ./artifacts
             wget -O fastfetch.deb https://github.com/fastfetch-cli/fastfetch/releases/download/${{ inputs.version }}/fastfetch-linux-aarch64.deb
             git clone --branch ${{ inputs.version }} --depth 1 'https://github.com/fastfetch-cli/fastfetch.git'
             echo '====================='
@@ -29,7 +31,7 @@ jobs:
     - name: Save DEB to cache
       uses: actions/cache/save@v3.3.1
       with:
-        path: /home/runner/work/OPi5Plus-Soft/OPi5Plus-Soft/fastfetch.deb
+        path: /home/runner/work/OPi5Plus-Soft/OPi5Plus-Soft/artifacts/fastfetch.deb
         key: fastfetch.deb
     
   report-fail:
