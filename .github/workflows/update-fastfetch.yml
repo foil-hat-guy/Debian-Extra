@@ -1,4 +1,4 @@
-name: Fastfetch DEB build
+name: Get Fastfetch DEB
 on:
   workflow_dispatch:
     inputs:
@@ -15,39 +15,21 @@ on:
 
 jobs:
   fastfetch-aarch64-build:
-    name: Build fastfetch for arm64 architecture
+    name: Get fastfetch for arm64 architecture
     runs-on: ubuntu-latest
     steps:
     
-    - name: Build fastfetch.deb
-      uses: uraimo/run-on-arch-action@v2.5.0
-      with:
-        arch: aarch64
-        distro: ubuntu_latest
-        setup: |
-            mkdir -p "${PWD}/artifacts"
-        dockerRunArgs: |
-            --volume "${PWD}/artifacts:/artifacts"
-        install: | 
-            apt-get update -y
-            apt-get -y install apt-utils
-            apt-get -y install cmake git pkg-config rpm build-essential
-        
-        run: |
+    - name: Download fastfetch.deb
+      run: |
+            wget -O fastfetch.deb https://github.com/fastfetch-cli/fastfetch/releases/download/${{ inputs.version }}/fastfetch-linux-aarch64.deb
             git clone --branch ${{ inputs.version }} --depth 1 'https://github.com/fastfetch-cli/fastfetch.git'
-            cd fastfetch
-            mkdir -p build
-            cd build
-            cmake ..
-            cmake --build . --target package
             echo '====================='
             ls
-            cp ./*.deb "/artifacts/fastfetch.deb"
     
     - name: Save DEB to cache
       uses: actions/cache/save@v3.3.1
       with:
-        path: /home/runner/work/OPi5Plus-Soft/OPi5Plus-Soft/artifacts/fastfetch.deb
+        path: /home/runner/work/OPi5Plus-Soft/OPi5Plus-Soft/fastfetch.deb
         key: fastfetch.deb
     
   report-fail:
