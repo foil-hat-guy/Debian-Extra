@@ -3,37 +3,37 @@ Architecture: arm64
 Depends: libc6 (>= 2.31)
 Priority: optional
 Section: devel
-Filename: pool/contrib/f/fastfetch/fastfetch_2.29.0_arm64.deb
-Size: 6910898
-SHA256: 69cc3a0ad9d24354cf11170a0ace463d822da54069ec65c0a5bea798d6da667e
-SHA1: 68ad164c77cf71effa6b4129effaed1a2b73e8c6
-MD5sum: 7e89f8bef05e75549c7d342dfac3b6e9
+Filename: pool/contrib/f/fastfetch/fastfetch_2.30.1_arm64.deb
+Size: 6959844
+SHA256: 9399e5d82b6fde74f40785d3e2d93f7198cc5ac74c4c7da99fd254356f203fb1
+SHA1: f1120ee6e5052211cde17f4bac30cf4e98d5ee13
+MD5sum: 08e56f8326b60e0c089afa4da1123809
 Description: Fast neofetch-like system information tool
  fastfetch is a neofetch-like tool for fetching system information and displaying them in a pretty way. It is written mostly in C to achieve much better performance.
 Maintainer: Linus Dierheimer <Linus@Dierheimer.de>
-Version: 2.29.0
-Installed-Size: 26360
+Version: 2.30.1
+Installed-Size: 26535
 
 Package: iosevka
 Maintainer: Foil-hat-guy <dev@foilhatguy.casa> 
 Essentional: no 
 Architecture: all
-Depends: iosevka-nerd-font (= 3.2.1),
- iosevka-nerd-font-mono (= 3.2.1),
- iosevka-nerd-font-propo (= 3.2.1),
- iosevka-term-nerd-font (= 3.2.1),
- iosevka-term-nerd-font-mono (= 3.2.1),
- iosevka-term-nerd-font-propo (= 3.2.1)
+Depends: iosevka-nerd-font (= 3.3.0),
+ iosevka-nerd-font-mono (= 3.3.0),
+ iosevka-nerd-font-propo (= 3.3.0),
+ iosevka-term-nerd-font (= 3.3.0),
+ iosevka-term-nerd-font-mono (= 3.3.0),
+ iosevka-term-nerd-font-propo (= 3.3.0)
 Homepage: https://www.nerdfonts.com/ 
-Version: 3.2.1 
+Version: 3.3.0 
 Installed-Size: 8
 Priority: optional
 Section: fonts
-Filename: pool/contrib/i/iosevka/iosevka_3.2.1_all.deb
-Size: 768
-SHA256: 83df3b1f562946bc4620c1fceaf6da1adbbfca0221d631de30596abee9a8ee4b
-SHA1: d409d2d7809e8ea577706811a4b1a22eb09763a6
-MD5sum: 8355088317f8698324247a50b6eb0df3
+Filename: pool/contrib/i/iosevka/iosevka_3.3.0_all.deb
+Size: 764
+SHA256: 448272fce9323f5ac2384d4a2d818dac2235eb04d2a6ca415b29e65468f79a4d
+SHA1: d60c333bb7e42ddf5fc999d7d39c67e2d308671c
+MD5sum: 0638c0c44b5ff3caad4794beb1decedc
 Description: It is a meta-package. It installs a set of Iosevka and IosevkaTerm nerd fonts. 
  There are default, monospace and proportional variants for both of them. 
  Each font family includes regular, bold, italic and bold italic fonts. 
@@ -44,32 +44,32 @@ Maintainer: Foil-hat-guy <dev@foilhatguy.casa>
 Essentional: no 
 Architecture: all
 Homepage: https://www.nerdfonts.com/ 
-Version: 3.2.1 
+Version: 3.3.0 
 Installed-Size: 12
 Priority: optional
 Section: fonts
-Filename: pool/contrib/i/iosevka-doc/iosevka-doc_3.2.1_all.deb
-Size: 3788
-SHA256: 44a5b942ea265b1c426dbf9d2594a1dfb1e6955772fdec42adb647bb948c4f91
-SHA1: 1e0b5be4a11306b9753fce987427a36f130da388
-MD5sum: 9498ad4b768f77c6fdeef3047065576f
+Filename: pool/contrib/i/iosevka-doc/iosevka-doc_3.3.0_all.deb
+Size: 3780
+SHA256: 454230c5d3e35b42769e3c2066cbcf37071b4aedc53fb849dc07e673f959f8a6
+SHA1: d58d13f9fdb89deb1df34708879ca1200d684f94
+MD5sum: 3b6e4a782970ab97eee433940110d84f
 Description: License and readme files for Iosevka fonts.
 
 Package: iosevka-nerd-font
 Maintainer: Foil-hat-guy <dev@foilhatguy.casa> 
 Essentional: no 
 Architecture: all
-Depends: iosevka-doc (= 3.2.1)
+Depends: iosevka-doc (= 3.3.0)
 Homepage: https://www.nerdfonts.com/ 
-Version: 3.2.1 
-Installed-Size: 51752 
+Version: 3.3.0 
+Installed-Size: 52416 
 Priority: optional
 Section: fonts
-Filename: pool/contrib/i/iosevka-nerd-font/iosevka-nerd-font_3.2.1_all.deb
-Size: 11275174
-SHA256: cd9d1a5392166a0b443e5beb29a47b53caf40b69bd6d293cd7d7da5fecfe7d0c
-SHA1: 7a79386d978a86a8737dc723b56de32fbeb4cefa
-MD5sum: 4474fba7def6623b62171a2af003a5ee
+Filename: pool/contrib/i/iosevka-nerd-font/iosevka-nerd-font_3.3.0_all.deb
+Size: 11653330
+SHA256: 6dfbf6d4a9a94770fc5bfddea775b3d86e17a90a8353d7ede32a3152f6c4da3e
+SHA1: 059743e8b696a5b3590639a3558862858d95362f
+MD5sum: 9ceb2569396f48037d2ba0d8ccff0030
 Description: Iosevka nerd font.
  This package contains regular, bold, italic and bold italic fonts.
 
@@ -77,17 +77,17 @@ Package: iosevka-nerd-font-mono
 Maintainer: Foil-hat-guy <dev@foilhatguy.casa> 
 Essentional: no 
 Architecture: all
-Depends: iosevka-doc (= 3.2.1)
+Depends: iosevka-doc (= 3.3.0)
 Homepage: https://www.nerdfonts.com/ 
-Version: 3.2.1 
-Installed-Size: 51244 
+Version: 3.3.0 
+Installed-Size: 51888 
 Priority: optional
 Section: fonts
-Filename: pool/contrib/i/iosevka-nerd-font-mono/iosevka-nerd-font-mono_3.2.1_all.deb
-Size: 11208940
-SHA256: c1766ec832eed0ab41631316ed00d28075bca0ebb20e67d1a9b97b99eddb6e61
-SHA1: b4d397e1e5e3d85153a49209a8f48381a738fe0c
-MD5sum: 3cc1751079406475cbec8806a682754a
+Filename: pool/contrib/i/iosevka-nerd-font-mono/iosevka-nerd-font-mono_3.3.0_all.deb
+Size: 11566950
+SHA256: d890ddb0c03339837cb54cf20e5b8bf36ff71ad9ae7fcb7f4d52040012407ace
+SHA1: 19ed3ebe6767757ce2ca95bdab88d55de3aa4fbd
+MD5sum: 51092ff856cda2b0823f82f4f963494c
 Description: Iosevka nerd font. Monospace variant.
  This package contains regular, bold, italic and bold italic fonts.
 
@@ -95,17 +95,17 @@ Package: iosevka-nerd-font-propo
 Maintainer: Foil-hat-guy <dev@foilhatguy.casa> 
 Essentional: no 
 Architecture: all
-Depends: iosevka-doc (= 3.2.1)
+Depends: iosevka-doc (= 3.3.0)
 Homepage: https://www.nerdfonts.com/ 
-Version: 3.2.1 
-Installed-Size: 51752 
+Version: 3.3.0 
+Installed-Size: 52416 
 Priority: optional
 Section: fonts
-Filename: pool/contrib/i/iosevka-nerd-font-propo/iosevka-nerd-font-propo_3.2.1_all.deb
-Size: 11304942
-SHA256: 16ccc734f44ac1d0e49cb3c4320b349a279080b79f7ecea935e2091a4084cf7d
-SHA1: 9c68f17df9dfc5f98a50fba55788b57b4dd82541
-MD5sum: 87eae4b46232d20501c13957cb6ee288
+Filename: pool/contrib/i/iosevka-nerd-font-propo/iosevka-nerd-font-propo_3.3.0_all.deb
+Size: 11683924
+SHA256: b62fae71f292c3a071918d0f97536013f5e904fd9986c18e0ddc2568867ac6e4
+SHA1: 3ec61ec790ad5a580d31d31beb85c0d00ef81054
+MD5sum: 2eeadea431b9b1fbfc7268b5ee4e21eb
 Description: Iosevka nerd font. Proportional variant.
  This package contains regular, bold, italic and bold italic fonts.
 
@@ -113,17 +113,17 @@ Package: iosevka-term-nerd-font
 Maintainer: Foil-hat-guy <dev@foilhatguy.casa> 
 Essentional: no 
 Architecture: all
-Depends: iosevka-doc (= 3.2.1)
+Depends: iosevka-doc (= 3.3.0)
 Homepage: https://www.nerdfonts.com/ 
-Version: 3.2.1 
-Installed-Size: 51744 
+Version: 3.3.0 
+Installed-Size: 52408 
 Priority: optional
 Section: fonts
-Filename: pool/contrib/i/iosevka-term-nerd-font/iosevka-term-nerd-font_3.2.1_all.deb
-Size: 11272530
-SHA256: 2a95a2fffe9fd2df477eb5ab07db3b31a357da148caa9856c866dfc2f6f26cc6
-SHA1: 233818672c82cddf8bf01684abf12a7a14406e24
-MD5sum: 24fa7a8d5a97cefa1466158f089ac9ca
+Filename: pool/contrib/i/iosevka-term-nerd-font/iosevka-term-nerd-font_3.3.0_all.deb
+Size: 11650986
+SHA256: 80e455cdfb58d0541b5abe6fcb3cb61b291461eb5123baf633ddd0f8ccd0c3d0
+SHA1: 5c97d86c9b4bd8f0709907f90017f5d8b78707fc
+MD5sum: b7dd30320070fc21d4ca3967f07601db
 Description: Iosevka Term nerd font.
  This package contains regular, bold, italic and bold italic fonts.
  This font is more suitable for terminals with restricted capabilities.
@@ -132,17 +132,17 @@ Package: iosevka-term-nerd-font-mono
 Maintainer: Foil-hat-guy <dev@foilhatguy.casa> 
 Essentional: no 
 Architecture: all
-Depends: iosevka-doc (= 3.2.1)
+Depends: iosevka-doc (= 3.3.0)
 Homepage: https://www.nerdfonts.com/ 
-Version: 3.2.1 
-Installed-Size: 51244 
+Version: 3.3.0 
+Installed-Size: 51888 
 Priority: optional
 Section: fonts
-Filename: pool/contrib/i/iosevka-term-nerd-font-mono/iosevka-term-nerd-font-mono_3.2.1_all.deb
-Size: 11205814
-SHA256: 5c91b96696a6ef2142807555d4f55c6912f26de31b37abfe383eec38dbe463c1
-SHA1: ad141ab5564ca3f0c4088e239c9a8e67c166eeab
-MD5sum: 3c38359926900b022c1f5e379ecd1fab
+Filename: pool/contrib/i/iosevka-term-nerd-font-mono/iosevka-term-nerd-font-mono_3.3.0_all.deb
+Size: 11562238
+SHA256: afd00ed926f6bb439dac90f7ce6f4494858eafef2a651ab627b792da0fdee519
+SHA1: 475b40ab8ae7078d87778856b284b6fb74fc5189
+MD5sum: c2b1810fe95f10a5d8f44a5f937bb212
 Description: Iosevka Term nerd font. Monospace variant.
  This package contains regular, bold, italic and bold italic fonts.
  This font is more suitable for terminals with restricted capabilities.
@@ -151,17 +151,17 @@ Package: iosevka-term-nerd-font-propo
 Maintainer: Foil-hat-guy <dev@foilhatguy.casa> 
 Essentional: no 
 Architecture: all
-Depends: iosevka-doc (= 3.2.1)
+Depends: iosevka-doc (= 3.3.0)
 Homepage: https://www.nerdfonts.com/ 
-Version: 3.2.1 
-Installed-Size: 51744 
+Version: 3.3.0 
+Installed-Size: 52408 
 Priority: optional
 Section: fonts
-Filename: pool/contrib/i/iosevka-term-nerd-font-propo/iosevka-term-nerd-font-propo_3.2.1_all.deb
-Size: 11301348
-SHA256: 1bdd79aeaa06ad6c95009838d10af76e6251f8f0fade51ecc8da52e4363e277c
-SHA1: efec385d493493d16da8e5608268b5f9f262520d
-MD5sum: 5e9d56a9c24ca85455e2c898eb4fef61
+Filename: pool/contrib/i/iosevka-term-nerd-font-propo/iosevka-term-nerd-font-propo_3.3.0_all.deb
+Size: 11681562
+SHA256: 712df28e7556a1fe9ff773d455a26c5dc13fd65675eb6919af4ed67c65fb92a7
+SHA1: 127d65f920a55b5889ca99749c8ceb4a0f0164c9
+MD5sum: 119c521384ac284ddd4486ff61ae903c
 Description: Iosevka Term nerd font. Proportional variant.
  This package contains regular, bold, italic and bold italic fonts.
  This font is more suitable for terminals with restricted capabilities.
@@ -172,15 +172,15 @@ Essentional: no
 Architecture: arm64
 Depends: libusb-1.0-0-dev ( >= 2:1.0.26 )
 Homepage: https://github.com/cnlohr/ch32v003fun
-Version: 0.0.80
+Version: 0.0.81
 Installed-Size: 564
 Priority: optional
 Section: electronics
-Filename: pool/contrib/m/minichlink/minichlink_0.0.80_arm64.deb
-Size: 175558
-SHA256: fa76919bea66abc82c2317eb85ec64a19b552fd87ce82f9b9082890af0df08e9
-SHA1: 95a9e1a5a834f4f80035ac0572b69fb3b789c32b
-MD5sum: 9bff60337d33415c2e052f526397a4af
+Filename: pool/contrib/m/minichlink/minichlink_0.0.81_arm64.deb
+Size: 175572
+SHA256: 4481ea1faf05871442d247d1f8081267a9392cca462daff1f06d227aeb1949a8
+SHA1: 51435e774dfa353b5108835496f39dd830e27c8c
+MD5sum: 19d8f7b524f02b293848f6b240c6f1f7
 Description: Console utility for WCH CH32V003 MCU programming.
  WCH CH32V003 is a 32-bit general-purpose RISC-V MCU.
 
