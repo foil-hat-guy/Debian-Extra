@@ -189,13 +189,13 @@ Architecture: arm64
 Depends: libc6 (>= 2.38), libgcc-s1 (>= 4.2)
 Priority: optional
 Section: devel
-Filename: pool/contrib/n/neovim/neovim_0.10.2_arm64.deb
-Size: 11972852
-SHA256: 5430e1c7608770a09f3e1886f842b537aa9945d3bd703a0b0a0699bb67f6e144
-SHA1: be891e311ba45e33f8e0e890f02388f5df1ee0ff
-MD5sum: 4403c9e268b78daea709b1c7c4bcb680
+Filename: pool/contrib/n/neovim/neovim_0.10.3_arm64.deb
+Size: 11977548
+SHA256: a94f5c56f5389473b8639513be1ba79fee74eb56f4f920ca8e28b1f4f7603d72
+SHA1: 1af75b745ec9d79203bb0cf793e23a153ddf9048
+MD5sum: 59f61e7b842d94b3ffe3e9897d3116f2
 Description: Vim-fork focused on extensibility and usability.
 Maintainer: Neovim.io
-Version: 0.10.2
-Installed-Size: 36986
+Version: 0.10.3
+Installed-Size: 36988
 
