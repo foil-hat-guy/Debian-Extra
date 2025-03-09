@@ -69,25 +69,6 @@ MD5sum: 2eeadea431b9b1fbfc7268b5ee4e21eb
 Description: Iosevka nerd font. Proportional variant.
  This package contains regular, bold, italic and bold italic fonts.
 
-Package: iosevka-term-nerd-font
-Maintainer: Foil-hat-guy <dev@foilhatguy.casa> 
-Essentional: no 
-Architecture: all
-Depends: iosevka-doc (= 3.3.0)
-Homepage: https://www.nerdfonts.com/ 
-Version: 3.3.0 
-Installed-Size: 52408 
-Priority: optional
-Section: fonts
-Filename: pool/contrib/i/iosevka-term-nerd-font/iosevka-term-nerd-font_3.3.0_all.deb
-Size: 11650986
-SHA256: 80e455cdfb58d0541b5abe6fcb3cb61b291461eb5123baf633ddd0f8ccd0c3d0
-SHA1: 5c97d86c9b4bd8f0709907f90017f5d8b78707fc
-MD5sum: b7dd30320070fc21d4ca3967f07601db
-Description: Iosevka Term nerd font.
- This package contains regular, bold, italic and bold italic fonts.
- This font is more suitable for terminals with restricted capabilities.
-
 Package: iosevka-term-nerd-font-mono
 Maintainer: Foil-hat-guy <dev@foilhatguy.casa> 
 Essentional: no 
