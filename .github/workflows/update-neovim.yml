@@ -44,7 +44,7 @@ jobs:
     - name: Save DEB to cache
       uses: actions/cache/save@v4
       with:
-        path: /home/runner/work/OPi5Plus-Soft/OPi5Plus-Soft/artifacts/neovim.deb
+        path: /home/runner/work/Debian-Extra/Debian-Extra/artifacts/neovim.deb
         key: neovim.deb
           
   report-fail:
