@@ -22,7 +22,7 @@
       - id: getversion
         name: Get current package version
         run: |
-          wget -qO - https://foil-hat-guy.github.io/OPi5Plus-Soft/dists/bookworm/contrib/binary-arm64/Packages > packages
+          wget -qO - https://foil-hat-guy.github.io/Debian-Extra/dists/bookworm/contrib/binary-arm64/Packages > packages
           grep -A 16 'Package: fastfetch' packages | grep 'Version' | cut -d ' ' -f 2 > currentversion
           echo "current="$(cat currentversion) >> "$GITHUB_OUTPUT"
     
@@ -37,7 +37,7 @@
       name: Update debian repository
       needs: pkg-version
       if: ${{ needs.pkg-version.outputs.new != needs.pkg-version.outputs.old }}
-      uses: foil-hat-guy/OPi5Plus-Soft/.github/workflows/update-fastfetch.yml@main
+      uses: foil-hat-guy/Debian-Extra/.github/workflows/update-fastfetch.yml@main
       with:
         version: ${{ needs.pkg-version.outputs.new }}
       secrets: inherit
