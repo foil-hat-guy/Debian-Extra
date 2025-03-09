@@ -1,7 +1,7 @@
 Origin: foil-hat-guy.github.io/Debian-Extra
 Label: foil-hat-guy.github.io/Debian-Extra
 Codename: bookworm
-Date: Sun, 09 Mar 2025 07:10:18 UTC
+Date: Sun, 09 Mar 2025 07:11:16 UTC
 Architectures: amd64 arm64
 Components: contrib
 Description: Repository with some additional packages for Debian Bookworm.
@@ -9,20 +9,20 @@ MD5Sum:
  d41d8cd98f00b204e9800998ecf8427e 0 contrib/binary-amd64/Packages
  7029066c27ac6f5ef18d660d5741979a 20 contrib/binary-amd64/Packages.gz
  dde9fb55d6446e6c268a0a34b2621a63 211 contrib/binary-amd64/Release
- dbfd777dca445747f03e590426ed4cf0 6798 contrib/binary-arm64/Packages
- 1446c186fba088626ce4a6ffe0074f77 2130 contrib/binary-arm64/Packages.gz
+ 01ef0028903f322c2fbb1f829aa62bc8 5847 contrib/binary-arm64/Packages
+ 5f79f9abc1eb450532bc42efaa5ed46e 1867 contrib/binary-arm64/Packages.gz
  6e500837c852f229e55e86df52c767f0 199 contrib/binary-arm64/Release
 SHA1:
  da39a3ee5e6b4b0d3255bfef95601890afd80709 0 contrib/binary-amd64/Packages
  46c6643f07aa7f6bfe7118de926b86defc5087c4 20 contrib/binary-amd64/Packages.gz
  f4f2d5f6f487e6ed96cdfa9d0e038015bbc37861 211 contrib/binary-amd64/Release
- 7d8ad0c3397a90daa2548a1479f62683081d4467 6798 contrib/binary-arm64/Packages
- 13fdb0a8372b7cd6c9faffd4b71333ac768185b2 2130 contrib/binary-arm64/Packages.gz
+ 43f8df89761437e2306e93dce80c711a34477421 5847 contrib/binary-arm64/Packages
+ 1b91cfa79e2853e1d9f31ab3eb5015fa39642a64 1867 contrib/binary-arm64/Packages.gz
  bc808286e5251f286e511db718514eb1f143f444 199 contrib/binary-arm64/Release
 SHA256:
  e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 contrib/binary-amd64/Packages
  59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2 20 contrib/binary-amd64/Packages.gz
  13a765cf809f4a041a41028380771600b61438fcce862d157db3a485583af89b 211 contrib/binary-amd64/Release
- 7af0e05b0a46dfebe077af6b020b8d760c0c6d9a214f16419f6df1a6adeeae80 6798 contrib/binary-arm64/Packages
- 0eb1ee3289bb17bd821775612ae7f31b23531ab8a71d8274358c84ee227e705e 2130 contrib/binary-arm64/Packages.gz
+ 63d5b0c452cb4f06eec92717c0480800c1dc320c99184a4979622af147542674 5847 contrib/binary-arm64/Packages
+ 8b6c86ed55c94a223e534f9772f19bfc6fd334c33c2c9df8f086c820cda0333c 1867 contrib/binary-arm64/Packages.gz
  3eafbc49f394efb2a0054c18eaef6e59db565f113e0bdcf58bf52a90af5d26b6 199 contrib/binary-arm64/Release
