@@ -24,10 +24,10 @@
           echo "new="$(git rev-parse HEAD) >> "$GITHUB_OUTPUT"
           cd ..
           
-          wget -qO - https://foil-hat-guy.github.io/OPi5Plus-Soft/dists/bookworm/contrib/binary-arm64/Packages > packages
+          wget -qO - https://foil-hat-guy.github.io/Debian-Extra/dists/bookworm/contrib/binary-arm64/Packages > packages
           currentversion=$(grep -A 16 'Package: minichlink' packages | grep 'Version' | cut -d ' ' -f 2)
           echo $currentversion
-          wget -qO - 'https://foil-hat-guy.github.io/OPi5Plus-Soft/pool/contrib/m/minichlink/minichlink_'$currentversion'_arm64.deb' > pkg.deb
+          wget -qO - 'https://foil-hat-guy.github.io/Debian-Extra/pool/contrib/m/minichlink/minichlink_'$currentversion'_arm64.deb' > pkg.deb
           ar -x pkg.deb
           tar --use-compress-program=unzstd -xvf data.tar.zst
           echo "current="$(grep 'SHA' ./usr/share/doc/minichlink/README-pkg.md | cut -d ':' -f 2) >> "$GITHUB_OUTPUT"
@@ -43,7 +43,7 @@
       name: Update debian repository
       needs: pkg-version
       if: ${{ needs.pkg-version.outputs.new != needs.pkg-version.outputs.old }}
-      uses: foil-hat-guy/OPi5Plus-Soft/.github/workflows/update-minichlink.yml@main
+      uses: foil-hat-guy/Debian-Extra/.github/workflows/update-minichlink.yml@main
       with:
         commit-sha: ${{ needs.pkg-version.outputs.new }}
       secrets: inherit
