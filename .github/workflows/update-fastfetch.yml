@@ -31,7 +31,7 @@ jobs:
     - name: Save DEB to cache
       uses: actions/cache/save@v4
       with:
-        path: /home/runner/work/OPi5Plus-Soft/OPi5Plus-Soft/artifacts/fastfetch.deb
+        path: /home/runner/work/Debian-Extra/Debian-Extra/artifacts/fastfetch.deb
         key: fastfetch.deb
     
   report-fail:
