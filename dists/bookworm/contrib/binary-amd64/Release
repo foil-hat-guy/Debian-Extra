@@ -1,0 +1,5 @@
+Component: contrib
+Origin: foil-hat-guy.github.io/OPi5Plus-Soft
+Label: foil-hat-guy.github.io/OPi5Plus-Soft
+Architecture: amd64
+Description: Repository with some additional for Orangepi 5 plus Armbian Bookworm.
