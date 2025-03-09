@@ -1,7 +1,7 @@
-Origin: foil-hat-guy.github.io/OPi5Plus-Soft
-Label: foil-hat-guy.github.io/OPi5Plus-Soft
+Origin: foil-hat-guy.github.io/Debian-Extra
+Label: foil-hat-guy.github.io/Debian-Extra
 Codename: bookworm
 Architectures: amd64 arm64
 Components: contrib
-Description: Repository with some additional for Orangepi 5 plus Armbian Bookworm.
+Description: Repository with some additional packages for Debian Bookworm.
 SignWith: yes
