@@ -1,9 +1,9 @@
 # Extra software for Debian Bookworm repository
 
-[![Fastfetch DEB build](https://github.com/foil-hat-guy/OPi5Plus-Soft/actions/workflows/update-fastfetch.yml/badge.svg)](https://github.com/foil-hat-guy/OPi5Plus-Soft/actions/workflows/update-fastfetch.yml)
-[![Neovim DEB Build](https://github.com/foil-hat-guy/OPi5Plus-Soft/actions/workflows/update-neovim.yml/badge.svg)](https://github.com/foil-hat-guy/OPi5Plus-Soft/actions/workflows/update-neovim.yml)
-[![Iosevka DEB Build](https://github.com/foil-hat-guy/OPi5Plus-Soft/actions/workflows/update-iosevka.yml/badge.svg)](https://github.com/foil-hat-guy/OPi5Plus-Soft/actions/workflows/update-iosevka.yml)
-[![Minichlink DEB Build](https://github.com/foil-hat-guy/OPi5Plus-Soft/actions/workflows/update-minichlink.yml/badge.svg)](https://github.com/foil-hat-guy/OPi5Plus-Soft/actions/workflows/update-minichlink.yml)
+[![Fastfetch DEB build](https://github.com/foil-hat-guy/Debian-Extra/actions/workflows/update-fastfetch.yml/badge.svg)](https://github.com/foil-hat-guy/Debian-Extra/actions/workflows/update-fastfetch.yml)
+[![Neovim DEB Build](https://github.com/foil-hat-guy/Debian-Extra/actions/workflows/update-neovim.yml/badge.svg)](https://github.com/foil-hat-guy/Debian-Extra/actions/workflows/update-neovim.yml)
+[![Iosevka DEB Build](https://github.com/foil-hat-guy/Debian-Extra/actions/workflows/update-iosevka.yml/badge.svg)](https://github.com/foil-hat-guy/Debian-Extra/actions/workflows/update-iosevka.yml)
+[![Minichlink DEB Build](https://github.com/foil-hat-guy/Debian-Extra/actions/workflows/update-minichlink.yml/badge.svg)](https://github.com/foil-hat-guy/Debian-Extra/actions/workflows/update-minichlink.yml)
 
 ## Description:
 
