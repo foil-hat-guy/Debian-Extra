@@ -40,22 +40,6 @@ Description: It is a meta-package. It installs a set of Iosevka and IosevkaTerm 
  Each font family includes regular, bold, italic and bold italic fonts. 
  All in all there are 24 fonts in six font families.
 
-Package: iosevka-doc
-Maintainer: Foil-hat-guy <dev@foilhatguy.casa> 
-Essentional: no 
-Architecture: all
-Homepage: https://www.nerdfonts.com/ 
-Version: 3.3.0 
-Installed-Size: 12
-Priority: optional
-Section: fonts
-Filename: pool/contrib/i/iosevka-doc/iosevka-doc_3.3.0_all.deb
-Size: 3780
-SHA256: 454230c5d3e35b42769e3c2066cbcf37071b4aedc53fb849dc07e673f959f8a6
-SHA1: d58d13f9fdb89deb1df34708879ca1200d684f94
-MD5sum: 3b6e4a782970ab97eee433940110d84f
-Description: License and readme files for Iosevka fonts.
-
 Package: iosevka-nerd-font
 Maintainer: Foil-hat-guy <dev@foilhatguy.casa> 
 Essentional: no 
