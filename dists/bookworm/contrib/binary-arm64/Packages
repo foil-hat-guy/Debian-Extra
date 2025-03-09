@@ -33,24 +33,6 @@ MD5sum: 51092ff856cda2b0823f82f4f963494c
 Description: Iosevka nerd font. Monospace variant.
  This package contains regular, bold, italic and bold italic fonts.
 
-Package: iosevka-nerd-font-propo
-Maintainer: Foil-hat-guy <dev@foilhatguy.casa> 
-Essentional: no 
-Architecture: all
-Depends: iosevka-doc (= 3.3.0)
-Homepage: https://www.nerdfonts.com/ 
-Version: 3.3.0 
-Installed-Size: 52416 
-Priority: optional
-Section: fonts
-Filename: pool/contrib/i/iosevka-nerd-font-propo/iosevka-nerd-font-propo_3.3.0_all.deb
-Size: 11683924
-SHA256: b62fae71f292c3a071918d0f97536013f5e904fd9986c18e0ddc2568867ac6e4
-SHA1: 3ec61ec790ad5a580d31d31beb85c0d00ef81054
-MD5sum: 2eeadea431b9b1fbfc7268b5ee4e21eb
-Description: Iosevka nerd font. Proportional variant.
- This package contains regular, bold, italic and bold italic fonts.
-
 Package: minichlink
 Maintainer: Foil-hat-guy <dev@foilhatguy.casa> 
 Essentional: no 
