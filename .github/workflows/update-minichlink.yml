@@ -112,7 +112,7 @@ jobs:
             echo ::set-output name=version::0.0.$(($currentversion+1))
     
     - name: Save DEB to cache
-      uses: actions/cache/save@v3.3.1
+      uses: actions/cache/save@v4
       with:
         path: /home/runner/work/OPi5Plus-Soft/OPi5Plus-Soft/artifacts/minichlink.deb
         key: minichlink.deb
