@@ -15,24 +15,6 @@ Maintainer: Linus Dierheimer <Linus@Dierheimer.de>
 Version: 2.38.0
 Installed-Size: 18654
 
-Package: iosevka-nerd-font-mono
-Maintainer: Foil-hat-guy <dev@foilhatguy.casa> 
-Essentional: no 
-Architecture: all
-Depends: iosevka-doc (= 3.3.0)
-Homepage: https://www.nerdfonts.com/ 
-Version: 3.3.0 
-Installed-Size: 51888 
-Priority: optional
-Section: fonts
-Filename: pool/contrib/i/iosevka-nerd-font-mono/iosevka-nerd-font-mono_3.3.0_all.deb
-Size: 11566950
-SHA256: d890ddb0c03339837cb54cf20e5b8bf36ff71ad9ae7fcb7f4d52040012407ace
-SHA1: 19ed3ebe6767757ce2ca95bdab88d55de3aa4fbd
-MD5sum: 51092ff856cda2b0823f82f4f963494c
-Description: Iosevka nerd font. Monospace variant.
- This package contains regular, bold, italic and bold italic fonts.
-
 Package: minichlink
 Maintainer: Foil-hat-guy <dev@foilhatguy.casa> 
 Essentional: no 
