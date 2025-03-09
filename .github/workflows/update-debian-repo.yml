@@ -14,28 +14,28 @@ jobs:
       uses: actions/cache/restore@v4
       id: fastfetch-cache
       with:
-        path: /home/runner/work/OPi5Plus-Soft/OPi5Plus-Soft/artifacts/fastfetch.deb
+        path: /home/runner/work/Debian-Extra/Debian-Extra/artifacts/fastfetch.deb
         key: fastfetch.deb
         
     - name: Load new neovim.deb
       uses: actions/cache/restore@v4
       id: neovim-cache
       with:
-        path: /home/runner/work/OPi5Plus-Soft/OPi5Plus-Soft/artifacts/neovim.deb
+        path: /home/runner/work/Debian-Extra/Debian-Extra/artifacts/neovim.deb
         key: neovim.deb
 
     - name: Load new iosevka.deb
       uses: actions/cache/restore@v4
       id: iosevka-cache
       with:
-        path: /home/runner/work/OPi5Plus-Soft/OPi5Plus-Soft/artifacts/*.deb
+        path: /home/runner/work/Debian-Extra/Debian-Extra/artifacts/*.deb
         key: iosevka.debs
 
     - name: Load new minichlink.deb
       uses: actions/cache/restore@v4
       id: minichlink-cache
       with:
-        path: /home/runner/work/OPi5Plus-Soft/OPi5Plus-Soft/artifacts/minichlink.deb
+        path: /home/runner/work/Debian-Extra/Debian-Extra/artifacts/minichlink.deb
         key: minichlink.deb
     
     - name: Import GPG key for debian
@@ -63,7 +63,7 @@ jobs:
       if: contains( steps.*.outputs.cache-hit, 'true' )
       run: |
           cd ./debian
-          reprepro --basedir . includedeb bookworm /home/runner/work/OPi5Plus-Soft/OPi5Plus-Soft/artifacts/*.deb
+          reprepro --basedir . includedeb bookworm /home/runner/work/Debian-Extra/Debian-Extra/artifacts/*.deb
 
     - name: Update git repository
       if: contains( steps.*.outputs.cache-hit, 'true' )
