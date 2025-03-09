@@ -11,28 +11,28 @@ jobs:
       has-new-pkg: ${{ contains( steps.*.outputs.cache-hit, 'true' ) }}
     steps:
     - name: Load new fastfetch.deb
-      uses: actions/cache/restore@v3.3.1
+      uses: actions/cache/restore@v4
       id: fastfetch-cache
       with:
         path: /home/runner/work/OPi5Plus-Soft/OPi5Plus-Soft/artifacts/fastfetch.deb
         key: fastfetch.deb
         
     - name: Load new neovim.deb
-      uses: actions/cache/restore@v3.3.1
+      uses: actions/cache/restore@v4
       id: neovim-cache
       with:
         path: /home/runner/work/OPi5Plus-Soft/OPi5Plus-Soft/artifacts/neovim.deb
         key: neovim.deb
 
     - name: Load new iosevka.deb
-      uses: actions/cache/restore@v3.3.1
+      uses: actions/cache/restore@v4
       id: iosevka-cache
       with:
         path: /home/runner/work/OPi5Plus-Soft/OPi5Plus-Soft/artifacts/*.deb
         key: iosevka.debs
 
     - name: Load new minichlink.deb
-      uses: actions/cache/restore@v3.3.1
+      uses: actions/cache/restore@v4
       id: minichlink-cache
       with:
         path: /home/runner/work/OPi5Plus-Soft/OPi5Plus-Soft/artifacts/minichlink.deb
