@@ -36,7 +36,7 @@ jobs:
             apt-get -y install git build-essential libnewlib-dev libusb-1.0-0-dev libudev-dev wget
         
         run: |
-            wget -qO - https://foil-hat-guy.github.io/OPi5Plus-Soft/dists/bookworm/contrib/binary-arm64/Packages > packages
+            wget -qO - https://foil-hat-guy.github.io/Debian-Extra/dists/bookworm/contrib/binary-arm64/Packages > packages
             currentversion=$(grep -A 16 'Package: minichlink' packages | grep 'Version' | cut -d ' ' -f 2 | cut -d '.' -f 3)
                         
             git clone 'https://github.com/cnlohr/ch32v003fun.git'
@@ -63,7 +63,7 @@ jobs:
             This package was prepared by the Foil-hat-guy <dev@foilhatguy.casa>.
           
             For more information about this package visit:
-            * https://foil-hat-guy.github.io/OPi5Plus-Soft/
+            * https://foil-hat-guy.github.io/Debian-Extra/
             * https://github.com/foil-hat-guy
           
             Ch32v003fun homepage:
@@ -114,7 +114,7 @@ jobs:
     - name: Save DEB to cache
       uses: actions/cache/save@v4
       with:
-        path: /home/runner/work/OPi5Plus-Soft/OPi5Plus-Soft/artifacts/minichlink.deb
+        path: /home/runner/work/Debian-Extra/Debian-Extra/artifacts/minichlink.deb
         key: minichlink.deb
           
   report-fail:
