@@ -1,28 +1,28 @@
 Origin: foil-hat-guy.github.io/Debian-Extra
 Label: foil-hat-guy.github.io/Debian-Extra
 Codename: bookworm
-Date: Mon, 21 Apr 2025 20:42:05 UTC
+Date: Thu, 24 Apr 2025 20:41:43 UTC
 Architectures: amd64 arm64
 Components: contrib
 Description: Repository with some additional packages for Debian Bookworm.
 MD5Sum:
- 638fe3b655395557b53fe986c749e179 5503 contrib/binary-amd64/Packages
- 93a9ab179dba31db2531dbafc6056114 1501 contrib/binary-amd64/Packages.gz
+ 9dd4c7d3fda8d85957869aabde144fc4 5503 contrib/binary-amd64/Packages
+ c834e9231d99077e38bfdad0c2ffa62c 1502 contrib/binary-amd64/Packages.gz
  dde9fb55d6446e6c268a0a34b2621a63 211 contrib/binary-amd64/Release
- 07a5b50b48b71dd96354712118448bc5 7302 contrib/binary-arm64/Packages
- 435aa1ef24cc1714fde18b8332d3a6d3 2272 contrib/binary-arm64/Packages.gz
+ dd083b25e378bacdff48b9fdf25d51b7 7302 contrib/binary-arm64/Packages
+ a0878e032704e25d69c0c493af36563b 2268 contrib/binary-arm64/Packages.gz
  6e500837c852f229e55e86df52c767f0 199 contrib/binary-arm64/Release
 SHA1:
- 137f1c09d794005cccb0b06a053d5bde0899206a 5503 contrib/binary-amd64/Packages
- bca7f661ca1c6a7f56237902a7deef957a9820c5 1501 contrib/binary-amd64/Packages.gz
+ f35ec96e5d0075a87f015250797d82d78b19caef 5503 contrib/binary-amd64/Packages
+ 8101c8ac007b67edc6bd16a8c5770a877fe44299 1502 contrib/binary-amd64/Packages.gz
  f4f2d5f6f487e6ed96cdfa9d0e038015bbc37861 211 contrib/binary-amd64/Release
- 9229b320fcc160ab655d26ba3c75de9ea1ce8259 7302 contrib/binary-arm64/Packages
- efeaba93ab99f290787dfad7fa3a0c373031a984 2272 contrib/binary-arm64/Packages.gz
+ 8798f4c9241797153905720f6cb20a32e52b25c5 7302 contrib/binary-arm64/Packages
+ 63da62d7e1c8ef1ccdb1827a16ef77b7cd9144fe 2268 contrib/binary-arm64/Packages.gz
  bc808286e5251f286e511db718514eb1f143f444 199 contrib/binary-arm64/Release
 SHA256:
- 6cd41a795ff077314e311be70c395d1d1477a69188becb289253dd37c41fca12 5503 contrib/binary-amd64/Packages
- 1b2c5315a6fd77297507c69338474b0a7172b89ffe0e22b710ef7fc82f1a98a0 1501 contrib/binary-amd64/Packages.gz
+ 181b8ec51c29e4f297321354b884f6827c87214cd495cb336a163b0059a91b4a 5503 contrib/binary-amd64/Packages
+ 513391206ed253a4ebc1c2b72e021790c696bcacebbd61d80bca81046166e805 1502 contrib/binary-amd64/Packages.gz
  13a765cf809f4a041a41028380771600b61438fcce862d157db3a485583af89b 211 contrib/binary-amd64/Release
- f1b1a655e2c6d05b790e5bc119458c7db2ac6696e70b412f9136c106d8c13dca 7302 contrib/binary-arm64/Packages
- 2817db0260a00b93dc6ee19334035067e942cf32356be99165f0eec04f41491d 2272 contrib/binary-arm64/Packages.gz
+ dc951d1343380acb6dd54e7a209cc5361198ac84dcc2d746b23993e2eadd4680 7302 contrib/binary-arm64/Packages
+ 73092f073526ee1b1e749f844cf5e950f56086993a3a34496a790d917cf746ce 2268 contrib/binary-arm64/Packages.gz
  3eafbc49f394efb2a0054c18eaef6e59db565f113e0bdcf58bf52a90af5d26b6 199 contrib/binary-arm64/Release
