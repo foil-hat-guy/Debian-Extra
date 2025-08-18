@@ -173,15 +173,15 @@ Essentional: no
 Architecture: arm64
 Depends: libusb-1.0-0-dev ( >= 2:1.0.26 )
 Homepage: https://github.com/cnlohr/ch32v003fun
-Version: 0.0.154
+Version: 0.0.155
 Installed-Size: 716
 Priority: optional
 Section: electronics
-Filename: pool/contrib/m/minichlink/minichlink_0.0.154_arm64.deb
-Size: 217760
-SHA256: 7ac84dcde80da4101502013b10cfbcc7a0df47f20523781fd7ce7412be6edbc8
-SHA1: 56f824ff6c5531109caab5acaf2bbafc9dd3b414
-MD5sum: 2748d89e80bbab370474ef6541339436
+Filename: pool/contrib/m/minichlink/minichlink_0.0.155_arm64.deb
+Size: 217740
+SHA256: e0a945fa67ee2a56e31c9aea8f28270c0d23e57c17fc468a997a4bfd026f86be
+SHA1: 1c9adf697d1befd847166939516c74e058864163
+MD5sum: 900170054e703f118f53e3a9a5632b91
 Description: Console utility for WCH CH32V003 MCU programming.
  WCH CH32V003 is a 32-bit general-purpose RISC-V MCU.
 
