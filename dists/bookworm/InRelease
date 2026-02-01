@@ -4,7 +4,7 @@ Hash: SHA512
 Origin: foil-hat-guy.github.io/Debian-Extra
 Label: foil-hat-guy.github.io/Debian-Extra
 Codename: bookworm
-Date: Thu, 29 Jan 2026 20:54:37 UTC
+Date: Sun, 01 Feb 2026 20:54:10 UTC
 Architectures: amd64 arm64
 Components: contrib
 Description: Repository with some additional packages for Debian Bookworm.
@@ -12,36 +12,36 @@ MD5Sum:
  9dd4c7d3fda8d85957869aabde144fc4 5503 contrib/binary-amd64/Packages
  c834e9231d99077e38bfdad0c2ffa62c 1502 contrib/binary-amd64/Packages.gz
  dde9fb55d6446e6c268a0a34b2621a63 211 contrib/binary-amd64/Release
- aae201d2947e94af3e12a815ae947fb7 7296 contrib/binary-arm64/Packages
- c92adc90da24631593b0c6ba56822062 2273 contrib/binary-arm64/Packages.gz
+ 3e898577b5b31b08f2294e253f3bb04e 7296 contrib/binary-arm64/Packages
+ 7d1f0d6465663db446c311e776a91a08 2275 contrib/binary-arm64/Packages.gz
  6e500837c852f229e55e86df52c767f0 199 contrib/binary-arm64/Release
 SHA1:
  f35ec96e5d0075a87f015250797d82d78b19caef 5503 contrib/binary-amd64/Packages
  8101c8ac007b67edc6bd16a8c5770a877fe44299 1502 contrib/binary-amd64/Packages.gz
  f4f2d5f6f487e6ed96cdfa9d0e038015bbc37861 211 contrib/binary-amd64/Release
- 7164ae24c076cace4e905eda839acc843ef3f535 7296 contrib/binary-arm64/Packages
- f1020393b766d1c4e97300192dabb41e097e74db 2273 contrib/binary-arm64/Packages.gz
+ 0144969c742d57f496d327e17da22146bdb6955b 7296 contrib/binary-arm64/Packages
+ 53a2ea9987ed8bc51035f20262539921cb1243c9 2275 contrib/binary-arm64/Packages.gz
  bc808286e5251f286e511db718514eb1f143f444 199 contrib/binary-arm64/Release
 SHA256:
  181b8ec51c29e4f297321354b884f6827c87214cd495cb336a163b0059a91b4a 5503 contrib/binary-amd64/Packages
  513391206ed253a4ebc1c2b72e021790c696bcacebbd61d80bca81046166e805 1502 contrib/binary-amd64/Packages.gz
  13a765cf809f4a041a41028380771600b61438fcce862d157db3a485583af89b 211 contrib/binary-amd64/Release
- 99a1dac68b24c343277e105dcb246845e7a3dee942b188c26122945a2cd94dc0 7296 contrib/binary-arm64/Packages
- 466e0d4c82b482ac01ac69229c48f100d800dcb0237aff11e364a2d0f8500501 2273 contrib/binary-arm64/Packages.gz
+ efe79794903d55ef5a3d07c48a7cd109ba3d6343c39b696ad4aa0c0eff780683 7296 contrib/binary-arm64/Packages
+ 2db96c68695430f480f806357418d511306565df0115ddfbfb766677bbb6b805 2275 contrib/binary-arm64/Packages.gz
  3eafbc49f394efb2a0054c18eaef6e59db565f113e0bdcf58bf52a90af5d26b6 199 contrib/binary-arm64/Release
 -----BEGIN PGP SIGNATURE-----
 
-iQIzBAEBCgAdFiEETdZIeUrvOc2jRJXE8lQ/30LGE9EFAml7yQ4ACgkQ8lQ/30LG
-E9G4Wg//b1e7gMZtdZkpI6cikgO6DxkKj6+tnKFlaXd1UUx6OmYjRPGzrtlaUTDP
-98G/QOn34zy88k5g5xzPIrYxtQKVLpnoZ+1efj5RycKGwRUH0h5NEVzIw8+Ut/Jz
-r2obVqw7NJg5oej+U4RA1InqlzeJGqjuXLvayZgsOHyfdQcYwoLQcwcDXbKQsvaX
-Kx7et58GAeMaOHmNS/L6bnFOWt523ggyvB/NOLYGqZ/cYEqZYb8eCPBZjy3b7dwL
-JFQrTTe4sthkzvArT0NI4UPZV6G8js62WOC4ltqORUs+H3fI+Y0HjUdKT9rBBHWb
-0XbgOQunmnNuZvn9MKlu5ykd2ioo2opuBi96eYg8SublN6z0Qc/kxyx+NUJC1qav
-8ZQaH/rZpRsqNN3MYLuJa0yZT3dh8wiKKxxh1bmqL/5+qc/oYfDn9K4HoK8YTG0A
-jFJwo05+qIkFX37OtvtKPxvIxXGvJC6ziLHPKX33d0uSud5dZyCKWdkIAl3jsnkv
-mQRzL+ksgBG9CNTncM86YAEAcmCWY9bXjVnlLyInmXnqnOBgRMGLpSZm8VdDXtSS
-+FfTAhGUWNv0ZBCzCkr6SgrsDNN83ou5ogtkqSQTqwVgsG8U4PgXPtDA//eoEltL
-yKBfE3ycgQ7Vy6yw6rMh795S+oe9fXFFs66oXHRhPu2as9Q0y6o=
-=tnLi
+iQIzBAEBCgAdFiEETdZIeUrvOc2jRJXE8lQ/30LGE9EFAml/vXMACgkQ8lQ/30LG
+E9GB3A/9GNBE3VLRnJBE/yW2kbwKfXAXkbYA32mCJy0Mc1Dmje34LDOJgDQ6psI7
+jA5ffR+cUa45Z8Tty2AhMzul26ZQhuF/4qxyyL6ZK398o1RGIxcZ0ynf9RwFDLIL
+LyVZorjHBMHpw2VnP1vq5Gat3ubaOtuOfvPr7E4hzoEYT7DuevSlcoFV/jwZXZud
+qN94eZZ4X7hpR55/YUrySuNWMDe37Ihhy8NZ3P6P7HFUyQfXjttF+bJ/HStF63jm
+bKh6lcknXk/jb9Zjy4TqIlPep+Xw7e5/Ataik5hsNB5Hhhf5cio2iieUe9VPAD0n
+TRsy3wvC+ufjlvWq0eJHt4hNALNxuV7V+o8+5PNYvf0BExnqd8gOK5q8cT3537SA
+Qk/riTt+4xM78leJXhI/9SAAVOjW9bq0Gk7KdXewF5OR0JBUfSR7755wsQy/jwZt
+WZfYZfJekHfFf+WpvZwtiIfElm5WkCoGzvkj50ueRbkVNuFBBahS1xibqAgjWikV
+kmlMAlfrNdeci62150TzBP49axSq61Rs3a0/A5d9YHomMRsXcF47EPgyKdbU5Sme
+pEvp5tBH1gW7BDAsw9k7/lRr25Yu/EUP+1DPpFA1zCfuk6xfGD4oBoaypXI2c+wS
+JNB5mXw7Hl2E7bQvKun9sF6YI2RHiByNWhNjAHhqhYe7pQVE01Q=
+=vmfx
 -----END PGP SIGNATURE-----
