@@ -1,7 +1,7 @@
 Origin: foil-hat-guy.github.io/Debian-Extra
 Label: foil-hat-guy.github.io/Debian-Extra
 Codename: bookworm
-Date: Fri, 25 Sep 2026 23:32:50 UTC
+Date: Mon, 12 Oct 2026 00:26:12 UTC
 Architectures: amd64 arm64
 Components: contrib
 Description: Repository with some additional packages for Debian Bookworm.
@@ -9,20 +9,20 @@ MD5Sum:
  f30625f581bf603b168485f389814333 5503 contrib/binary-amd64/Packages
  bcf60ad5333bf474e47df52d9c9fa862 1496 contrib/binary-amd64/Packages.gz
  dde9fb55d6446e6c268a0a34b2621a63 211 contrib/binary-amd64/Release
- f343ac8f822a888b1c677dcd88a1d1df 7296 contrib/binary-arm64/Packages
- fc73471ca37c64897a1a06b7a0afb5b0 2267 contrib/binary-arm64/Packages.gz
+ cd0c8b6e220e2574533abca085e69001 7296 contrib/binary-arm64/Packages
+ d65ed5f7d8e279fcbbd149340bad09ae 2263 contrib/binary-arm64/Packages.gz
  6e500837c852f229e55e86df52c767f0 199 contrib/binary-arm64/Release
 SHA1:
  075299a38cd96ee12ee921eda47fdd8173fca4da 5503 contrib/binary-amd64/Packages
  f54e93ed9b87e7453bb8f4dfbfc28cf76fd96bb5 1496 contrib/binary-amd64/Packages.gz
  f4f2d5f6f487e6ed96cdfa9d0e038015bbc37861 211 contrib/binary-amd64/Release
- c94de67bbe4ef70d10274629c19ad476c94cdba7 7296 contrib/binary-arm64/Packages
- be7f1e384afb497ef300c4479d5669c6c25a5fd5 2267 contrib/binary-arm64/Packages.gz
+ 8ea0fdf0bba57af25f3f6c40998cb7b4c44c420b 7296 contrib/binary-arm64/Packages
+ 99d258726098e37d81443ab91ac8fb4fd6bb1768 2263 contrib/binary-arm64/Packages.gz
  bc808286e5251f286e511db718514eb1f143f444 199 contrib/binary-arm64/Release
 SHA256:
  460538c9f8e2f3829531e6d57dbfedec830356e6341cfee2f8def935cd1f236d 5503 contrib/binary-amd64/Packages
  e8b8b6eede7f1f1a647da8fd9febb0487fcf98f244d2a4b50f66d9065b4433c3 1496 contrib/binary-amd64/Packages.gz
  13a765cf809f4a041a41028380771600b61438fcce862d157db3a485583af89b 211 contrib/binary-amd64/Release
- 65a81bc48ccf8439aa578373f812dc7b3a4d62d3d63bbcb2b9f361c0dc6ea2ae 7296 contrib/binary-arm64/Packages
- 54bcd1c21c03c56c2db927ee3238d2b9c9c3bb7b196a373bb96ace0902c8ab2f 2267 contrib/binary-arm64/Packages.gz
+ 33457469849e3d5e5afb4a5b3b955b2d283fa9eb0f6f96b6db2936b5f6e697f9 7296 contrib/binary-arm64/Packages
+ 301ef650ace02712e10bdc4d5a6c0ca55603c3dc65ed02c2be0ac4f0b24582c3 2263 contrib/binary-arm64/Packages.gz
  3eafbc49f394efb2a0054c18eaef6e59db565f113e0bdcf58bf52a90af5d26b6 199 contrib/binary-arm64/Release
